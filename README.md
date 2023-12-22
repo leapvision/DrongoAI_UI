@@ -1,2 +1,2 @@
 # DrongoAI_UI
-Drongo AI single page website
+Single Page Website using HTML, CSS and js
