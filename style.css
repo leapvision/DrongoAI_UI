@@ -45,7 +45,7 @@
 @import url("css/common.css");
 
 :root {
-    --primary-color: #D60000;
+    --primary-color: #be0218;
 }
 
 
@@ -161,8 +161,8 @@ body pre {
 }
 
 .header-logo img {
-    width: 88px;
-    height: 50px;
+    /* width: 88px; */
+    height: 36px;
 }
 
 .menu-holder {
@@ -593,6 +593,48 @@ a.button-dot:hover:before {
 }
 
 
+.button-more span{
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.button-more{
+    padding: 10px 32px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+}
+
+.right-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.right-arrow img {
+    width: 40px;
+    filter: invert(100%);
+    transition: transform 1s ease;
+}
+
+.right-arrow:hover img {
+    cursor: pointer;
+    animation: bounceOnce 1s ease-out forwards; /* One-time bounce animation on hover */
+  }
+
+@keyframes bounceOnce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0); /* No movement at these keyframes */
+    }
+    40% {
+      transform: translateX(20px); /* Move to the right at 40% keyframe */
+    }
+    60% {
+      transform: translateX(10px); /* Bounce back slightly at 60% keyframe */
+    }
+  }
+
 /* ===================================
     2.5 Image/Text Slider CSS
 ====================================== */
@@ -645,7 +687,7 @@ a.button-dot:hover:before {
 .text-slider-wrapper {
     font-size: 24px;
     line-height: 35px;
-    background-color: #000;
+    background-color: #ffffff;
     padding: 130px;
 }
 
@@ -656,6 +698,7 @@ a.button-dot:hover:before {
     width: 87px;
     height: 74px;
     background-size: 87px 74px;
+    filter: hue-rotate(-120deg);
 }
 
 .text-slider-wrapper .text-slide {
@@ -799,12 +842,13 @@ a.button-dot:hover:before {
 ====================================== */
 
 #home {    
-    background-image: url(images/hero_image_01.jpg);
+    background-image: url(images/hero_image_2.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: calc(100vh - 77px);    
     display: flex;
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 #home .section-wrapper {
@@ -836,6 +880,18 @@ h1.big-text {
     margin: 25px 0;
 }
 
+.service-holder:hover {
+
+    .service-num {
+        cursor: pointer;
+        color: var(--primary-color);
+        text-shadow: -1px 0 var(--primary-color), 
+        0 1px var(--primary-color), 
+        1px 0 var(--primary-color), 
+        0 -1px var(--primary-color);
+    }
+}
+
 .service-holder:after {
     content: "";
     display: block;
@@ -843,15 +899,21 @@ h1.big-text {
 }
 
 .service-txt h4 {
-    font-size: 46px;
+    height: 60px;
+    font-size: 30px;
     color: #fff;
     font-weight: 700;
     line-height: 110%;
 }
 
+.service-txt {
+    text-align: center;
+}
+
 .service-num {
-    font-size: 264px;
-    font-weight: 700;
+    font-size: 136px;
+    font-weight: 600;
+    text-align: center;
     color: #000000;
     text-shadow: -1px 0 #b3b3b3, 
         0 1px #b3b3b3, 
@@ -863,6 +925,9 @@ h1.big-text {
     margin-bottom: -10px;
     -webkit-transform: translateZ(0);
 }
+
+
+
 
 
 /* ===================================
@@ -883,7 +948,8 @@ h1.big-text {
 ====================================== */
 
 #clients {
-    background-image: url(images/quote_image_01.jpg);
+    /* background-image: url(images/quote_image_01.jpg); */
+    background-color: black;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1979,8 +2045,8 @@ footer ul {
 }
 
 .footer-logo img {
-    width: 88px;
-    height: 50px;
+    /* width: 88px; */
+    height: 34px;
     margin-bottom: 30px;
 }
 
