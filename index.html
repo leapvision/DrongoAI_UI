@@ -837,7 +837,7 @@
           <div class="section-wrapper block content-1170 center-relative">
             <div class="content-wrapper">
               <div class="one_half">
-                <p class="title-description-up">CONTACT US</p>
+                <p class="title-description-up">DRONGO AI</p>
                 <h2 class="entry-title medium-text">
                   Lets start <br />
                   Working
@@ -850,48 +850,119 @@
                 </p>
                 <br />
                 <div class="button-holder text-left">
-                  <a href="#" class="button">JOIN US</a>
+                  <a class="button" id="joinUsButton">JOIN US</a>
                 </div>
               </div>
 
-              <div class="one_half last">
+              <div class="one_half last" id="contactFormContainer">
                 <div class="contact-form">
-                  <p>
-                    <input
-                      id="name"
-                      type="text"
-                      name="your-name"
-                      placeholder="Name"
-                    />
-                  </p>
-                  <p>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      name="your-email"
-                      placeholder="Email"
-                    />
-                  </p>
-                  <p>
-                    <input
-                      id="subject"
-                      type="text"
-                      name="your-subject"
-                      placeholder="Subject"
-                    />
-                  </p>
-                  <p>
-                    <textarea
-                      id="message"
-                      name="your-message"
-                      placeholder="Message"
-                    ></textarea>
-                  </p>
-                  <p class="contact-submit-holder">
-                    <input type="submit" value="SEND" />
-                  </p>
+                  <form id="contactForm">
+                    <p>
+                      <input
+                        id="name"
+                        type="text"
+                        name="your-name"
+                        placeholder="Name"
+                      />
+                    </p>
+                    <p>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        name="your-email"
+                        placeholder="Email"
+                      />
+                    </p>
+                    <p>
+                      <input
+                        id="subject"
+                        type="text"
+                        name="your-subject"
+                        placeholder="Subject"
+                      />
+                    </p>
+                    <p>
+                      <textarea
+                        id="message"
+                        name="your-message"
+                        placeholder="Message"
+                      ></textarea>
+                    </p>
+                    <p class="contact-submit-holder">
+                      <input type="submit" value="SEND" />
+                    </p>
+                  </form>
                 </div>
               </div>
+
+              <div
+                class="one_half last"
+                id="hiringFormContainer"
+                style="display: none"
+              >
+                <div class="hiring-form">
+                  <form id="hiringForm">
+                    <p>
+                      <input
+                        id="hiringName"
+                        type="text"
+                        name="hiring-name"
+                        placeholder="Name"
+                      />
+                    </p>
+                    <p>
+                      <input
+                        id="hiringEmail"
+                        type="email"
+                        name="hiring-email"
+                        placeholder="Email"
+                      />
+                    </p>
+                    <p>
+                      <input
+                        id="hiringPhoneNumber"
+                        type="text"
+                        name="hiring-phone-number"
+                        placeholder="Phone Number"
+                      />
+                    </p>
+                    <p>
+                      <select
+                        id="roles"
+                        name="roles"
+                        aria-placeholder="Select Role"
+                      >
+                        <option value="" disabled selected>
+                          Select a Role
+                        </option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                      </select>
+                    </p>
+                    <p>
+                      <input
+                        id="resume"
+                        type="file"
+                        name="resume"
+                        accept=".pdf"
+                        placeholder="Resume (PDF only)"
+                      />
+                    </p>
+                    <p>
+                      <textarea
+                        id="message"
+                        name="your-message"
+                        placeholder="Message"
+                      ></textarea>
+                    </p>
+                    <p class="hiring-submit-holder">
+                      <input type="submit" value="APPLY" />
+                    </p>
+                  </form>
+                </div>
+              </div>
+
               <div class="clear"></div>
 
               <p>
@@ -954,5 +1025,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky-kit.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

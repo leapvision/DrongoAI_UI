@@ -2090,7 +2090,6 @@ body.blog {
   text-align: center;
   padding: 10px 40px;
   cursor: pointer;
-  vertical-align: middle;
   text-decoration: none;
   transition: all 0.2s linear;
   margin-bottom: 17px;
@@ -2110,7 +2109,115 @@ body.blog {
 }
 
 /* ===================================
-    16. Footer CSS
+    16. Hiring Section CSS
+====================================== */
+
+.hiring-form {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 22px;
+  color: #000;
+}
+
+.hiring-form p {
+  margin-bottom: 0 !important;
+}
+
+.hiring-form input[type="text"],
+.hiring-form input[type="email"],
+.hiring-form input[type="file"],
+.hiring-form textarea,
+.hiring-form select {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border: 0;
+  font-size: 15px;
+  padding: 5px 0;
+  width: 100%;
+  line-height: 25px;
+  color: #000;
+  margin-bottom: 35px;
+  text-indent: 10px;
+  background-color: transparent;
+  border-bottom: 3px solid;
+}
+
+.hiring-form textarea {
+  height: 80px;
+}
+
+.hiring-form input[type="text"]::placeholder,
+.hiring-form input[type="email"]::placeholder,
+.hiring-form input[type="file"]::placeholder,
+.hiring-form textarea::placeholder,
+.hiring-form select::placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 1;
+}
+
+.hiring-form input[type="text"]:ms-input-placeholder,
+.hiring-form input[type="email"]:ms-input-placeholder,
+.hiring-form input[type="file"]:ms-input-placeholder,
+.hiring-form textarea:ms-input-placeholder,
+.hiring-form select:ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.hiring-form input[type="text"]::ms-input-placeholder,
+.hiring-form input[type="email"]::ms-input-placeholder,
+.hiring-form input[type="file"]::ms-input-placeholder,
+.hiring-form textarea::ms-input-placeholder,
+.hiring-form select::ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.hiring-form input[name="your-name"] {
+  margin-top: 0;
+}
+
+.hiring-submit-holder {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.hiring-form input[type="submit"] {
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 10px 40px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  line-height: 35px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+}
+
+.hiring-form input[type="submit"]:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+/* ===================================
+    17. Footer CSS
 ====================================== */
 
 footer a {
@@ -2210,7 +2317,7 @@ footer .footer-social-divider:before {
 }
 
 /* ===================================
-    17. Responsive CSS
+    18. Responsive CSS
 ====================================== */
 
 @media screen and (max-width: 1600px) {
