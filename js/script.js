@@ -56,3 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // toggleButtonContent();
   });
 });
+
+// Number of children
+const numChildren = 8;
+
+// Create children dynamically
+for (let i = 1; i <= numChildren; i++) {
+  const angle = (i / numChildren) * 2 * Math.PI;
+  const radius = 150; // Adjust the radius as needed
+
+  const child = document.createElement("div");
+  child.className = "child";
+  child.textContent = "Tech " + i;
+
+  const container = document.getElementById("container");
+  container.appendChild(child);
+
+  const centerX = container.offsetWidth / 2;
+  const centerY = container.offsetHeight / 2;
+
+  const childX = centerX + radius * Math.cos(angle) - child.offsetWidth / 2;
+  const childY = centerY + radius * Math.sin(angle) - child.offsetHeight / 2;
+
+  child.style.left = childX + "px";
+  child.style.top = childY + "px";
+}
