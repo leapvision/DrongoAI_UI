@@ -2913,3 +2913,39 @@ footer .footer-social-divider:before {
     font-size: 28px;
   }
 }
+
+/* ===================================
+    Clients Section
+====================================== */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: transparent;
+  white-space: nowrap;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 16s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 160px;
+  margin: 0 36px;
+  background-color: white;
+}
