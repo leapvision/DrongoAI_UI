@@ -1484,6 +1484,25 @@ h1.big-text {
   color: #fff !important;
 }
 
+.social-holder {
+  background: transparent;
+}
+
+.social-handle {
+  display: inline-block;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.social-handle a {
+  color: #000 !important;
+  transition: all 0.3s ease;
+}
+
+.social-handle a:hover {
+  color: var(--primary-color) !important;
+}
+
 /* ===================================
     11. Skills Section CSS
 ====================================== */
@@ -2022,7 +2041,7 @@ body.blog {
 }
 
 .contact-form textarea {
-  height: 150px;
+  height: 134px;
 }
 
 .contact-form input[type="text"]::placeholder,
