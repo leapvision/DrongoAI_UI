@@ -2089,6 +2089,10 @@ body.blog {
   color: var(--primary-color);
 }
 
+.contact-text {
+  color: var(--primary-color);
+}
+
 /* ===================================
     16. Hiring Section CSS
 ====================================== */
