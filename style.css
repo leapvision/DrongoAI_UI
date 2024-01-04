@@ -1503,6 +1503,47 @@ h1.big-text {
   color: var(--primary-color) !important;
 }
 
+.team-holder {
+  position: relative;
+  width: 100%;
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.team-tag-line {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: start;
+  line-height: 1.4;
+  color: white;
+  width: 90%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 650px) {
+  .team-tag-line {
+    display: none;
+  }
+}
+
 /* ===================================
     11. Skills Section CSS
 ====================================== */
