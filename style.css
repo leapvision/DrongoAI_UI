@@ -2146,6 +2146,25 @@ body.blog {
   color: var(--primary-color);
 }
 
+.join-us {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+
+  p {
+    padding: 10px;
+  }
+
+  span {
+    color: var(--primary-color);
+  }
+
+  span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 /* ===================================
     16. Hiring Section CSS
 ====================================== */
@@ -2170,18 +2189,18 @@ body.blog {
   font-weight: 500;
   border: 0;
   font-size: 15px;
-  padding: 5px 0;
+  padding: 4px 0;
   width: 100%;
   line-height: 25px;
   color: #000;
   margin-bottom: 35px;
-  text-indent: 10px;
+  text-indent: 6px;
   background-color: transparent;
   border-bottom: 3px solid;
 }
 
 .hiring-form textarea {
-  height: 80px;
+  height: 60px;
 }
 
 .hiring-form input[type="text"]::placeholder,
@@ -2209,20 +2228,27 @@ body.blog {
   line-height: 25px;
 }
 
-.hiring-form input[type="text"]::ms-input-placeholder,
-.hiring-form input[type="email"]::ms-input-placeholder,
-.hiring-form input[type="file"]::ms-input-placeholder,
-.hiring-form textarea::ms-input-placeholder,
-.hiring-form select::ms-input-placeholder {
-  font-family: "Rubik", sans-serif;
-  color: #000;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-}
-
 .hiring-form input[name="your-name"] {
   margin-top: 0;
+}
+
+.hiring-form input[type="file"]::-webkit-file-upload-button {
+  background: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+
+.hiring-form input[type="file"]::-webkit-file-upload-button:hover {
+  background: #fff;
+  border: 2px solid #535353;
+  color: #000;
 }
 
 .hiring-submit-holder {
@@ -2252,6 +2278,22 @@ body.blog {
 .hiring-form input[type="submit"]:hover {
   background-color: #fff;
   color: var(--primary-color);
+}
+
+/* Style the select element */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/* Style the options */
+select option {
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
 /* ===================================
@@ -3012,4 +3054,142 @@ footer .footer-social-divider:before {
   height: 160px;
   margin: 0 36px;
   background-color: white;
+}
+
+/* ===================================
+    Modal
+====================================== */
+
+.modal {
+  opacity: 0;
+  padding: 50px;
+  position: absolute;
+  z-index: 1100;
+  -webkit-transition: opacity 600ms linear 600ms;
+  -moz-transition: opacity 600ms linear 600ms;
+  -ms-transition: opacity 600ms linear 600ms;
+  -o-transition: opacity 600ms linear 600ms;
+  transition: opacity 600ms linear 600ms;
+}
+
+.modal_info {
+  background: #fcf9f2;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.modal_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 900;
+  -webkit-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -ms-transition: opacity 200ms linear;
+  -o-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+.display {
+  opacity: 1;
+  visibility: visible;
+}
+
+.conceal {
+  visibility: visible;
+}
+
+.btn_container {
+  height: 100%;
+  text-align: center;
+}
+
+.btn_container:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+button.modal_close {
+  background: var(--primary-color);
+  border: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  -webkit-transition: -webkit-transform 600ms;
+  -moz-transition: -moz-transform 600ms;
+  -ms-transition: -ms-transform 600ms;
+  -o-transition: -o-transform 600ms;
+  transition: transform 600ms;
+}
+
+button.modal_close:hover {
+  background: var(--primary-color);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+  -o-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
+  -webkit-transition: -webkit-transform 600ms;
+  -moz-transition: -moz-transform 600ms;
+  -ms-transition: -ms-transform 600ms;
+  -o-transition: -o-transform 600ms;
+  transition: transform 600ms;
+}
+
+button.modal_close span,
+button.modal_close span:before,
+button.modal_close span:after {
+  background: #ffffff;
+  content: "";
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 20px;
+}
+
+button.modal_close span:first-child {
+  background: none;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+button.modal_close span:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.modal_close span:after {
+  -webkit-transform: translateY(-2px) rotate(-45deg);
+  -moz-transform: translateY(-2px) rotate(-45deg);
+  -ms-transform: translateY(-2px) rotate(-45deg);
+  -o-transform: translateY(-2px) rotate(-45deg);
+  transform: translateY(-2px) rotate(-45deg);
+  top: 2px;
 }
