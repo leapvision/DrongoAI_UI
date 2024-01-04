@@ -161,7 +161,6 @@ canvas {
 }
 
 .header-logo img {
-  /* width: 88px; */
   height: 36px;
 }
 
@@ -1538,12 +1537,6 @@ h1.big-text {
   z-index: 1;
 }
 
-@media screen and (max-width: 650px) {
-  .team-tag-line {
-    display: none;
-  }
-}
-
 /* ===================================
     11. Skills Section CSS
 ====================================== */
@@ -2294,7 +2287,6 @@ footer ul {
 }
 
 .footer-logo img {
-  /* width: 88px; */
   height: 34px;
   margin-bottom: 30px;
 }
@@ -2937,11 +2929,23 @@ footer .footer-social-divider:before {
     font-size: 14px;
     line-height: 125%;
   }
+
+  .team-tag-line {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 750px) {
+  .header-logo {
+    height: 24px;
+  }
+
   .blog-item-holder .entry-holder {
     max-width: 95%;
+  }
+
+  .footer-logo img {
+    height: 24px;
   }
 }
 
