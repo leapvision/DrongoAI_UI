@@ -11,7 +11,7 @@
   newsBackgroundImages();
   skillsFill();
   portfolioItemContentLoadOnClick();
-  serviceItemContentLoadOnClick();
+ 
   fixForMenu();
   singlePostStickyInfo();
   slowScroll();
@@ -21,7 +21,8 @@
   firstSectionActiveFix();
   setMenu();
   SendMail();
-
+ 
+ 
   //Show-Hide header sidebar
   $("#toggle").on("click", multiClickFunctionStop);
 
@@ -237,6 +238,9 @@
     });
   }
 
+
+ 
+
   function loadPortfolioItemContent(portfolioItemID) {
     $.ajax({
       url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
@@ -309,98 +313,8 @@
     return false;
   }
 
-  function serviceItemContentLoadOnClick() {
-    $(".service-link").on("click", function (e) {
-      e.preventDefault();
-      var serviceTarget = $(this).data("target");
 
-      if ($("#" + serviceTarget).length) {
-        // Check if content is already loaded
-        $("html, body").animate(
-          { scrollTop: $("#services").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $(".service-content").removeClass("show");
-          $("#" + serviceTarget).addClass("show");
-          $(".service-content-holder").addClass("show");
-          $(".service-link").removeClass("animate-plus");
-        }, 300);
-      } else {
-        loadServiceContent(serviceTarget);
-      }
-    });
-  }
 
-  function loadServiceContent(serviceID) {
-    $.ajax({
-      url: $('.ajax-service[data-id="' + serviceID + '"]').attr("href"),
-      type: "GET",
-      success: function (html) {
-        var getPortfolioItemHtml = $(html)
-          .find(".portfolio-item-wrapper")
-          .html();
-        $(".portfolio-load-content-holder").append(
-          '<div id="pcw-' +
-            serviceID +
-            '" class="portfolio-content-wrapper">' +
-            getPortfolioItemHtml +
-            "</div>"
-        );
-        if (!$("#pcw-" + serviceID + " .close-icon").length) {
-          $("#pcw-" + serviceID).prepend('<div class="close-icon"></div>');
-        }
-        $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $("#pcw-" + serviceID).imagesLoaded(function () {
-            skillsFill();
-            imageSliderSettings();
-            $(".site-content").fitVids(); //Fit Video
-            $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-            setTimeout(function () {
-              $("#pcw-" + serviceID).addClass("show");
-              $(".portfolio-load-content-holder").addClass("show");
-              $(".ajax-portfolio").removeClass("animate-plus");
-              $("#portfolio-grid").hide();
-            }, 300);
-            $(".close-icon").on("click", function (e) {
-              var portfolioReturnItemID = $(this)
-                .closest(".portfolio-content-wrapper")
-                .attr("id")
-                .split("-")[1];
-              $(".portfolio-load-content-holder").addClass("viceversa");
-              $("#portfolio-grid, .more-posts-portfolio-holder").css(
-                "display",
-                "block"
-              );
-              setTimeout(function () {
-                $("#pcw-" + portfolioReturnItemID).removeClass("show");
-                $(".portfolio-load-content-holder").removeClass(
-                  "viceversa show"
-                );
-                $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
-                  "hide"
-                );
-              }, 300);
-              setTimeout(function () {
-                $("html, body").animate(
-                  {
-                    scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-                      .top,
-                  },
-                  400
-                );
-              }, 500);
-            });
-          });
-        }, 500);
-      },
-    });
-    return false;
-  }
 
   function skillsFill() {
     $(".skill-fill").each(function () {
@@ -751,3 +665,39 @@ var modal = (function () {
     },
   };
 })();
+
+
+//services js code
+
+$(document).ready(function() {
+  $("#loadPage1").click(function() {
+    $("#main-content-service").hide();
+    $("#page2").load("services-1.html", function() {
+      $("#page2").show();
+    });
+  });
+
+  $("#loadPage2").click(function() {
+      $("#main-content-service").hide();
+      $("#page2").load("services-2.html", function() {
+        $("#page2").show();
+      });
+    });
+
+    $("#loadPage3").click(function() {
+      $("#main-content-service").hide();
+      $("#page2").load("services-3.html", function() {
+        $("#page2").show();
+      });
+    });
+
+  $(document).on("click", "#backButton", function() {
+    $("#page2").hide();
+    $("#main-content-service").show();
+  });
+});
+
+
+
+
+

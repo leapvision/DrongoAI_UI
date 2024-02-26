@@ -10,22 +10,49 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik:400,700,700i"
-      rel="stylesheet"
-      type="text/css"
-    />
+    
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+  
   </head>
 
   <body>
+
+    <script>
+
+//services animations
+
+// Number of children
+const numChildren = 8;
+
+// Create children dynamically
+for (let i = 1; i <= numChildren; i++) {
+  const angle = (i / numChildren) * 2 * Math.PI;
+  const radius = 150; // Adjust the radius as needed
+
+  const child = document.createElement("div");
+  child.className = "child";
+  child.textContent = "Tech " + i;
+
+  const container = document.getElementById("container");
+  container.appendChild(child);
+
+  const centerX = container.offsetWidth / 2;
+  const centerY = container.offsetHeight / 2;
+
+  const childX = centerX + radius * Math.cos(angle) - child.offsetWidth / 2;
+  const childY = centerY + radius * Math.sin(angle) - child.offsetHeight / 2;
+
+  child.style.left = childX + "px";
+  child.style.top = childY + "px";
+}
+    </script>
+
+
     <div class="site-wrapper">
       <div class="doc-loader">
         <img src="images/preloader.gif" alt="Seppo" />
@@ -76,8 +103,8 @@
       </header>
 
       <div id="content" class="site-content center-relative">
-        <div class="service-item-wrapper center-relative content-1170">
-          <div class="service-content">
+        <div class="portfolio-item-wrapper center-relative content-1170">
+          <div class="portfolio-content">
             <div class="one_third">
               <h1>AI / ML</h1>
               <div class="info-text">
@@ -95,6 +122,7 @@
             </div>
             <div class="clear"></div>
           </div>
+        
         </div>
       </div>
 

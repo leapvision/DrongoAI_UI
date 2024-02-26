@@ -25,6 +25,12 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+ 
+ 
+ <style>
+  
+ </style>
+ 
   </head>
 
   <body class="page-template-onepage">
@@ -96,21 +102,33 @@
       </header>
 
       <div id="content" class="site-content center-relative">
-        <!-- Home Section -->
-        <div id="home" class="section no-page-title">
-          <div class="section-wrapper block center-relative">
-            <canvas id="canvas"></canvas>
-            <div class="content-wrapper content-1170">
-              <h1 class="big-text">
-                Intelligent Solutions. <br />
-                Driven by Technology.
-              </h1>
-              <div class="button-holder">
-                <a href="#portfolio" class="button">LEARN MORE</a>
+        
+        
+       
+          <!-- Home Section -->
+          <div id="home" class="section no-page-title">
+            <div class="section-wrapper block center-relative">
+              <div class="content-wrapper content-1170">
+                <canvas id="canvas"></canvas>
+                <div class="landing-text-wrapper">
+
+               
+                <h1 class="big-text">
+                  Intelligent Solutions. <br />
+                  Driven by Technology.
+                </h1>
+              </div>
+                <div class="button-holder">
+                  <a href="#portfolio" class="button">LEARN MORE</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+  
+        
+        
+       
+        
 
         <!-- Clients Section -->
         <div id="clients" class="section no-page-title">
@@ -148,14 +166,25 @@
           </div>
         </div>
 
-        <!-- Services Section -->
-        <div id="services" class="section">
+       
+
+
+        <div id="services" class="section" >
           <div class="page-title-holder">
             <h3 class="entry-title">SERVICES</h3>
           </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <div class="one_third">
+          
+          
+        
+        
+          <div id="services_section" class="section-wrapper block content-1170 center-relative">
+            
+            
+        
+            <div class="content-wrapper main">
+              <div id="main-content-service" >
+              
+                <div class="one_third">
                 <div class="service-holder">
                   <p class="service-num">AI</p>
                   <div class="service-txt">
@@ -166,22 +195,20 @@
                     </p>
                     <div class="button-holder">
                       <div
-                        class="right-arrow service-link"
-                        data-target="service-ai"
-                      >
-                        <a
-                          class="item-link ajax-service"
-                          href="service-1.html"
-                          data-id="1"
-                        >
-                          <img src="images/right-arrow.png" alt="right-arrow"
-                        /></a>
+                        class="right-arrow">
+                       
+                      
+                      
+                      
+                       <a href="#" id="loadPage1"><img src="images/right-arrow.png" alt="right-arrow" 
+                        /></a> 
+                    
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+        
               <div class="one_third">
                 <div class="service-holder">
                   <p class="service-num">WD</p>
@@ -192,14 +219,18 @@
                       Dolore, veniam?
                     </p>
                     <div class="button-holder">
+                     
                       <div class="right-arrow">
-                        <img src="images/right-arrow.png" alt="right-arrow" />
+                        
+                        <a href="#" id="loadPage2"><img src="images/right-arrow.png" alt="right-arrow" 
+                          /></a> 
+                        
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
+        
               <div class="one_third last">
                 <div class="service-holder">
                   <p class="service-num">AD</p>
@@ -210,19 +241,32 @@
                       Repellat, modi!
                     </p>
                     <div class="button-holder">
+                     
                       <div class="right-arrow">
-                        <img src="images/right-arrow.png" alt="right-arrow" />
+                        
+                        <a href="#" id="loadPage3"><img src="images/right-arrow.png" alt="right-arrow" 
+                          /></a> 
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              
               <div class="clear"></div>
+              </div>
             </div>
-          </div>
+            </div>
+          
+        
+        </div>
+        
+        <div id="page2" style="display: none;" class="visible"></div>
+        </div>
         </div>
 
-        <!-- Portfolio Section -->
+ 
+
+        <!-- Portfolio Section  original -->
         <div id="portfolio" class="section no-padding">
           <div class="page-title-holder">
             <h3 class="entry-title">PORTFOLIO</h3>
@@ -245,22 +289,23 @@
                     >
                       <img src="images/portfolio_item_01.jpg" alt="" />
                       <div class="portfolio-text-holder">
-                        <p class="portfolio-desc">INTERIOR</p>
-                        <p class="portfolio-title">Living Room</p>
+                        <p class="portfolio-desc">AI/ML</p>
+                        <p class="portfolio-title">X- Ray imaging solutions</p>
                       </div>
                     </a>
                   </div>
 
-                  <div id="p-item-2" class="grid-item element-item p_one_half">
+                  <div id="p-item-2" class="grid-item element-item p_one_fourth">
                     <a
                       class="item-link ajax-portfolio"
                       href="portfolio-2.html"
                       data-id="2"
                     >
-                      <img src="images/portfolio_item_02.jpg" alt="" />
+                      <img src="images/portfolio_item_01.jpg" alt="" />
                       <div class="portfolio-text-holder">
-                        <p class="portfolio-desc">FASHION</p>
-                        <p class="portfolio-title">Modeling</p>
+                        <p class="portfolio-desc">AI/ML</p>
+                        <p class="portfolio-title">IBEX digitisation
+                        </p>
                       </div>
                     </a>
                   </div>
@@ -274,10 +319,10 @@
                       href="portfolio-3.html"
                       data-id="3"
                     >
-                      <img src="images/portfolio_item_03.jpg" alt="" />
+                      <img src="images/portfolio_item_01.jpg" alt="" />
                       <div class="portfolio-text-holder">
-                        <p class="portfolio-desc">CREATIVE</p>
-                        <p class="portfolio-title">Psd Mockup</p>
+                        <p class="portfolio-desc">APPLICATION DEVELOPMENT</p>
+                        <p class="portfolio-title"> Elevated body temperature screening software</p>
                       </div>
                     </a>
                   </div>
@@ -291,10 +336,10 @@
                       href="portfolio-4.html"
                       data-id="4"
                     >
-                      <img src="images/portfolio_item_04.jpg" alt="" />
+                      <img src="images/portfolio_item_01.jpg" alt="" />
                       <div class="portfolio-text-holder">
-                        <p class="portfolio-desc">ARCHITECTURE</p>
-                        <p class="portfolio-title">Pillars</p>
+                        <p class="portfolio-desc">WEB DEVELOPMENT</p>
+                        <p class="portfolio-title">Device Management Platform</p>
                       </div>
                     </a>
                   </div>
@@ -303,6 +348,8 @@
             </div>
           </div>
         </div>
+
+
 
         <!-- Clients Section -->
         <div id="clients" class="section">
@@ -351,254 +398,7 @@
           </div>
         </div>
 
-        <!-- About Section -->
-        <!-- <div id="about" class="section">
-          <div class="page-title-holder">
-            <h3 class="entry-title">ABOUT</h3>
-          </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <div class="one_half">
-                <p class="title-description-up">WHO WE ARE</p>
-                <h2 class="entry-title medium-text">
-                  Live up to <br />
-                  your creative potential.
-                </h2>
-                <p>
-                  Code the energy hidden in matter citizens of distant epochs
-                  from which we spring drake equation perga inconspicuous
-                  motespatch clean designed code and energy matter.
-                </p>
-                <br />
-                <div class="button-holder text-left">
-                  <a href="#portfolio" class="button"> LEARN MORE </a>
-                </div>
-              </div>
-
-              <div
-                class="one_half last"
-                data-threshold="0 0"
-                data-jarallax-element="120 0"
-              >
-                <img src="images/about_01.jpg" alt="" />
-              </div>
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- News Section -->
-        <!-- <div id="news" class="section">
-          <div class="page-title-holder">
-            <h3 class="entry-title">NEWS</h3>
-          </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <div
-                class="blog-holder-scode latest-posts-scode block center-relative"
-              >
-                <article class="relative blog-item-holder-scode">
-                  <div class="post-thumbnail">
-                    <a href="single.html">
-                      <div
-                        class="latest-posts-background-featured-image-holder"
-                        data-background-image="images/blog_img_01.jpg"
-                      ></div>
-                    </a>
-                  </div>
-                  <h4 class="entry-title">
-                    <a href="single.html">
-                      How to write rogue mote of dust love
-                    </a>
-                  </h4>
-                  <div class="excerpt">
-                    Bearable only through love hydrogen atoms bits of moving
-                    fluff culture shores of the cosmic ocean paroxysm of global
-                    death ...
-                  </div>
-                </article>
-
-                <article class="relative blog-item-holder-scode">
-                  <div class="post-thumbnail">
-                    <a href="single.html">
-                      <div
-                        class="latest-posts-background-featured-image-holder"
-                        data-background-image="images/blog_img_02.jpg"
-                      ></div>
-                    </a>
-                  </div>
-                  <h4 class="entry-title">
-                    <a href="single.html">
-                      Epochs encyclopa galactica stellar
-                    </a>
-                  </h4>
-                  <div class="excerpt">
-                    Bearable only through love hydrogen atoms bits of moving
-                    fluff culture shores of the cosmic ocean paroxysm of global
-                    death ...
-                  </div>
-                </article>
-
-                <article class="relative blog-item-holder-scode">
-                  <div class="post-thumbnail">
-                    <a href="single.html">
-                      <div
-                        class="latest-posts-background-featured-image-holder"
-                        data-background-image="images/blog_img_03.jpg"
-                      ></div>
-                    </a>
-                  </div>
-                  <h4 class="entry-title">
-                    <a href="single.html">
-                      How to write rogue mote of dust love
-                    </a>
-                  </h4>
-                  <div class="excerpt">
-                    Bearable only through love hydrogen atoms bits of moving
-                    fluff culture shores of the cosmic ocean paroxysm of global
-                    death ...
-                  </div>
-                </article>
-              </div>
-              <br />
-              <div class="button-holder center-text">
-                <a href="blog.html" class="button"> GO TO BLOG </a>
-              </div>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div> -->
-
-        <!-- Pricing Section -->
-        <!-- <div id="pricing" class="section">
-          <div class="page-title-holder">
-            <h3 class="entry-title">PRICING</h3>
-          </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <div class="one_third">
-                <div class="pricing-table">
-                  <p class="pricing-num">1</p>
-                  <div class="pricing-wrapper">
-                    <div class="pricing-table-header">
-                      <div class="pricing-table-title">BASIC</div>
-                    </div>
-                    <div class="pricing-table-price">$25</div>
-                    <div class="pricing-table-desc">PER MONTH</div>
-                    <div class="pricing-table-content-holder">
-                      <ul>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Support
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          5GB Server Space
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          2 Users per Project
-                        </li>
-                        <li class="pricing-list included-no">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Email Integration
-                        </li>
-                        <li class="pricing-list included-no">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Download
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="pricing-button">
-                    <a href="#" class="button scroll"> CHOOSE PLAN </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="one_third">
-                <div class="pricing-table">
-                  <p class="pricing-num">2</p>
-                  <div class="pricing-wrapper">
-                    <div class="pricing-table-header">
-                      <div class="pricing-table-title">ADVANCED</div>
-                    </div>
-                    <div class="pricing-table-price">$50</div>
-                    <div class="pricing-table-desc">PER MONTH</div>
-                    <div class="pricing-table-content-holder">
-                      <ul>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Support
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          5GB Server Space
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          2 Users per Project
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Email Integration
-                        </li>
-                        <li class="pricing-list included-no">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Download
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="pricing-button">
-                    <a href="#" class="button scroll"> CHOOSE PLAN </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="one_third last">
-                <div class="pricing-table">
-                  <p class="pricing-num">3</p>
-                  <div class="pricing-wrapper">
-                    <div class="pricing-table-header">
-                      <div class="pricing-table-title">EXPERT</div>
-                    </div>
-                    <div class="pricing-table-price">$75</div>
-                    <div class="pricing-table-desc">PER MONTH</div>
-                    <div class="pricing-table-content-holder">
-                      <ul>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Support
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          5GB Server Space
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          2 Users per Project
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Email Integration
-                        </li>
-                        <li class="pricing-list included-yes">
-                          <span class="fa fa-check" aria-hidden="true"></span>
-                          Unlimited Download
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="pricing-button">
-                    <a href="#" class="button scroll"> CHOOSE PLAN </a>
-                  </div>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div> -->
+        
 
         <!-- Company Section -->
         <div id="company" class="section">
@@ -607,6 +407,7 @@
           </div>
           <div class="section-wrapper block content-1170 center-relative">
             <div class="content-wrapper">
+            
               <div class="member member-left">
                 <img
                   src="images/about_item_01.jpg"
@@ -625,36 +426,7 @@
                       shows how impeccable all our missions with our Clients’
                       have been.
                     </p>
-                    <div
-                      class="member-social-holder"
-                      data-jarallax-element="0 30"
-                    >
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-facebook"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-twitter"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-instagram"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-vimeo"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-behance"></span>
-                        </a>
-                      </div>
-                    </div>
+                
                   </div>
                 </div>
               </div>
@@ -669,36 +441,7 @@
                       to solving problems. This fluidity helps us decode
                       challenges both subjectively and objectively.
                     </p>
-                    <div
-                      class="member-social-holder"
-                      data-jarallax-element="0 -30"
-                    >
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-facebook"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-twitter"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-instagram"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-vimeo"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-behance"></span>
-                        </a>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
                 <img
@@ -725,36 +468,7 @@
                       intuitive design, makes every solution we craft, a perfect
                       blend of science and art.
                     </p>
-                    <div
-                      class="member-social-holder"
-                      data-jarallax-element="0 30"
-                    >
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-facebook"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-twitter"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-instagram"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-vimeo"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-behance"></span>
-                        </a>
-                      </div>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
@@ -772,36 +486,7 @@
                       allows us to augment efficiencies in any form of
                       industrial or business processes.
                     </p>
-                    <div
-                      class="member-social-holder"
-                      data-jarallax-element="0 -30"
-                    >
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-facebook"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-twitter"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-instagram"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-vimeo"></span>
-                        </a>
-                      </div>
-                      <div class="social">
-                        <a href="#" target="_blank">
-                          <span class="fa fa-behance"></span>
-                        </a>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
                 <img
@@ -811,6 +496,7 @@
                   data-jarallax-element="60 0"
                 />
               </div>
+             
             </div>
           </div>
         </div>
@@ -823,7 +509,7 @@
           <div class="team-holder">
             <img
               class="team-photo"
-              src="images/dummy.jpg"
+              src="images/team.jpg"
               alt="Team-Photo"
               loading="lazy"
             />
@@ -837,152 +523,7 @@
           </div>
         </div>
 
-        <!-- Skills Section -->
-        <!-- <div id="skills" class="section">
-          <div class="page-title-holder">
-            <h3 class="entry-title">SKILLS</h3>
-          </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <div class="one_half">
-                <p class="title-description-up">OUR NUMBERS</p>
-                <h2 class="entry-title medium-text">
-                  Check our <br />
-                  Skills
-                </h2>
-                <p>
-                  Code the energy hidden in matter citizens of distant epochs
-                  from which we spring drake equation perga inconspicuous
-                  motespatch clean designed code and energy matter.
-                </p>
-                <br />
-                <div class="button-holder text-left">
-                  <a href="#portfolio" class="button">LEARN MORE</a>
-                </div>
-              </div>
-
-              <div class="one_half last">
-                <div class="skills-holder">
-                  <div class="skill-holder">
-                    <div class="skill-percent">75%</div>
-                    <div class="skill-text">
-                      <span>Creativity</span>
-                      <div class="skill">
-                        <div class="skill-fill" data-fill="75%"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-holder">
-                    <div class="skill-percent">45%</div>
-                    <div class="skill-text">
-                      <span>Cooking</span>
-                      <div class="skill">
-                        <div class="skill-fill" data-fill="45%"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-holder">
-                    <div class="skill-percent">90%</div>
-                    <div class="skill-text">
-                      <span>PhP</span>
-                      <div class="skill">
-                        <div class="skill-fill" data-fill="90%"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-holder">
-                    <div class="skill-percent">65%</div>
-                    <div class="skill-text">
-                      <span>Marketing</span>
-                      <div class="skill">
-                        <div class="skill-fill" data-fill="65%"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-holder">
-                    <div class="skill-percent">85%</div>
-                    <div class="skill-text">
-                      <span>Design</span>
-                      <div class="skill">
-                        <div class="skill-fill" data-fill="85%"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Millstones Section -->
-        <!-- <div id="millstones" class="section">
-          <div class="page-title-holder">
-            <h3 class="entry-title">MILESTONES</h3>
-          </div>
-          <div class="section-wrapper block content-1170 center-relative">
-            <div class="content-wrapper">
-              <ul class="milestones-holder">
-                <li class="milestone">
-                  <div class="milestone-info-left">
-                    <p class="milestone-num">135</p>
-                  </div>
-                  <div class="milestone-info-right">
-                    <h5>Terabytes of files uploaded</h5>
-                    <p class="milestone-text">
-                      Nulla ac laoreet est, a mollis nibh. Aenean eget auctor
-                      velit quis pharetra.
-                    </p>
-                  </div>
-                </li>
-
-                <li class="milestone">
-                  <div class="milestone-info-left">
-                    <p class="milestone-num">67K</p>
-                  </div>
-                  <div class="milestone-info-right">
-                    <h5>Lines of CSS code wrote</h5>
-                    <p class="milestone-text">
-                      Nulla ac laoreet est, a mollis nibh. Aenean eget auctor
-                      velit quis pharetra.
-                    </p>
-                  </div>
-                </li>
-
-                <li class="milestone">
-                  <div class="milestone-info-left">
-                    <p class="milestone-num">74</p>
-                  </div>
-                  <div class="milestone-info-right">
-                    <h5>Cups of coffee drinked per week</h5>
-                    <p class="milestone-text">
-                      Nulla ac laoreet est, a mollis nibh. Aenean eget auctor
-                      velit quis pharetra.
-                    </p>
-                  </div>
-                </li>
-
-                <li class="milestone">
-                  <div class="milestone-info-left">
-                    <p class="milestone-num">389</p>
-                  </div>
-                  <div class="milestone-info-right">
-                    <h5>Happy clients served this year</h5>
-                    <p class="milestone-text">
-                      Nulla ac laoreet est, a mollis nibh. Aenean eget auctor
-                      velit quis pharetra.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
-
+  
         <!-- Contact Section -->
         <div id="contact" class="section">
           <div class="page-title-holder">
@@ -1234,7 +775,10 @@
     <script src="js/isotope.pkgd.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky-kit.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+   <script src="services.js"></script>
+   
+   
   </body>
 </html>

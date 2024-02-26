@@ -126,6 +126,7 @@ body pre {
 
 canvas {
   background: #000000;
+  width: auto;
 }
 
 /* ===================================
@@ -559,7 +560,10 @@ body .social a:hover {
 .three_fourth {
   width: 73%;
 }
-
+.one_arrow
+{
+  width: 5%;
+}
 .one_half.margin-0 {
   width: 50%;
 }
@@ -888,7 +892,7 @@ a.button-dot:hover:before {
   background-size: cover;
   background-repeat: no-repeat; */
   min-height: calc(100vh - 77px);
-  display: flex;
+  /* display: flex; */
   background-color: rgba(0, 0, 0, 1);
   position: relative;
 }
@@ -1233,6 +1237,29 @@ h1.big-text {
   transform: translateX(-5px);
 }
 
+
+/* services close button */
+
+.close-icon-holder{
+  background-image: url(images/close-left-arrow.png);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background-size: 40px;
+  background-position: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding-top: 3.5rem;
+ 
+}
+
+.close-icon-holder:hover {
+  transform: translateX(-5px);
+}
+
+
 /* ===================================
     8.1 Single Portfolio
 ====================================== */
@@ -1242,9 +1269,14 @@ h1.big-text {
   margin-bottom: 50px;
 }
 
+
+
+
 /* ===================================
     8.2 Service Detail
 ====================================== */
+
+
 
 .service-item-wrapper {
   margin-top: 100px;
@@ -1468,10 +1500,14 @@ h1.big-text {
 
 .member-social-holder {
   background: var(--primary-color);
-  padding: 25px 50px;
-  position: absolute;
-  bottom: -35px;
-  left: -45px;
+  position: sticky;
+    width: 3rem;
+    top: 73%;
+    padding-left: 25px;
+    padding-right: 0px;
+    left: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .member-right .member-social-holder {
@@ -2395,6 +2431,14 @@ footer .footer-social-divider:before {
   margin: 0;
 }
 
+
+
+
+.arrow-margin-update
+{
+  margin-top: -50px;
+}
+
 /* ===================================
     18. Responsive CSS
 ====================================== */
@@ -2535,8 +2579,15 @@ footer .footer-social-divider:before {
     width: 27%;
   }
 
+  .join-us{
+    padding-top: 10rem;
+  }
   .latest-posts-background-featured-image-holder {
     height: 350px;
+  }
+
+  .team-photo{
+    padding-top: 5rem;
   }
 
   .pricing-wrapper {
@@ -2559,7 +2610,21 @@ footer .footer-social-divider:before {
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1025px) {
+
+  h1.big-text {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    color: #fff;
+    font-size: 60px;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
+}
+
+@media screen and (max-width: 1025px) {
   #header-main-menu {
     padding-bottom: 70px;
   }
@@ -2627,10 +2692,12 @@ footer .footer-social-divider:before {
     margin-bottom: 5px;
   }
 
-  h1.big-text {
-    text-align: center;
-    font-size: 60px;
-  }
+  
+#home a {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+}
 
   .section-wrapper {
     padding-bottom: 70px;
@@ -2873,6 +2940,28 @@ footer .footer-social-divider:before {
     margin-top: 50px;
     text-align: center;
   }
+
+.arrow-margin-update
+{
+  margin-top: -50px;
+}
+
+
+
+.member-social-holder {
+  background: var(--primary-color);
+  position: static;
+    width: 100%;
+    top: 50%;
+   
+    left: 100%;
+    margin: 0px;
+    z-index: 1;
+   padding: auto;
+
+
+
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -2989,6 +3078,11 @@ footer .footer-social-divider:before {
   .footer-logo img {
     height: 24px;
   }
+
+  .modal
+  {
+    left: -10%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -3005,9 +3099,21 @@ footer .footer-social-divider:before {
   }
 
   h1.big-text {
-    text-align: center;
-    font-size: 40px;
+    position: absolute;
+  top: 30%;
+  left: 3.5%;
+  color: #fff;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 40px;
   }
+
+
+#home a {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
 }
 
 @media screen and (max-width: 400px) {
@@ -3018,6 +3124,23 @@ footer .footer-social-divider:before {
   .footer-mail {
     font-size: 28px;
   }
+
+  h1.big-text {
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    color: #fff;
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
+
+#home a {
+  position: absolute;
+  top: 40%;
+  left: 9%;
+}
 }
 
 /* ===================================
@@ -3192,4 +3315,23 @@ button.modal_close span:after {
   -o-transform: translateY(-2px) rotate(-45deg);
   transform: translateY(-2px) rotate(-45deg);
   top: 2px;
+}
+
+
+
+
+/* CSS FOR FADE IN ANIMATION */
+#page2 {
+  
+  transition: opacity 3s;
+}
+
+.hidden {
+ 
+  opacity: 0;
+}
+
+.visible {
+  
+  opacity: 1;
 }
