@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .service-content-holder {
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 10% 40% 50%;
+    align-content: center;
+    column-gap: 30px;
+}
+
+.back-button-holder {
+    background-color: aqua;
+}
+
+.text-content-holder {
+    background-color: azure;
+}
+
+.animation-holdder-div {
+    background-color: beige;
+}
+
+/* Media Query for responsive layout */
+@media screen and (max-width: 768px) {
+    .service-content-holder {
+        grid-template-columns: 1fr; /* Single column layout */
+        row-gap: 20px; /* Add gap between rows */
+    }
+    .back-button-holder,
+    .text-content-holder,
+    .animation-holdder-div {
+        width: 100%; /* Take full width */
+    }
+}
+
+ </style>
+</head>
+<body>
+    <div class="service-content-holder">
+        <div class="back-button-holder">
+            <p class="back">back</p>
+        </div>
+        <div class="text-content-holder">
+            
+        </div>
+        <div class="animation-holdder-div">
+            <p>animaton</p>
+        </div>
+    </div>
+</body>
+</html>
