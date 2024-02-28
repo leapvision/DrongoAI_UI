@@ -121,7 +121,9 @@
 
   function imageSliderSettings() {
     $(".image-slider").each(function () {
+     
       var id = $(this).attr("id");
+      console.log("inside the slider  : "+id);
       var auto_value = window[id + "_auto"];
       var hover_pause = window[id + "_hover"];
       var speed_value = window[id + "_speed"];
@@ -212,107 +214,234 @@
     });
   }
 
-  function portfolioItemContentLoadOnClick() {
-    $(".ajax-portfolio").on("click", function (e) {
-      e.preventDefault();
-      var portfolioItemID = $(this).data("id");
-      $(this).addClass("animate-plus");
-      if ($("#pcw-" + portfolioItemID).length) {
-        //Check if is allready loaded
-        $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-          setTimeout(function () {
-            $("#pcw-" + portfolioItemID).addClass("show");
-            $(".portfolio-load-content-holder").addClass("show");
-            $(".ajax-portfolio").removeClass("animate-plus");
-            $("#portfolio-grid, .more-posts-portfolio-holder").hide();
-          }, 300);
-        }, 500);
-      } else {
-        loadPortfolioItemContent(portfolioItemID);
-      }
-    });
-  }
+  // function portfolioItemContentLoadOnClick() {
+  //   $(".ajax-portfolio").on("click", function (e) {
+  //     e.preventDefault();
+  //     var portfolioItemID = $(this).data("id");
+  //     $(this).addClass("animate-plus");
+  //     if ($("#pcw-" + portfolioItemID).length) {
+  //       //Check if is allready loaded
+  //       $("html, body").animate(
+  //         { scrollTop: $("#portfolio-wrapper").offset().top },
+  //         400
+  //       );
+  //       setTimeout(function () {
+  //         $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+  //         setTimeout(function () {
+  //           $("#pcw-" + portfolioItemID).addClass("show");
+  //           $(".portfolio-load-content-holder").addClass("show");
+  //           $(".ajax-portfolio").removeClass("animate-plus");
+  //           $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+  //         }, 300);
+  //       }, 500);
+  //       $("#pcw-" + portfolioItemID).imagesLoaded(function () {
+  //         imageSliderSettings(portfolioItemID);
+  //     });
+  //     } else {
+        
+  //       loadPortfolioItemContent(portfolioItemID);
+  //     }
+  //   });
+  // }
 
 
  
 
-  function loadPortfolioItemContent(portfolioItemID) {
-    $.ajax({
-      url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
-      type: "GET",
-      success: function (html) {
-        var getPortfolioItemHtml = $(html)
-          .find(".portfolio-item-wrapper")
-          .html();
-        $(".portfolio-load-content-holder").append(
-          '<div id="pcw-' +
-            portfolioItemID +
-            '" class="portfolio-content-wrapper">' +
-            getPortfolioItemHtml +
-            "</div>"
-        );
-        if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
-          $("#pcw-" + portfolioItemID).prepend(
-            '<div class="close-icon"></div>'
-          );
-        }
-        $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $("#pcw-" + portfolioItemID).imagesLoaded(function () {
-            skillsFill();
-            imageSliderSettings();
-            $(".site-content").fitVids(); //Fit Video
-            $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+  // function loadPortfolioItemContent(portfolioItemID) {
+  //   $.ajax({
+  //     url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
+  //     type: "GET",
+  //     success: function (html) {
+  //       var getPortfolioItemHtml = $(html)
+  //         .find(".portfolio-item-wrapper")
+  //         .html();
+  //       $(".portfolio-load-content-holder").append(
+  //         '<div id="pcw-' +
+  //           portfolioItemID +
+  //           '" class="portfolio-content-wrapper">' +
+  //           getPortfolioItemHtml +
+  //           "</div>"
+  //       );
+
+        
+
+  //       if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
+  //         $("#pcw-" + portfolioItemID).prepend(
+  //           '<div class="close-icon"></div>'
+  //         );
+  //       }
+  //       $("html, body").animate(
+  //         { scrollTop: $("#portfolio-wrapper").offset().top },
+  //         400
+  //       );
+  //       setTimeout(function () {
+  //         $("#pcw-" + portfolioItemID).imagesLoaded(function () {
+
+  //           console.log('Inside imagesLoaded' , portfolioItemID);
+  //           skillsFill();
+  //           imageSliderSettings(portfolioItemID);
+  //           $(".site-content").fitVids(); //Fit Video
+  //           $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+  //           setTimeout(function () {
+  //             $("#pcw-" + portfolioItemID).addClass("show");
+  //             $(".portfolio-load-content-holder").addClass("show");
+  //             $(".ajax-portfolio").removeClass("animate-plus");
+  //             $("#portfolio-grid").hide();
+  //           }, 300);
+  //           $(".close-icon").on("click", function (e) {
+  //             var portfolioReturnItemID = $(this)
+  //               .closest(".portfolio-content-wrapper")
+  //               .attr("id")
+  //               .split("-")[1];
+  //             $(".portfolio-load-content-holder").addClass("viceversa");
+  //             $("#portfolio-grid, .more-posts-portfolio-holder").css(
+  //               "display",
+  //               "block"
+  //             );
+  //             setTimeout(function () {
+  //               $("#pcw-" + portfolioReturnItemID).removeClass("show");
+  //               $(".portfolio-load-content-holder").removeClass(
+  //                 "viceversa show"
+  //               );
+  //               $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
+  //                 "hide"
+  //               );
+  //             }, 300);
+  //             setTimeout(function () {
+  //               $("html, body").animate(
+  //                 {
+  //                   scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
+  //                     .top,
+  //                 },
+  //                 400
+  //               );
+  //             }, 500);
+            
+  //           });
+           
+  //         });
+  //       }, 500);
+  //     },
+  //   });
+  //   return false;
+  // }
+  function portfolioItemContentLoadOnClick() {
+    $(".ajax-portfolio").on("click", function (e) {
+        e.preventDefault();
+        var portfolioItemID = $(this).data("id");
+        $(this).addClass("animate-plus");
+        if ($("#pcw-" + portfolioItemID).length) {
+            // Check if already loaded
+            $("html, body").animate(
+                { scrollTop: $("#portfolio-wrapper").offset().top },
+                400
+            );
             setTimeout(function () {
-              $("#pcw-" + portfolioItemID).addClass("show");
-              $(".portfolio-load-content-holder").addClass("show");
-              $(".ajax-portfolio").removeClass("animate-plus");
-              $("#portfolio-grid").hide();
-            }, 300);
-            $(".close-icon").on("click", function (e) {
-              var portfolioReturnItemID = $(this)
-                .closest(".portfolio-content-wrapper")
-                .attr("id")
-                .split("-")[1];
-              $(".portfolio-load-content-holder").addClass("viceversa");
-              $("#portfolio-grid, .more-posts-portfolio-holder").css(
-                "display",
-                "block"
-              );
-              setTimeout(function () {
-                $("#pcw-" + portfolioReturnItemID).removeClass("show");
-                $(".portfolio-load-content-holder").removeClass(
-                  "viceversa show"
-                );
-                $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
-                  "hide"
-                );
-              }, 300);
-              setTimeout(function () {
-                $("html, body").animate(
-                  {
-                    scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-                      .top,
-                  },
-                  400
-                );
-              }, 500);
+                $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+                setTimeout(function () {
+                    $("#pcw-" + portfolioItemID).addClass("show");
+                    $(".portfolio-load-content-holder").addClass("show");
+                    $(".ajax-portfolio").removeClass("animate-plus");
+                    $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+                }, 300);
+            }, 500);
+        } else {
+            loadPortfolioItemContent(portfolioItemID);
+        }
+    });
+}
+
+function loadPortfolioItemContent(portfolioItemID) {
+    $.ajax({
+        url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
+        type: "GET",
+        success: function (html) {
+            var getPortfolioItemHtml = $(html)
+                .find(".portfolio-item-wrapper")
+                .html();
+            $(".portfolio-load-content-holder").append(
+                '<div id="pcw-' +
+                    portfolioItemID +
+                    '" class="portfolio-content-wrapper">' +
+                    getPortfolioItemHtml +
+                    "</div>"
+            );
+
+            // Apply image slider to newly loaded content:
+            $("#pcw-" + portfolioItemID + " .image-slider").each(function () {
+                var id = $(this).attr("id");
+                var auto_value = window[id + "_auto"];
+                var hover_pause = window[id + "_hover"];
+                var speed_value = window[id + "_speed"];
+                auto_value = auto_value === "true" ? true : false;
+                hover_pause = hover_pause === "true" ? true : false;
+                $(this).owlCarousel({
+                    loop: true,
+                    autoHeight: true,
+                    smartSpeed: 1000,
+                    autoplay: auto_value,
+                    autoplayHoverPause: hover_pause,
+                    autoplayTimeout: speed_value,
+                    responsiveClass: true,
+                    items: 1,
+                });
+                $(this).on("mouseleave", function () {
+                    $(this).trigger("stop.owl.autoplay");
+                    $(this).trigger("play.owl.autoplay", [auto_value]);
+                });
             });
-          });
-        }, 500);
-      },
+
+            if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
+                $("#pcw-" + portfolioItemID).prepend('<div class="close-icon"></div>');
+            }
+
+            $("html, body").animate(
+                { scrollTop: $("#portfolio-wrapper").offset().top },
+                400
+            );
+            setTimeout(function () {
+                $("#pcw-" + portfolioItemID).imagesLoaded(function () {
+                    skillsFill();
+                    $(".site-content").fitVids(); //Fit Video
+                    $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+                    setTimeout(function () {
+                        $("#pcw-" + portfolioItemID).addClass("show");
+                        $(".portfolio-load-content-holder").addClass("show");
+                        $(".ajax-portfolio").removeClass("animate-plus");
+                        $("#portfolio-grid").hide();
+                    }, 300);
+                    $(".close-icon").on("click", function (e) {
+                        var portfolioReturnItemID = $(this)
+                            .closest(".portfolio-content-wrapper")
+                            .attr("id")
+                            .split("-")[1];
+                        $(".portfolio-load-content-holder").addClass("viceversa");
+                        $("#portfolio-grid, .more-posts-portfolio-holder").css(
+                            "display",
+                            "block"
+                        );
+                        setTimeout(function () {
+                            $("#pcw-" + portfolioReturnItemID).removeClass("show");
+                            $(".portfolio-load-content-holder").removeClass(
+                                "viceversa show"
+                            );
+                            $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
+                                "hide"
+                            );
+                        }, 300);
+                        setTimeout(function () {
+                            $("html, body").animate(
+                                { scrollTop: $("#p-item-" + portfolioReturnItemID).offset().top },
+                                400
+                            );
+                        }, 500);
+                    });
+                });
+            }, 500);
+        },
     });
     return false;
-  }
-
+}
 
 
 
@@ -667,37 +796,101 @@ var modal = (function () {
 })();
 
 
-//services js code
+function applyTransformations() {
+  $(".small-card:nth-child(4)").css("transform", "translate(120%, -160%)");
+  $(".small-card:nth-child(5)").css("transform", "translate(120%, 50%)");
+  $(".small-card:nth-child(2)").css("transform", "translate(-230%, 50%)");
+  $(".small-card:nth-child(3)").css("transform", "translate(-230%, -150%)");
+  $(".small-card:nth-child(6)").css("transform", "translate(-50%, -250%)");
+  $(".small-card:nth-child(7)").css("transform", "translate(-50%, 150%)");
+}
 
-$(document).ready(function() {
-  $("#loadPage1").click(function() {
+function removeTransformations() {
+  $(".small-card:nth-child(4)").css("transform", "translate(-50%, -50%)");
+  $(".small-card:nth-child(5)").css("transform", "translate(-50%, -50%)");
+  $(".small-card:nth-child(2)").css("transform", "translate(-50%, -50%)");
+  $(".small-card:nth-child(3)").css("transform", "translate(-50%, -50%)");
+  $(".small-card:nth-child(6)").css("transform", "translate(-50%, -50%)");
+  $(".small-card:nth-child(7)").css("transform", "translate(-50%, -50%)");
+}
+
+function addoffset()
+{
+    $("html, body").animate(
+        {
+          scrollTop: $("#SERVICES-HOLDER").offset().top-100,
+        },
+        1000
+      );
+}
+
+function addFadeIn()
+{
+    $("#SERVICES-HOLDER").css("opacity", "1");
+}
+
+function addFadeOut(){
+    $("#SERVICES-HOLDER").css("opacity", "0");
+
+}
+
+
+$(document).ready(function () {
+  $("#SERVICE-1").hide();
+  $("#SERVICE-2").hide();
+  $("#SERVICE-3").hide();
+ 
+
+  
+
+  $("#loadPage1").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
     $("#main-content-service").hide();
-    $("#page2").load("services-1.html", function() {
-      $("#page2").show();
-    });
+    $("#SERVICE-1").show();
+   addFadeIn();
+    addoffset();
+
+    applyTransformations();
   });
 
-  $("#loadPage2").click(function() {
-      $("#main-content-service").hide();
-      $("#page2").load("services-2.html", function() {
-        $("#page2").show();
-      });
-    });
-
-    $("#loadPage3").click(function() {
-      $("#main-content-service").hide();
-      $("#page2").load("services-3.html", function() {
-        $("#page2").show();
-      });
-    });
-
-  $(document).on("click", "#backButton", function() {
-    $("#page2").hide();
-    $("#main-content-service").show();
+  $("#loadPage2").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    $("#main-content-service").hide();
+    $("#SERVICE-2").show();
+    addFadeIn();
+    addoffset();
+    applyTransformations();
   });
+
+  $("#loadPage3").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    $("#main-content-service").hide();
+    $("#SERVICE-3").show();
+    addFadeIn();
+    addoffset();
+    applyTransformations();
+  });
+
+
 });
 
 
 
 
 
+$(document).on("click", "#backButton", function () {
+    addFadeOut();
+    $("#SERVICE-1").hide();
+    $("#SERVICE-2").hide();
+    $("#SERVICE-3").hide();
+    removeTransformations();
+  $("#main-content-service").show();
+
+  $("html, body").animate(
+    {
+      scrollTop: $("#services_section").offset().top,
+    },
+    1000
+  );
+//   $("#services_section").css("padding-top", "200px");
+});
