@@ -315,6 +315,10 @@ body .sm-clean li.current_page_item > a {
   .sm-clean ul {
     background-color: #fff;
   }
+
+  button.modal_close {
+    right: 0px;
+  }
 }
 
 .sm-clean > li:last-child > a,
@@ -2564,7 +2568,14 @@ footer .footer-social-divider:before {
           
 /* Media query for mobile screens */
 @media only screen and (max-width: 1000px) {
-    .services-container {
+   
+  
+  
+.gradient-overlay {
+  
+  background: none;
+}
+  .services-container {
         flex-direction: column;
     }
 
@@ -3500,6 +3511,14 @@ button.modal_close span:after {
 
 
 
+@media (max-width: 925px) {
+
+ 
+  .modal_info
+  {
+    padding: 50px 60px;
+  }
+}
 
 /* services section */
 #SERVICES-HOLDER
