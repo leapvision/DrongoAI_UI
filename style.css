@@ -309,6 +309,7 @@ body .sm-clean li.current_page_item > a {
   .sm-clean ul {
     padding: 8px 0;
   }
+
 }
 
 @media (max-width: 925px) {
@@ -319,6 +320,8 @@ body .sm-clean li.current_page_item > a {
   button.modal_close {
     right: 0px;
   }
+
+  
 }
 
 .sm-clean > li:last-child > a,
@@ -473,7 +476,6 @@ body .sm-clean li.current_page_item > a {
   margin-bottom: 0;
   letter-spacing: 2px;
 }
-
 .info-text {
   font-size: 22px;
   line-height: 190%;
@@ -494,6 +496,29 @@ body .sm-clean li.current_page_item > a {
   margin-bottom: 30px;
 }
 
+.info-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-code {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  align-items: center;
+}
+
+.info-code p {
+  margin-bottom: 0px;
+}
+
+
+
+.i
 .tp-bullet-title {
   display: none !important;
 }
@@ -732,6 +757,12 @@ a.button-dot:hover:before {
 
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: transparent;
+}
+
+.owl-item
+{
+  display: flex;
+    justify-content: center;
 }
 
 .text-slider-wrapper {
@@ -3157,9 +3188,19 @@ footer .footer-social-divider:before {
 }
 
 @media screen and (max-width: 767px) {
+  
+ .portfolio-text
+ {
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+ }
+  
   .page-title-holder {
     height: 100px;
   }
+
+  
 
   .section h3.entry-title {
     margin-top: 18px;
