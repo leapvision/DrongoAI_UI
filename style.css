@@ -1139,7 +1139,7 @@ h1.big-text {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background: linear-gradient(to top, #000, #0000);
   left: 0;
   top: 0;
   opacity: 0;
@@ -3338,12 +3338,10 @@ footer .footer-social-divider:before {
 /* ===================================
     Clients Section
 ====================================== */
-
 @keyframes slide {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-100%);
   }
@@ -3352,8 +3350,30 @@ footer .footer-social-divider:before {
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: transparent;
+  background: white;
   white-space: nowrap;
+  position: relative;
+  
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
 .logos:hover .logos-slide {
@@ -3362,13 +3382,12 @@ footer .footer-social-divider:before {
 
 .logos-slide {
   display: inline-block;
-  animation: 16s slide infinite linear;
+  animation: 25s slide infinite linear;
 }
 
 .logos-slide img {
   height: 160px;
-  margin: 0 36px;
-  background-color: white;
+  margin: 0 60px;
 }
 
 /* ===================================
