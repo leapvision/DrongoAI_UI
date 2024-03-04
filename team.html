@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Team Cards</title>
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link
+  href="https://fonts.googleapis.com/css?family=Rubik:400,700,700i"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+.team-cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.team-header-texts
+{
+    padding-left: 30px;
+}
+
+.team-header-texts p
+{
+    margin-bottom: 0px;
+    color: black;
+    opacity: 0.6;
+}
+
+.team-header-texts h1
+{
+   padding: 0px;
+   color: var(--primary-color);
+}
+
+.team-card-texts a{
+    color: var(--primary-color);
+}
+.services-container {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+.team-box {
+  display: flex;
+
+}
+
+.team-container
+{
+display: flex;
+flex-direction: row;
+}
+.team-box1 {
+  width: 10%;
+  
+  display: flex;
+  align-items: start;
+}
+
+.team-box2 {
+  width: 90%;
+  
+  display: flex;
+ 
+
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.team-linkedin
+{
+    color: var(--primary-color);
+    transition: all 0.2s;
+}
+
+.team-linkedin:hover{
+    color: black;
+}
+
+.team-card {
+    margin: 10px;
+   padding: 20px; 
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+   /* max-width: 250px;  */
+    /* border-radius: 10%; */
+}
+
+.team-card-bottom {
+    margin-top: 20px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.team-card-texts p {
+    margin: 5px 0;
+  text-align:start;
+  line-height: 1;
+  padding-left: 2px;
+}
+
+.team-card-texts p:first-child {
+ font-weight: bold;
+ color: black;
+}
+
+.social-handle {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        width: calc(50% - 20px);
+    }
+
+    .team-container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+    <div class=" block content-1170 center-relative  " id="TEAM-HOLDER" >
+        <div class="team-main-container " id="TEAM-CARDS" >
+            <div class="team-container " >
+              <div class="team-box team-box1">
+                <div class="close-icon-holder" id="backButton"></div>
+              </div>
+              
+<div class="team-box team-box2">
+    <div class="team-header-texts">
+        <p>The team</p>
+       
+        <h1>Meet our team of Experts</h1>
+        <p>content about the team</p>
+   
+    </div>
+    
+
+    <div class="team-cards-holder">
+        <div class="team-card">
+            <img src="https://doodles-academy.org/wp-content/uploads/2020/10/Profile_square-scaled.jpeg" alt="team-member">
+            <div class="team-card-bottom">
+                <div class="team-card-texts">
+                    <p>name</p>
+                    <p>designation</p>
+                </div>
+                <div class="social-handle">
+                    <a href="#" target="_blank">
+                        <span class="team-linkedin fa fa-linkedin"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+       <div class="team-card">
+            <img src="https://doodles-academy.org/wp-content/uploads/2020/10/Profile_square-scaled.jpeg" alt="team-member">
+            <div class="team-card-bottom">
+                <div class="team-card-texts">
+                    <p>name</p>
+                    <p>designation</p>
+                </div>
+                <div class="social-handle">
+                    <a href="#" target="_blank">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+      
+       <div class="team-card">
+            <img src="https://doodles-academy.org/wp-content/uploads/2020/10/Profile_square-scaled.jpeg" alt="team-member">
+            <div class="team-card-bottom">
+                <div class="team-card-texts">
+                    <p>name</p>
+                    <p>designation</p>
+                </div>
+                <div class="social-handle">
+                    <a href="#" target="_blank">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+       <div class="team-card">
+            <img src="https://doodles-academy.org/wp-content/uploads/2020/10/Profile_square-scaled.jpeg" alt="team-member">
+            <div class="team-card-bottom">
+                <div class="team-card-texts">
+                    <p>name</p>
+                    <p>designation</p>
+                </div>
+                <div class="social-handle">
+                    <a href="#" target="_blank">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more team-cards as needed -->
+    </div>
+</div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+</body>
+</html>

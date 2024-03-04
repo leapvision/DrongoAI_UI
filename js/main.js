@@ -839,7 +839,7 @@ $(document).ready(function () {
   $("#SERVICE-1").hide();
   $("#SERVICE-2").hide();
   $("#SERVICE-3").hide();
- 
+  $("#TEAM-HOLDER").hide();
 
   
 
@@ -872,6 +872,40 @@ $(document).ready(function () {
   });
 
 
+  $("#loadteam").click(function (event) {
+
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+ 
+    $("#team").hide();
+    $("#TEAM-HOLDER").show();
+    console.log("hello");
+    $("#TEAM-HOLDER").css("opacity", "1");
+    $("html, body").animate(
+      {
+        scrollTop: $("#TEAM-HOLDER").offset().top-100,
+      },
+      10
+    );
+   
+  });
+
+  $("#loadteam2").click(function (event) {
+
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+ 
+    $("#team").hide();
+    $("#TEAM-HOLDER").show();
+    console.log("hello");
+    $("#TEAM-HOLDER").css("opacity", "1");
+    $("html, body").animate(
+      {
+        scrollTop: $("#TEAM-HOLDER").offset().top-100,
+      },
+      10
+    );
+   
+  });
+
 });
 
 
@@ -893,4 +927,21 @@ $(document).on("click", "#backButton", function () {
     1000
   );
 //   $("#services_section").css("padding-top", "200px");
+});
+
+
+
+$(document).on("click", "#team-back-button", function () {
+  $("#TEAM-HOLDER").css("opacity", "0");
+   $("#TEAM-HOLDER").hide();
+ 
+$("#team").show();
+
+$("html, body").animate(
+  {
+    scrollTop: $("#team").offset().top,
+  },
+  400
+);
+
 });
