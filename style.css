@@ -2679,6 +2679,8 @@ footer .footer-social-divider:before {
                   #image-text{
                     font-size: 52px;
                   }
+
+                 
           }
 
 
@@ -3223,7 +3225,10 @@ footer .footer-social-divider:before {
     height: 100px;
   }
 
-  
+  .portfolio-content h1
+  {
+    font-size: 32px;
+  }
 
   .section h3.entry-title {
     margin-top: 18px;
@@ -3596,7 +3601,14 @@ button.modal_close span:after {
 
 @media (max-width: 925px) {
 
- 
+  .logos-slide img {
+    height: 100px;
+    margin: 0 30px;
+}
+.logos:before, .logos:after 
+{
+  width: 50px;
+}
   .modal_info
   {
     padding: 50px 60px;
