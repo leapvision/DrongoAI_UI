@@ -879,12 +879,12 @@ $(document).ready(function () {
     $("#team").hide();
     $("#TEAM-HOLDER").show();
     console.log("hello");
-    $("#TEAM-HOLDER").css("opacity", "1");
+    $("#TEAM-CARDS").css("opacity", "1");
     $("html, body").animate(
       {
         scrollTop: $("#TEAM-HOLDER").offset().top-100,
       },
-      10
+      100
     );
    
   });
@@ -896,12 +896,12 @@ $(document).ready(function () {
     $("#team").hide();
     $("#TEAM-HOLDER").show();
     console.log("hello");
-    $("#TEAM-HOLDER").css("opacity", "1");
+    $("#TEAM-CARDS").css("opacity", "1");
     $("html, body").animate(
       {
-        scrollTop: $("#TEAM-HOLDER").offset().top-100,
+        scrollTop: $("#TEAM-HOLDER").offset().top-40,
       },
-      10
+      100
     );
    
   });
@@ -932,7 +932,7 @@ $(document).on("click", "#backButton", function () {
 
 
 $(document).on("click", "#team-back-button", function () {
-  $("#TEAM-HOLDER").css("opacity", "0");
+  $("#TEAM-CARDS").css("opacity", "0");
    $("#TEAM-HOLDER").hide();
  
 $("#team").show();
@@ -941,7 +941,7 @@ $("html, body").animate(
   {
     scrollTop: $("#team").offset().top,
   },
-  400
+  1000
 );
 
 });
