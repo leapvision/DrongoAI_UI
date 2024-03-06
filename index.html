@@ -859,7 +859,12 @@
                   </select>
                 </p>
                 <p>
-                  <input id="resume" type="file" name="resume" accept=".pdf" />
+                  <input id="resume" type="file" name="resume" accept=".pdf" style="display: none;">
+                  <label for="resume" id="resume-upload">Upload Your Resume</label>
+                  <!-- Text to display the selected file name -->
+                  <div id="file-name">No file selected</div>
+
+                 
                 </p>
                 <p class="hiring-submit-holder">
                   <input type="submit" value="APPLY" />
@@ -996,14 +1001,19 @@
                       </select>
                     </p>
                     <p>
-                      <input
+                      
+                      <!-- <input
                         id="resume"
                         type="file"
                         name="resume"
                         accept=".pdf"
                         placeholder="Resume (PDF only)"
-                      />
+                      /> -->
+                   
+                      <input id="resume" type="file" name="resume" accept=".pdf" placeholder="Resume (PDF only)">
+                     
                     </p>
+                   
                     <p>
                       <textarea
                         id="message"
@@ -1013,6 +1023,7 @@
                     </p>
                     <p class="hiring-submit-holder">
                       <input type="submit" value="APPLY" />
+                      
                     </p>
                    
                   </form>

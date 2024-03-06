@@ -795,6 +795,14 @@ var modal = (function () {
   };
 })();
 
+$(document).ready(function() {
+  // When a file is selected
+  $('#resume').change(function() {
+    var fileName = $(this).val().split('\\').pop(); // Getting only the file name
+    $('#file-name').text(fileName !== '' ? fileName : 'No file selected');
+  });
+});
+
 
 function applyTransformations() {
   $(".small-card:nth-child(4)").css("transform", "translate(120%, -160%)");
