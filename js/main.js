@@ -998,3 +998,16 @@ $(document).ready(function() {
       $('arrow-image').removeClass('arrow-hover');
   });
 });
+
+
+//code to refresh the screen to set canvas width
+$(document).ready(function() {
+  var initialWidth = $(window).width();
+
+  $(window).resize(function() {
+      var currentWidth = $(window).width();
+      if (Math.abs(currentWidth - initialWidth) > 250) {
+          location.reload();
+      }
+  });
+});
