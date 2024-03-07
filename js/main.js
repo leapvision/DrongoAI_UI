@@ -824,7 +824,7 @@ var s3 = null;
 function addoffset(id) {
   var animationDuration = $(window).width() > 1000 ? 1000 : 100; // Check window height
   var windowsize=$(window).width();
-  var offset=windowsize>=700?400:220;
+  var offset=windowsize>=700?530:220;
 
   $("html, body").animate(
     {
@@ -940,11 +940,12 @@ $(document).on("click", "#backButton", function () {
   var animationDuration = $(window).width() > 1000 ? 1000 : 50;
 
   // Animate scroll to the stored position
-  if (animationDuration > 1000) {
-    console.log("desktop");
+  if (animationDuration >= 1000) {
+    console.log("hello");
     $("html, body").animate(
       {
-        scrollTop: "#main-content-service",
+        
+        scrollTop: $("#main-content-service").offset().top-275,
       },
       100
     );
