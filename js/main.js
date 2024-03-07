@@ -822,14 +822,27 @@ function removeTransformations() {
   $(".small-card:nth-child(7)").css("transform", "translate(-50%, -50%)");
 }
 
-function addoffset()
+
+
+var s1=null;
+var s2=null;
+var s3=null;
+
+
+
+
+function addoffset(id)
 {
-    $("html, body").animate(
-        {
-          scrollTop: $("#SERVICES-HOLDER").offset().top-100,
-        },
-        1000
-      );
+  var animationDuration = $(window).width() > 1000 ? 1000 : 100; // Check window height
+    
+  $("html, body").animate(
+      {
+          scrollTop: $(id).offset().top - 100,
+      },
+      animationDuration // Use the determined animation duration
+  );
+
+ 
 }
 
 function addFadeIn()
@@ -856,9 +869,11 @@ $(document).ready(function () {
     $("#main-content-service").hide();
     $("#SERVICE-1").show();
    addFadeIn();
-    addoffset();
-
-    applyTransformations();
+ 
+   addoffset("#SERVICE-1");
+   s1= $(window).scrollTop();
+   applyTransformations(); 
+    
   });
 
   $("#loadPage2").click(function (event) {
@@ -866,7 +881,8 @@ $(document).ready(function () {
     $("#main-content-service").hide();
     $("#SERVICE-2").show();
     addFadeIn();
-    addoffset();
+    addoffset("#SERVICE-2");
+  s2= $(window).scrollTop();
     applyTransformations();
   });
 
@@ -875,7 +891,8 @@ $(document).ready(function () {
     $("#main-content-service").hide();
     $("#SERVICE-3").show();
     addFadeIn();
-    addoffset();
+    addoffset("#SERVICE-3");
+  s3=$(window).scrollTop();
     applyTransformations();
   });
 
@@ -928,12 +945,46 @@ $(document).on("click", "#backButton", function () {
     removeTransformations();
   $("#main-content-service").show();
 
+  // $("html, body").animate(
+  //   {
+  //     scrollTop: $("#services_section").offset().top,
+  //   },
+  //   1000
+  // );
+
+   // Retrieve scroll position for the corresponding card
+   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
+  
+  
+   // Animate scroll to the stored position
+   
+  
+   if (targetCard=='SERVICE-1') {
+    $("html, body").animate(
+        {
+            scrollTop: s1,
+        },
+        100
+    );
+}
+else if(targetCard=='SERVICE-2')
+{
   $("html, body").animate(
     {
-      scrollTop: $("#services_section").offset().top,
+        scrollTop: s2,
     },
-    1000
-  );
+    100);
+}
+else
+{
+  $("html, body").animate(
+    {
+        scrollTop: s3,
+    },
+    100);
+}
+
+
 //   $("#services_section").css("padding-top", "200px");
 });
 
