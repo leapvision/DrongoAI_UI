@@ -3817,16 +3817,17 @@ button.modal_close span:after {
 }
 
 /* services section */
-#SERVICES-HOLDER
+/* #SERVICES-HOLDER
 {
-    padding-top: 0px;
-}
+   padding-top: 10rem;
+} */
 
 
 /* CSS FOR FADE IN ANIMATION */
 #SERVICES-HOLDER {
 opacity: 0;
 transition: opacity 3s;
+padding-top: 10rem;
 }
 
 
@@ -3874,13 +3875,13 @@ transition: opacity 3s;
   font-size: 16px;
   
 }
-
+/* 
 .services-container {
 display: flex;
-margin-top: 1rem;
+margin-top: 10rem;
 margin-bottom: 5rem;
 padding: 1rem;
-}
+} */
 
 .team-box {
 display: flex;
