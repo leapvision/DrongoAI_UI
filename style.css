@@ -988,20 +988,23 @@ h1.big-text {
 .service-holder {
   margin: 25px 0;
 }
-
-.service-holder:hover {
-  .service-num {
-    cursor: pointer;
-    color: var(--primary-color);
-    text-shadow: -1px 0 var(--primary-color), 0 1px var(--primary-color),
-      1px 0 var(--primary-color), 0 -1px var(--primary-color);
-  }
+.service-holder:hover .service-num {
+  cursor: pointer;
+  color: var(--primary-color);
+  text-shadow: -1px 0 var(--primary-color), 0 1px var(--primary-color),
+    1px 0 var(--primary-color), 0 -1px var(--primary-color);
 }
 
-.service-holder:after {
-  content: "";
-  display: block;
-  clear: both;
+.services-p-tag
+{
+  color:#b3b3b3
+}
+
+.service-holder:hover .right-arrow img {
+ 
+  cursor: pointer;
+  transform: translateX(5px);
+   
 }
 
 .service-txt h4 {
@@ -2442,13 +2445,13 @@ footer ul {
 
 .footer-logo img {
   height: 34px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .footer-logo-divider {
   position: relative;
   height: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .footer-logo-divider:before {
@@ -2495,7 +2498,7 @@ footer .footer-social-divider:before {
 }
 
 .social-holder {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .social-holder a {
@@ -2514,7 +2517,6 @@ footer .footer-social-divider:before {
 {
   margin-top: -50px;
 }
-
 
 
 /* ===================================
@@ -2581,64 +2583,7 @@ footer .footer-social-divider:before {
                
      }
 
-     /* .image-card:hover .overlay {
-      opacity: 1; 
-    } */
-
-    /* Apply styles to the first floating card on hover */
-/* .images-container .floating-cards-s1:nth-child(1):hover {
-  opacity: 1;
-}
-.images-container .floating-cards-s1:nth-child(2):hover {
-  opacity: 1;
-}
-.images-container .floating-cards-s1:nth-child(3):hover {
-  opacity: 1;
-}
-
-.images-container .floating-cards-s1:nth-child(4):hover {
-  opacity: 1;
-}
-.images-container .floating-cards-s1:nth-child(5):hover {
-  opacity: 1;
-} */
-
-
-
-/* 
-    .overlay {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 6px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      text-align: center;
-      
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      width: 6rem;
-      height: 6rem;
-                border-radius: 50%;
-                
-                transform: translate(-50%, -50%);
-                
-                
-               
-    }
-    .overlay-text {
-      font-size: 12px;
-      line-height: 1.3;
-      font-family: 'Courier New', Courier, monospace;
-    } */
-
-
-
+    
 
       .small-card,
                 .big-card
@@ -2653,6 +2598,7 @@ footer .footer-social-divider:before {
   margin-top: 1rem;
   margin-bottom: 5rem;
   padding: 1rem;
+ 
 }
 
 .box {
@@ -3498,13 +3444,7 @@ footer .footer-social-divider:before {
     left: -10%;
   }
 
-  .images-container .floating-cards-s1:nth-child(1):hover {
-  opacity: 0;
-}
-.floating-cards-s1:hover
-{
-  opacity: 1;
-}
+ 
 }
 
 @media screen and (max-width: 650px) {
@@ -3828,6 +3768,7 @@ button.modal_close span:after {
 opacity: 0;
 transition: opacity 3s;
 padding-top: 8rem;
+height: 90vh;
 }
 
 

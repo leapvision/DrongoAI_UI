@@ -988,3 +988,13 @@ $(document).on("click", "#team-back-button", function () {
     1000
   );
 });
+
+
+// hover effect for services cards
+$(document).ready(function() {
+  $('service-holder').hover(function() {
+      $('arrow-image').addClass('arrow-hover');
+  }, function() {
+      $('arrow-image').removeClass('arrow-hover');
+  });
+});
