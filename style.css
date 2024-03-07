@@ -3945,12 +3945,14 @@ color: black;
     text-align: center;
     padding-top: 2rem;
   }
-}
 
-#SERVICES-HOLDER 
+  #SERVICES-HOLDER 
 {
   height: auto;
 }
+
+}
+
 
 .box2 h1{
   color: var(--primary-color);
