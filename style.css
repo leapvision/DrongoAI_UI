@@ -2646,7 +2646,10 @@ footer .footer-social-divider:before {
   flex-direction: column-reverse;
 }  
 
-
+#SERVICES-HOLDER 
+{
+  height: auto;
+}
 
 .box3{
   padding-bottom: 5rem;
@@ -3942,6 +3945,11 @@ color: black;
     text-align: center;
     padding-top: 2rem;
   }
+}
+
+#SERVICES-HOLDER 
+{
+  height: auto;
 }
 
 .box2 h1{
