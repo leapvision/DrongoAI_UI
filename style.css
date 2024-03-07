@@ -3838,6 +3838,7 @@ padding-top: 8rem;
 {
   opacity: 0;
   transition: opacity 0.8s;
+  padding-top: 10rem;
 }
 
 .team-cards-holder {
@@ -3935,11 +3936,6 @@ padding: 1rem;
   width: 100%;
  /* max-width: 250px;  */
   /* border-radius: 10%; */
-}
-
-#TEAM-CARDS
-{
-  padding-top: 3rem;
 }
 
 .team-card-bottom {
