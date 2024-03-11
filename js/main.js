@@ -901,7 +901,7 @@ $(document).ready(function() {
 
   $(window).resize(function() {
       var currentWidth = $(window).width();
-      if (Math.abs(currentWidth - initialWidth) > 250) {
+      if (Math.abs(currentWidth - initialWidth) > 400) {
           location.reload();
       }
   });
