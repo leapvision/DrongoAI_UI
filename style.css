@@ -2527,122 +2527,6 @@ footer .footer-social-divider:before {
 }
 
 
-/* ===================================
-   services css
-====================================== */
-
-.big-card{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-    #image-text
-    {
-      font-size: 10rem;
-      color: var(--primary-color);
-
-    }
-    .image-card-holder{
-      display: grid;
-                place-items: center;
-    }
-    
-    .images-container,
-            .image-card{
-                
-               
-                aspect-ratio: 1/1;
-            }
-           
-            .big-card,
-            .image-card{
-                width: 30vmin;
-            }
-    
-            .images-container
-            {
-                position: absolute;
-               
-            }
-    
-            .image-card{
-               
-                position: absolute;
-                transition: transform 2500ms cubic-bezier(.05,.43,.25,.95);
-            }
-            .big-card{
-                
-                border-radius: 50%;
-                width: 30vmin;
-                z-index: 1;
-               
-            }
-            .small-card{
-                
-                
-                width: 10vmin;
-                border-radius: 50%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 10px 10px 10px rgba(255, 255, 255, 1);
-             
-               
-     }
-
-    
-
-      .small-card,
-                .big-card
-                {
-                    background-size: cover; /* Ensure the background image covers the entire container */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /
-                }
-     
-                .services-container {
-  display: flex;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  padding: 1rem;
- 
-}
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-}
-
-.box1 {
-  width: 10%;
-  
-  display: flex;
-  align-items: start;
-}
-
-.box2 {
-  width: 40%;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-
-.box3 {
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-   
 
           
 /* Media query for mobile screens */
@@ -2920,7 +2804,7 @@ footer .footer-social-divider:before {
   }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
 
   h1.big-text {
     position: absolute;
@@ -2934,10 +2818,135 @@ footer .footer-social-divider:before {
 
 }
 
-@media screen and (max-width: 1025px) {
+
+
+/* ===================================
+   services css
+====================================== */
+
+.big-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    #image-text
+    {
+      font-size: 10rem;
+      color: var(--primary-color);
+
+    }
+    .image-card-holder{
+      display: grid;
+                place-items: center;
+    }
+    
+    .images-container,
+            .image-card{
+                
+               
+                aspect-ratio: 1/1;
+            }
+           
+            .big-card,
+            .image-card{
+                width: 30vmin;
+            }
+    
+            .images-container
+            {
+                position: absolute;
+               
+            }
+    
+            .image-card{
+               
+                position: absolute;
+                transition: transform 2500ms cubic-bezier(.05,.43,.25,.95);
+            }
+            .big-card{
+                
+                border-radius: 50%;
+                width: 30vmin;
+                z-index: 1;
+               
+            }
+            .small-card{
+                
+                
+                width: 10vmin;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 10px 10px 10px rgba(255, 255, 255, 1);
+             
+               
+     }
+
+    
+
+      .small-card,
+                .big-card
+                {
+                    background-size: cover; /* Ensure the background image covers the entire container */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /
+                }
+     
+                .services-container {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
+ 
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+.box1 {
+  width: 10%;
+  
+  display: flex;
+  align-items: start;
+}
+
+.box2 {
+  width: 40%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+
+.box3 {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+   
+
+@media screen and (max-width: 1024px) {
   #header-main-menu {
     padding-bottom: 70px;
   }
+
+  #image-text
+  {
+    font-size: 7.5rem;
+  }
+  
 
   .menu-wrapper {
     width: 95%;
