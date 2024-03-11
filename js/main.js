@@ -657,18 +657,21 @@ var modal = (function () {
       var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
       $modal.css({
         top: top + $window.scrollTop(),
-        left: left + $window.scrollLeft(),
+        
+        left: $(window).width() < 780 ? "-15px" : left + $window.scrollLeft(),
       });
     },
     open: function (settings) {
       $content.empty().append(settings.content);
 
       $modal
-        .css({
-          width: settings.width || "auto",
+      .css({
+          width: $(window).width() > 1000 ? "30%" : "80%",
           height: settings.height || "auto",
-        })
-        .appendTo("body");
+          
+      })
+      .appendTo("body");
+  
 
       if (!$(".modal_overlay").length) {
         $('<div class="modal_overlay"/>').appendTo("body");
@@ -695,6 +698,7 @@ $(document).ready(function () {
 });
 
 function applyTransformations() {
+  // $(".small-card").css("opacity","1");
   $(".small-card:nth-child(4)").css("transform", "translate(120%, -160%)");
   $(".small-card:nth-child(5)").css("transform", "translate(120%, 50%)");
   $(".small-card:nth-child(2)").css("transform", "translate(-230%, 50%)");
@@ -704,6 +708,7 @@ function applyTransformations() {
 }
 
 function removeTransformations() {
+  // $(".small-card").css("opacity","0");
   $(".small-card:nth-child(4)").css("transform", "translate(-50%, -50%)");
   $(".small-card:nth-child(5)").css("transform", "translate(-50%, -50%)");
   $(".small-card:nth-child(2)").css("transform", "translate(-50%, -50%)");
