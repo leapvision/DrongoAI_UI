@@ -1024,25 +1024,25 @@ tick();
 
 
 
-  $("#hiringForm").submit(function(event) {
-    var errorMessage = "";
+  // $("#hiringForm").submit(function(event) {
+  //   var errorMessage = "";
 
-    // Validate email
-    var email = $("#hiringEmail").val();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errorMessage += "Invalid email format. <br>";
-    }
+  //   // Validate email
+  //   var email = $("#hiringEmail").val();
+  //   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  //     errorMessage += "Invalid email format. <br>";
+  //   }
 
-    // Validate phone number (basic check for digits)
-    var phone = $("#hiringPhoneNumber").val();
-    if (!/^\d{10}$/.test(phone)) {
-      errorMessage += "Invalid phone number format (must be 10 digits). <br>";
-    }
+  //   // Validate phone number (basic check for digits)
+  //   var phone = $("#hiringPhoneNumber").val();
+  //   if (!/^\d{10}$/.test(phone)) {
+  //     errorMessage += "Invalid phone number format (must be 10 digits). <br>";
+  //   }
 
 
-    // Display error message if any
-    if (errorMessage) {
-      $("#error-message").html(errorMessage);
-      event.preventDefault(); // Prevent form submission
-    }
-  });
+  //   // Display error message if any
+  //   if (errorMessage) {
+  //     $("#error-message").html(errorMessage);
+  //     event.preventDefault(); // Prevent form submission
+  //   }
+  // });
