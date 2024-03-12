@@ -2825,12 +2825,17 @@ footer .footer-social-divider:before {
   }
   #image-text
   {
-    font-size: 7.5rem;
+    font-size: 6.5rem;
   }
 
   #home a{
-    top:65%;
+    top:55%;
   }
+  h1.big-text {
+    font-size: 60px;
+  }
+
+  
 }
 
 @media screen and (max-width: 1270px) {
