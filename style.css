@@ -1217,6 +1217,12 @@ h1.big-text {
   transition: all 0.3s ease;
 }
 
+.portfolio-text
+{
+  font-size: 18px;
+  line-height: 2;
+}
+
 .portfolio-title {
   font-size: 30px;
   line-height: 170%;
