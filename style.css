@@ -438,10 +438,10 @@ body .sm-clean li.current_page_item > a {
   top: 0;
   left: 0;
   background-color: var(--primary-color);
-  width: 285px;
+  width: 200px;
   display: inline-block;
   z-index: 98;
-  height: 130px;
+  height: 100px;
 }
 
 .page-title-holder:after {
@@ -449,7 +449,7 @@ body .sm-clean li.current_page_item > a {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 130px 60px 0 0;
+  border-width: 100px 60px 0 0;
   border-color: var(--primary-color) transparent transparent transparent;
   position: absolute;
   top: 0;
@@ -465,7 +465,7 @@ body .sm-clean li.current_page_item > a {
   text-align: center;
   color: #fff;
   letter-spacing: 2px;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .page .page-content {
@@ -1264,7 +1264,7 @@ h1.big-text {
 }
 
 .section.no-padding .portfolio-content-wrapper {
-  padding: 225px 0 75px 0;
+  padding: 100px 0 75px 0;
 }
 
 .portfolio-content-wrapper {
@@ -1286,6 +1286,23 @@ h1.big-text {
   transform: translateY(70px);
 }
 
+/* .portfolio-content-image-wrapper
+{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+} */
+
+
+.portfolio-right-image img{
+  padding-top: 1rem;
+  object-fit: contain;
+  height: 100%;
+  width: 100%; 
+
+   aspect-ratio: 1/1; 
+}
+
 .close-icon {
   background-image: url(images/close-left-arrow.png);
   background-repeat: no-repeat;
@@ -1299,7 +1316,7 @@ h1.big-text {
   cursor: pointer;
   position: absolute;
   left: -100px;
-  top: 195px;
+  top: 115px;
 }
 
 .close-icon:hover {
@@ -2649,14 +2666,22 @@ footer .footer-social-divider:before {
 #SERVICES-HOLDER {
   opacity: 0;
   transition: opacity 3s;
-  padding-top: 8rem;
-  height: 90vh;
+  padding-top: 3rem;
+  height: auto;
   }
 
           
 /* Media query for mobile screens */
 @media only screen and (max-width: 1000px) {
-   
+  
+
+  .section.no-padding .portfolio-content-wrapper
+  {
+    padding-top: 200px;
+  }
+
+ 
+
 .portfolio-content-image-wrapper{
   display: flex;
   flex-direction: column-reverse;
@@ -3215,7 +3240,7 @@ footer .footer-social-divider:before {
   .close-icon {
     top: 140px;
     /* right: -10px; */
-    left: 1px;
+    left: -15px;
   }
 
   .pricing-table {
@@ -3357,7 +3382,7 @@ footer .footer-social-divider:before {
 
   .portfolio-content h1
   {
-    font-size: 32px;
+    font-size: 28px;
     color: black;
   }
 

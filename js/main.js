@@ -391,7 +391,7 @@
         }
 
         $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
+          { scrollTop: $("#portfolio-wrapper").offset().top},
           400
         );
         setTimeout(function () {
@@ -428,7 +428,7 @@
                 $("html, body").animate(
                   {
                     scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-                      .top,
+                      .top-100
                   },
                   400
                 );
@@ -724,7 +724,7 @@ var s3 = null;
 function addoffset(id) {
   var animationDuration = $(window).width() > 1000 ? 1000 : 100; // Check window height
   var windowsize=$(window).width();
-  var offset=windowsize>=700?530:220;
+  var offset=windowsize>=700?430:220;
 
   $("html, body").animate(
     {
@@ -794,12 +794,12 @@ $(document).ready(function () {
     $("#TEAM-HOLDER").show();
     console.log("hello");
     $("#TEAM-CARDS").css("opacity", "1");
-    $("html, body").animate(
-      {
-        scrollTop: $("#TEAM-HOLDER").offset().top - 100,
-      },
-      100
-    );
+    // $("html, body").animate(
+    //   {
+    //     scrollTop: $("#TEAM-HOLDER").offset().top
+    //   },
+     
+    // );
   });
 
   $("#loadteam2").click(function (event) {
