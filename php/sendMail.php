@@ -1,50 +1,40 @@
 <?php
 
-include_once (dirname(dirname(__FILE__)) . '/config.php');
+function sendEmail($mail_to, $mail_subject, $mail_body)
+{
 
-//Initial response is NULL
-$response = null;
+    $cURL_key = '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';
+    $mail_from = 'hellojaikrishna@gmail.com';
 
-//Initialize appropriate action and return as HTML response
-if (isset($_POST["action"])) {
-    $action = $_POST["action"];
+    $curl = curl_init();
 
-    switch ($action) {
-        case "SendMessage": {
-                if (isset($_POST["email"]) && !empty($_POST["email"])) {
 
-                    $message = $_POST["message"];
-                    $message .= "<br/><br/>";                                        
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://api.sendgrid.com/v3/mail/send",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "{\"personalizations\": [{\"to\": [{\"email\": \"$mail_to\"}]}],\"from\": {\"email\": \"$mail_from\"},\"subject\": \"$mail_subject\",\"content\": [{\"type\": \"text/plain\", \"value\": \"$mail_body\"}]}",
+        CURLOPT_HTTPHEADER => array(
+            "authorization: Bearer $cURL_key",
+            "cache-control: no-cache",
+            "content-type: application/json"
+        ),
+    ));
 
-                    $response = (SendEmail($message, $_POST["subject"], $_POST["name"], $_POST["email"], $email)) ? 'Message Sent' : "Sending Message Failed";
-                } else {
-                    $response = "Sending Message Failed";
-                }
-            }
-            break;
-        default: {
-                $response = "Invalid action is set! Action is: " . $action;
-            }
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    } else {
+        echo $response;
     }
 }
 
-
-if (isset($response) && !empty($response) && !is_null($response)) {
-    echo '{"ResponseData":' . json_encode($response) . '}';
-}
-
-function SendEmail($message, $subject, $name, $from, $to) {
-    $isSent = false;
-    // Content-type header
-    $headers = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    // Additional headers    
-    $headers .= 'From: ' . $name .'<'.$from .'>';
-
-    if (@mail($to, $subject, $message, $headers)) {
-        $isSent = true;
-    }
-    return $isSent;
-}
-
-?>
+sendEmail("mail to","Hello World", "Hi, welcome to programming");

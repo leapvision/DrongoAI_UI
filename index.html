@@ -777,43 +777,45 @@
             <div class="hiring-form">
               <form id="hiringForm">
                 <p>
+                  <!-- <label for="hiringName">Name:</label> -->
                   <input
                     id="hiringName"
                     type="text"
                     name="hiring-name"
                     placeholder="Name"
+                    required
                   />
                 </p>
                 <p>
+                  <!-- <label for="hiringEmail">Email:</label> -->
                   <input
                     id="hiringEmail"
                     type="email"
                     name="hiring-email"
                     placeholder="Email"
+                    required
                   />
                 </p>
                 <p>
+                  <!-- <label for="hiringPhoneNumber">Phone Number:</label> -->
                   <input
-                    id="hiringPhoneNumber"
-                    type="text"
-                    name="hiring-phone-number"
-                    placeholder="Phone Number"
-                  />
+    id="hiringPhoneNumber"
+    type="text"
+    name="hiring-phone-number"
+    placeholder="Phone Number"
+    required
+    pattern="[0-9]{10}"
+    title="Please enter a 10-digit phone number (numbers only)"
+  />
                 </p>
-
+            
                 <p>
-                  <textarea
-                    id="message"
-                    name="your-message"
-                    placeholder="Message"
-                  ></textarea>
+                  <!-- <label for="message">Message:</label> -->
+                  <textarea id="message" name="your-message" placeholder="Message" required></textarea>
                 </p>
                 <p>
-                  <select
-                    id="roles"
-                    name="roles"
-                    aria-placeholder="Select Role"
-                  >
+                  <!-- <label for="roles">Select Role:</label> -->
+                  <select id="roles" name="roles" required>
                     <option value="" disabled selected>Select a Role</option>
                     <option value="developer">Developer</option>
                     <option value="designer">Designer</option>
@@ -822,17 +824,19 @@
                 </p>
                 <p>
                   <input id="resume" type="file" name="resume" accept=".pdf" style="display: none;">
-                  <label for="resume" id="resume-upload">Upload Your Resume</label>
-                  <!-- Text to display the selected file name -->
+                  <label for="resume" id="resume-upload">Upload Your Resume (PDF only)</label>
                   <div id="file-name">No file selected</div>
-
-                 
                 </p>
                 <p class="hiring-submit-holder">
                   <input type="submit" value="APPLY" />
                 </p>
+                <div id="error-message"></div>
               </form>
             </div>
+
+
+
+
           </div>
           <div class="modal_overlay"></div>
           <div
@@ -918,7 +922,7 @@
                 </div>
               </div>
 
-              <div
+              <!-- <div
                 class="one_half last"
                 id="hiringFormContainer"
                 style="display: none"
@@ -948,14 +952,14 @@
                         name="hiring-phone-number"
                         placeholder="Phone Number"
                       /><div class="social-handle">
-              <!-- <a href="#" target="_blank">
+               <a href="#" target="_blank">
                 <span class="fa fa-facebook"></span>
               </a>
             </div>
             <div class="social-handle">
               <a href="#" target="_blank">
                 <span class="fa fa-twitter"></span>
-              </a> -->
+              </a> 
             </div>
                     </p>
                     <p>
@@ -976,13 +980,13 @@
                     </p>
                     <p>
                       
-                      <!-- <input
+                     <input
                         id="resume"
                         type="file"
                         name="resume"
                         accept=".pdf"
                         placeholder="Resume (PDF only)"
-                      /> -->
+                      /> 
                    
                       <input id="resume" type="file" name="resume" accept=".pdf" placeholder="Resume (PDF only)">
                      
@@ -1002,7 +1006,7 @@
                    
                   </form>
                 </div>
-              </div>
+              </div> -->
 
               <div class="clear"></div>
 
@@ -1077,6 +1081,6 @@ Karnataka, India. <br> Phone:  080 2662 1544
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky-kit.min.js"></script>
     <script src="js/main.js"></script>
- 
+    <script src="js/validate.js"></script>
   </body>
 </html>
