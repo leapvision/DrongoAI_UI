@@ -2841,7 +2841,10 @@ footer .footer-social-divider:before {
     font-size: 60px;
   }
 
-  
+  .section.no-padding .portfolio-content-wrapper
+  {
+    padding-top: 200px;
+  }
 }
 
 @media screen and (max-width: 1270px) {
@@ -2981,20 +2984,6 @@ footer .footer-social-divider:before {
   }
 }
 
-@media screen and (max-width: 1024px) {
-
-  h1.big-text {
-    position: absolute;
-    top: 20%;
-    left: 7%;
-    color: #fff;
-    font-size: 60px;
-    line-height: 120%;
-    margin-bottom: 40px;
-  }
-
-}
-
 
 @media screen and (max-width: 1024px) {
   #header-main-menu {
@@ -3006,6 +2995,16 @@ footer .footer-social-divider:before {
     font-size: 7.5rem;
   }
   
+  h1.big-text {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    color: #fff;
+    font-size: 50px;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
 
   .menu-wrapper {
     width: 95%;
@@ -3093,7 +3092,7 @@ footer .footer-social-divider:before {
   
 #home a {
   position: absolute;
-  top: 40%;
+  top: 44%;
   left: 7%;
 }
 
