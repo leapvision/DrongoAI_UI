@@ -3809,6 +3809,8 @@ button.modal_close span:after {
   /* width: 90%; */
 }
 
+
+
 @media (max-width: 925px) {
 
   .logos-slide img {
@@ -3826,8 +3828,13 @@ button.modal_close span:after {
 
   .close-icon-holder
   {
-    padding-top: 0px;
+    padding-top: 2rem;
     padding-left: 5rem;
+  }
+
+  #image-text
+  {
+    font-size: 6.5rem;
   }
 
   .box1 .close-icon-holder{

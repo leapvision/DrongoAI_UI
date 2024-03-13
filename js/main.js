@@ -1,3 +1,5 @@
+
+
 (function ($) {
   "use strict";
   var count = 1;
@@ -689,13 +691,6 @@ var modal = (function () {
   };
 })();
 
-$(document).ready(function () {
-  // When a file is selected
-  $("#resume").change(function () {
-    var fileName = $(this).val().split("\\").pop(); // Getting only the file name
-    $("#file-name").text(fileName !== "" ? fileName : "No file selected");
-  });
-});
 
 function applyTransformations() {
   // $(".small-card").css("opacity","1");
@@ -809,12 +804,7 @@ $(document).ready(function () {
     $("#TEAM-HOLDER").show();
     console.log("hello");
     $("#TEAM-CARDS").css("opacity", "1");
-    $("html, body").animate(
-      {
-        scrollTop: $("#TEAM-HOLDER").offset().top - 40,
-      },
-      100
-    );
+  
   });
 });
 
@@ -828,12 +818,6 @@ $(document).on("click", "#backButton", function () {
   $("#services").show();
   $("#main-content-service").show();
 
-  // $("html, body").animate(
-  //   {
-  //     scrollTop: $("#services_section").offset().top,
-  //   },
-  //   1000
-  // );
 
   // Retrieve scroll position for the corresponding card
   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
@@ -872,7 +856,7 @@ $(document).on("click", "#backButton", function () {
     );
   }
 
-  //   $("#services_section").css("padding-top", "200px");
+  
 });
 
 $(document).on("click", "#team-back-button", function () {
@@ -970,7 +954,7 @@ function draw() {
     for (var j = 0, x = stars.length; j < x; j++) {
       var starII = stars[j];
       if (distance(starI, starII) < 150) {
-        //ctx.globalAlpha = (1 / 150 * distance(starI, starII).toFixed(1));
+       
         ctx.lineTo(starII.x, starII.y);
       }
     }
@@ -1021,28 +1005,3 @@ function tick() {
 }
 
 tick();
-
-
-
-  // $("#hiringForm").submit(function(event) {
-  //   var errorMessage = "";
-
-  //   // Validate email
-  //   var email = $("#hiringEmail").val();
-  //   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-  //     errorMessage += "Invalid email format. <br>";
-  //   }
-
-  //   // Validate phone number (basic check for digits)
-  //   var phone = $("#hiringPhoneNumber").val();
-  //   if (!/^\d{10}$/.test(phone)) {
-  //     errorMessage += "Invalid phone number format (must be 10 digits). <br>";
-  //   }
-
-
-  //   // Display error message if any
-  //   if (errorMessage) {
-  //     $("#error-message").html(errorMessage);
-  //     event.preventDefault(); // Prevent form submission
-  //   }
-  // });

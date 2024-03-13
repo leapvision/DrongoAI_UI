@@ -230,38 +230,36 @@
                       <h1 id="image-text">AI</h1>
                     </div>
                     <div class="small-card image-card " style="background-image: url('images/services/S1/S-1.png');">
-                      <!-- <div class="floating-cards-s1 overlay ">
-                              <div class="overlay-text"><br>NLP</div>
-                            </div> -->
+
                     </div>
                     <div class="small-card image-card floating-cards-s1"
                       style="background-image: url('images/services/S1/S-2.png');">
                       <div class="floating-cards-s1 overlay ">
-                        <!-- <div class="overlay-text">Computer Vision</div> -->
+
                       </div>
                     </div>
                     <div class="small-card image-card floating-cards-s1"
                       style="background-image: url('images/services/S1/S-3.png');">
                       <div class="floating-cards-s1 overlay ">
-                        <!-- <div class="overlay-text"><br>Robotics</div> -->
+
                       </div>
                     </div>
                     <div class="small-card image-card floating-cards-s1"
                       style="background-image: url('images/services/S1/S-4.png');">
                       <div class="floating-cards-s1 overlay ">
-                        <!-- <div class="overlay-text">Analytics & Visualization</div> -->
+
                       </div>
                     </div>
                     <div class="small-card image-card floating-cards-s1"
                       style="background-image: url('images/services/S1/S-5.png');">
                       <div class="floating-cards-s1 overlay ">
-                        <!-- <div class="overlay-text">Numerical Data</div> -->
+
                       </div>
                     </div>
                     <div class="small-card image-card floating-cards-s1"
                       style="background-image: url('images/services/S1/S-6.png');">
                       <div class="floating-cards-s1 overlay ">
-                        <!-- <div class="overlay-text">Speech & Sound</div> -->
+
                       </div>
                     </div>
 
@@ -480,28 +478,6 @@
     <div class="section-wrapper block content-1170 center-relative">
       <div class="content-wrapper">
 
-        <!-- <div class="member member-left">
-                <img
-                  src="images/about_01.png"
-                  alt=""
-                  data-threshold="0 0"
-                  data-jarallax-element="60 0"
-                />
-                <div class="member-info">
-                  <p class="member-postition">WHAT SETS US APART</p>
-                  <h5 class="member-name">Your problem becomes our problem</h5>
-                  <div class="member-content">
-                    <p>
-                      Once we dive into our Clients’ challenges, it is no longer
-                      theirs. Challenges are jet-fuel to our tech & design
-                      obsessed creative engines. And our track record proudly
-                      shows how impeccable all our missions with our Clients’
-                      have been.
-                    </p>
-                
-                  </div>
-                </div>
-              </div> -->
         <br />
         <div class="member big-screen member-right">
           <div class="member-info">
@@ -738,44 +714,51 @@
     </div>
     <div class="modal_info">
       <div class="hiring-form">
+        
+        
+        
         <form id="hiringForm" method="POST" action="mail.php" enctype="multipart/form-data">
           <p>
-            <!-- <label for="hiringName">Name:</label> -->
-            <input id="hiringName" type="text" name="hiring-name" placeholder="Name" required />
+              <input id="hiringName" type="text" name="hiring-name" placeholder="Name" required />
           </p>
           <p>
-            <!-- <label for="hiringEmail">Email:</label> -->
-            <input id="hiringEmail" type="email" name="hiring-email" placeholder="Email" required />
+              <input id="hiringEmail" type="email" name="hiring-email" placeholder="Email" required />
           </p>
           <p>
-            <!-- <label for="hiringPhoneNumber">Phone Number:</label> -->
-            <input id="hiringPhoneNumber" type="text" name="hiring-phone-number" placeholder="Phone Number" required
-              pattern="[0-9]{10}" title="Please enter a 10-digit phone number (numbers only)" />
+              <input id="hiringPhoneNumber" type="text" name="hiring-phone-number" placeholder="Phone Number" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number (numbers only)" />
           </p>
+          <p>
+              <textarea id="message" name="your-message" placeholder="Message" required></textarea>
+          </p>
+          <p>
+              <select id="roles" name="roles" required>
+                  <option value="" disabled selected>Select a Role</option>
+                  <option value="developer">Developer</option>
+                  <option value="designer">Designer</option>
+                  <option value="manager">Manager</option>
+              </select>
+          </p>
+          <p>
+              <!-- <input id="resume" type="file" name="resume" accept=".pdf" style="display: none;">
+              <label for="resume" id="resume-upload">Upload Your Resume (PDF only)</label>
+              <div id="file-name">No file selected</div> -->
+               <!-- <div id="error-message"></div> -->
+               <label for="file-input">Upload Resume</label>
+               <input type="file" id="file-input" name="file-input" accept=".pdf">
+               
 
-          <p>
-            <!-- <label for="message">Message:</label> -->
-            <textarea id="message" name="your-message" placeholder="Message" required></textarea>
-          </p>
-          <p>
-            <!-- <label for="roles">Select Role:</label> -->
-            <select id="roles" name="roles" required>
-              <option value="" disabled selected>Select a Role</option>
-              <option value="developer">Developer</option>
-              <option value="designer">Designer</option>
-              <option value="manager">Manager</option>
-            </select>
-          </p>
-          <p>
-            <input id="resume" type="file" name="resume" accept=".pdf" style="display: none;">
-            <label for="resume" id="resume-upload">Upload Your Resume (PDF only)</label>
-          <div id="file-name">No file selected</div>
+               
+</p>
+               <p>
+               
           </p>
           <p class="hiring-submit-holder">
-            <input type="submit" value="APPLY" />
+              <input type="submit" value="APPLY" />
           </p>
           <div id="error-message"></div>
-        </form>
+      </form>
+      
+      
       </div>
 
 
@@ -792,16 +775,7 @@
           </h2>
           <h3 class="medium-text contact-text">Let's Talk</h3>
           <div class="social-holder">
-            <!-- <div class="social-handle">
-                    <a href="#" target="_blank">
-                      <span class="fa fa-facebook"></span>
-                    </a>
-                  </div>
-                  <div class="social-handle">
-                    <a href="#" target="_blank">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </div> -->
+
             <div class="social-handle">
               <div class="social-handle">
                 <a href="https://www.linkedin.com/company/42856071" target="_blank">
@@ -826,109 +800,27 @@
           <div class="contact-form">
             <form id="contactForm">
               <p>
-                <input id="name" type="text" name="your-name" placeholder="Name" />
+                  <input id="name" type="text" name="your-name" placeholder="Name" required />
               </p>
               <p>
-                <input id="contact-email" type="email" name="your-email" placeholder="Email" />
+                  <input id="contact-email" type="email" name="your-email" placeholder="Email" required />
               </p>
               <p>
-                <input id="subject" type="text" name="your-subject" placeholder="Subject" />
+                  <input id="subject" type="text" name="your-subject" placeholder="Subject" required />
               </p>
+              
               <p>
-                <textarea id="message" name="your-message" placeholder="Message" modal></textarea>
+                  <textarea id="message" name="your-message" placeholder="Message" required></textarea>
               </p>
               <p class="contact-submit-holder">
-                <input type="submit" value="SEND" />
+                  <input type="submit" value="SEND" />
               </p>
-            </form>
+          </form>
+          
           </div>
         </div>
 
-        <!-- <div
-                class="one_half last"
-                id="hiringFormContainer"
-                style="display: none"
-              >
-                <div class="hiring-form">
-                  <form id="hiringForm">
-                    <p>
-                      <input
-                        id="hiringName"
-                        type="text"
-                        name="hiring-name"
-                        placeholder="Name"
-                      />
-                    </p>
-                    <p>
-                      <input
-                        id="hiringEmail"
-                        type="email"
-                        name="hiring-email"
-                        placeholder="Email"
-                      />
-                    </p>
-                    <p>
-                      <input
-                        id="hiringPhoneNumber"
-                        type="text"
-                        name="hiring-phone-number"
-                        placeholder="Phone Number"
-                      /><div class="social-handle">
-               <a href="#" target="_blank">
-                <span class="fa fa-facebook"></span>
-              </a>
-            </div>
-            <div class="social-handle">
-              <a href="#" target="_blank">
-                <span class="fa fa-twitter"></span>
-              </a> 
-            </div>
-                    </p>
-                    <p>
-                      <select
-                        id="roles"
-                        name="roles"asurable impact.
 
-
-                        aria-placeholder="Select Role"
-                      >
-                        <option value="" disabled selected>
-                          Select a Role
-                        </option>
-                        <option value="developer">Developer</option>
-                        <option value="designer">Designer</option>
-                        <option value="manager">Manager</option>
-                      </select>
-                    </p>
-                    <p>
-                      
-                     <input
-                        id="resume"
-                        type="file"
-                        name="resume"
-                        accept=".pdf"
-                        placeholder="Resume (PDF only)"
-                      /> 
-                   
-                      <input id="resume" type="file" name="resume" accept=".pdf" placeholder="Resume (PDF only)">
-                     
-                    </p>
-                   
-                    <p>
-                      <textarea
-                        id="message"
-                        name="your-message"
-                        placeholder="Message"
-                      ></textarea>
-                    </p>
-                    <p class="hiring-submit-holder">
-                      <input type="submit" value="APPLY" />
-                      
-                    </p>
-                   
-                  </form>
-                </div>
-              </div> -->
 
         <div class="clear"></div>
 
@@ -1001,6 +893,8 @@
   <script src="js/jquery.sticky-kit.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/validate.js"></script>
+
+
 </body>
 
 </html>
