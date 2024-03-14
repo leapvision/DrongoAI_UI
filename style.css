@@ -3894,7 +3894,7 @@ button.modal_close span:after {
 {
   opacity: 0;
   transition: opacity 0.8s;
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
 
 .team-cards-holder {

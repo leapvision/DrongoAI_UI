@@ -37,27 +37,27 @@
 //     }
 // }
 
-if (isset($_POST['submit'])) {
-    print($_POST)
-    if ($_POST['submit'] == 'APPLY'){
-        print("Application form")
-        $name = $_POST['hiring-name'];
-        $email = $_POST['hiring-email'];
-        $phone = $_POST['hiring-phone-number'];
-        $message = $_POST['your-message'];
-        $role = $_POST['roles'];
-        print($_FILES)
-        // $resumePDF = $_FILES['resume']['tmp_name'];
-        // print($resumePDF)
-        // $resume = file_get_contents($resumePDF);
-        // $resume = base64_encode($resume);
-        // $resume = chunk_split($resume);
-        $subject = "Application for $role - $name";
-        $message = "Name: $name\nEmail: $email\nPhone: $phone\nRole: $role\nMessage: $message";
-        sendEmail($email, $subject, $message);
-        print("Mail sent")
-    }
-}
+// if (isset($_POST['submit'])) {
+//     print($_POST)
+//     if ($_POST['submit'] == 'APPLY'){
+//         print("Application form")
+//         $name = $_POST['hiring-name'];
+//         $email = $_POST['hiring-email'];
+//         $phone = $_POST['hiring-phone-number'];
+//         $message = $_POST['your-message'];
+//         $role = $_POST['roles'];
+//         print($_FILES)
+//         // $resumePDF = $_FILES['resume']['tmp_name'];
+//         // print($resumePDF)
+//         // $resume = file_get_contents($resumePDF);
+//         // $resume = base64_encode($resume);
+//         // $resume = chunk_split($resume);
+//         $subject = "Application for $role - $name";
+//         $message = "Name: $name\nEmail: $email\nPhone: $phone\nRole: $role\nMessage: $message";
+//         sendEmail($email, $subject, $message);
+//         print("Mail sent")
+//     }
+// }
 
 // sendEmail("hellojaikrishna@gmail.com","hello","hello")
 function sendEmail($mail_to, $mail_subject, $mail_body){
