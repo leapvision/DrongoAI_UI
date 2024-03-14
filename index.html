@@ -214,13 +214,8 @@
                 <h1>AI/ML</h1>
                 <div class="info-text">
                   <p class="portfolio-text">
-                    Unlock your business potential with DrongoAI's cutting-edge
-                    AI/ML services. Our expert team delivers tailored solutions
-                    for automation, insights, and customer experiences. From
-                    concept to deployment, we exceed expectations with quality,
-                    scalability, and performance. Trust us to integrate
-                    seamlessly into your infrastructure and drive measurable
-                    results. Harness the power of AI with DrongoAI.</p>
+                    Whether you're looking to automate processes, gain valuable insights from your data, or enhance customer experiences, we have the expertise in providing cutting-edge AI/ML development services to bring your vision to life. From concept to deployment, we work closely with you to understand your goals and deliver custom AI solutions that exceed expectations.
+</p>
                 </div>
               </div>
               <div class="box box3">
@@ -281,12 +276,8 @@
                 <h1>WEB DEVELOPMENT</h1>
                 <div class="info-text">
                   <p class="portfolio-text">
-                    Crafting captivating websites for your digital success. From
-                    startups to corporations, we bring your vision to life. Our
-                    expertise includes responsive design, e-commerce, and custom
-                    applications. With a focus on quality and performance,
-                    satisfaction is guaranteed. Partner with us for innovative web
-                    solutions. Unlock your online potential today.</p>
+                    Our team of experienced developers combine technical expertise with creative flair to deliver stunning, user-friendly websites that captivate audiences and drive results. Whether you're a startup looking to establish your online presence or a large enterprise seeking to revamp your web presence, we have the skills and resources to bring your vision to life. We leverage the latest technologies and best practices to deliver web experiences that stand out from the crowd.
+                  </p>
                 </div>
               </div>
               <div class="box box3">
@@ -326,15 +317,8 @@
                 <h1>APPLICATION DEVELOPMENT</h1>
                 <div class="info-text">
                   <p class="portfolio-text">
-                    Unlock business potential with DrongoAI's bespoke applications.
-                    Our seasoned team delivers end-to-end development tailored to
-                    your needs. Whether mobile, desktop, or cross-platform, we bring
-                    expertise to every project. Quality, security, and performance
-                    are our priorities, ensuring seamless user experiences. We
-                    prioritize innovation and agility, adapting to your evolving
-                    business needs. Partner with DrongoAI for reliable,
-                    forward-thinking development that drives success. Contact us
-                    today to discuss your goals and discover the difference.</p>
+                    Whether you need a mobile app to engage customers on the go, a web application to streamline internal processes, or a cross-platform solution to reach audiences across devices, we have the expertise to bring your ideas to life. From concept to deployment, we work closely with you to understand your objectives and deliver intuitive, scalable applications that exceed expectations.
+</p>
                 </div>
               </div>
               <div class="box box3">
@@ -714,53 +698,38 @@
     </div>
     <div class="modal_info">
       <div class="hiring-form">
-        
-        
-        
-        <form id="hiringForm" id="contactForm" action="https://formsubmit.co/373219a0ebdaa8f54a3bfc2b1ece29e5" method="POST">
-          <p>
-              <input id="hiringName" type="text" name="hiring-name" placeholder="Name" required />
-          </p>
-          <p>
-              <input id="hiringEmail" type="email" name="hiring-email" placeholder="Email" required />
-          </p>
-          <p>
-              <input id="hiringPhoneNumber" type="text" name="hiring-phone-number" placeholder="Phone Number" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number (numbers only)" />
-          </p>
-          <p>
-              <textarea id="message" name="your-message" placeholder="Message" required></textarea>
-          </p>
-          <p>
-              <select id="roles" name="roles" required>
-                  <option value="" disabled selected>Select a Role</option>
-                  <option value="developer">Developer</option>
-                  <option value="designer">Designer</option>
-                  <option value="manager">Manager</option>
-              </select>
-          </p>
-          <p>
-              <!-- <input id="resume" type="file" name="resume" accept=".pdf" style="display: none;">
-              <label for="resume" id="resume-upload">Upload Your Resume (PDF only)</label>
-              <div id="file-name">No file selected</div> -->
-               <!-- <div id="error-message"></div> -->
-               <label for="file-input">Upload Resume</label>
-               <input type="file" id="file-input" name="file-input" accept=".pdf">
-
-
-               
-</p>
-               <p>
-               
-          </p>
-          <p class="hiring-submit-holder">
-              <input type="submit" value="APPLY" />
-          </p>
-          <div id="error-message"></div>
-      </form>
-      
-      
-      </div>
-
+        <form id="hiringForm" id="contactForm" method="POST" enctype="multipart/form-data">
+            <p>
+                <input id="hiringName" type="text" name="hiring-name" placeholder="Name" required />
+            </p>
+            <p>
+                <input id="hiringEmail" type="email" name="hiring-email" placeholder="Email" required />
+            </p>
+            <p>
+                <input id="hiringPhoneNumber" type="text" name="hiring-phone-number" placeholder="Phone Number" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number (numbers only)" />
+            </p>
+            <p>
+                <textarea id="message" name="your-message" placeholder="Message" required></textarea>
+            </p>
+            <p>
+                <select id="roles" name="roles" required>
+                    <option value="" disabled selected>Select a Role</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="manager">Manager</option>
+                </select>
+            </p>
+            <p>
+                <label for="file-input">Upload Resume (PDF only)</label>
+                <input type="file" id="file-input" name="file-input" accept=".pdf" required>
+            </p>
+            <p class="hiring-submit-holder">
+                <input type="submit" value="APPLY" />
+            </p>
+            <div id="error-message"></div>
+        </form>
+    </div>
+    
 
 
 
@@ -798,7 +767,9 @@
 
         <div class="one_half last" id="contactFormContainer">
           <div class="contact-form">
-            <form id="contactForm" action="https://formsubmit.co/373219a0ebdaa8f54a3bfc2b1ece29e5" method="POST" >
+          
+            <form id="contactForm" action="php/mail.php" method="POST">
+
               <p>
                   <input id="name" type="text" name="your-name" placeholder="Name" required />
               </p>
@@ -816,7 +787,6 @@
                   <input type="submit" value="SEND" />
               </p>
           </form>
-          
           </div>
         </div>
 
