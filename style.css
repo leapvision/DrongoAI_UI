@@ -1248,6 +1248,20 @@ h1.big-text {
   font-size: 44px;
   color: black;
   line-height: 130%;
+  /* text-align: center; */
+  line-height: 1;
+}
+
+.portfolio-heading-holder
+{
+  text-align: center;
+}
+
+.portfolio-heading-holder p
+{
+  font-size: 18px;
+  
+  line-height: 1;
 }
 
 .portfolio-load-content-holder {
@@ -2562,7 +2576,7 @@ footer .footer-social-divider:before {
 }
     #image-text
     {
-      font-size: 10rem;
+      font-size: 7rem;
       color: var(--primary-color);
 
     }
@@ -2604,7 +2618,7 @@ footer .footer-social-divider:before {
             .small-card{
                 
                 
-                width: 10vmin;
+                width: 8vmin;
                 border-radius: 50%;
                 left: 50%;
                 top: 50%;
@@ -2800,6 +2814,17 @@ footer .footer-social-divider:before {
     max-width: 95%;
   }
 }
+
+
+@media screen and (max-width: 1440px) {
+
+  h1.big-text {
+    font-size: 65px;
+  }
+
+}
+
+
 
 @media screen and (max-width: 1366px) {
   .blog-holder-scode {
