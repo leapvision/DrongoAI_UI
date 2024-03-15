@@ -22,7 +22,7 @@
   fitVideo();
   firstSectionActiveFix();
   setMenu();
-  SendMail();
+  // SendMail();
 
   //Show-Hide header sidebar
   $("#toggle").on("click", multiClickFunctionStop);
@@ -214,112 +214,279 @@
     });
   }
 
-  // function portfolioItemContentLoadOnClick() {
-  //   $(".ajax-portfolio").on("click", function (e) {
-  //     e.preventDefault();
-  //     var portfolioItemID = $(this).data("id");
-  //     $(this).addClass("animate-plus");
-  //     if ($("#pcw-" + portfolioItemID).length) {
-  //       //Check if is allready loaded
-  //       $("html, body").animate(
-  //         { scrollTop: $("#portfolio-wrapper").offset().top },
-  //         400
-  //       );
-  //       setTimeout(function () {
-  //         $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-  //         setTimeout(function () {
-  //           $("#pcw-" + portfolioItemID).addClass("show");
-  //           $(".portfolio-load-content-holder").addClass("show");
-  //           $(".ajax-portfolio").removeClass("animate-plus");
-  //           $("#portfolio-grid, .more-posts-portfolio-holder").hide();
-  //         }, 300);
-  //       }, 500);
-  //       $("#pcw-" + portfolioItemID).imagesLoaded(function () {
-  //         imageSliderSettings(portfolioItemID);
-  //     });
-  //     } else {
 
-  //       loadPortfolioItemContent(portfolioItemID);
-  //     }
-  //   });
-  // }
 
-  // function loadPortfolioItemContent(portfolioItemID) {
-  //   $.ajax({
-  //     url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
-  //     type: "GET",
-  //     success: function (html) {
-  //       var getPortfolioItemHtml = $(html)
-  //         .find(".portfolio-item-wrapper")
-  //         .html();
-  //       $(".portfolio-load-content-holder").append(
-  //         '<div id="pcw-' +
-  //           portfolioItemID +
-  //           '" class="portfolio-content-wrapper">' +
-  //           getPortfolioItemHtml +
-  //           "</div>"
-  //       );
+// function loadcocein()
+// {
+ 
+//   !(function (e) {
+//     if ("object" == typeof exports && "undefined" != typeof module)
+//       module.exports = e();
+//     else if ("function" == typeof define && define.amd) define([], e);
+//     else {
+//       var t;
+//       (t =
+//         "undefined" != typeof window
+//           ? window
+//           : "undefined" != typeof global
+//           ? global
+//           : "undefined" != typeof self
+//           ? self
+//           : this),
+//         (t.Cocoen = e());
+//     }
+//   })
+  
+//   (function () {
+//     return (function e(t, n, i) {
+//       function s(o, a) {
+//         if (!n[o]) {
+//           if (!t[o]) {
+//             var l = "function" == typeof require && require;
+//             if (!a && l) return l(o, !0);
+//             if (r) return r(o, !0);
+//             var d = new Error("Cannot find module '" + o + "'");
+//             throw ((d.code = "MODULE_NOT_FOUND"), d);
+//           }
+//           var h = (n[o] = { exports: {} });
+//           t[o][0].call(
+//             h.exports,
+//             function (e) {
+//               var n = t[o][1][e];
+//               return s(n ? n : e);
+//             },
+//             h,
+//             h.exports,
+//             e,
+//             t,
+//             n,
+//             i
+//           );
+//         }
+//         return n[o].exports;
+//       }
+//       for (
+//         var r = "function" == typeof require && require, o = 0;
+//         o < i.length;
+//         o++
+//       )
+//         s(i[o]);
+//       return s;
+//     })(
+//       {
+//         1: [
+//           function (e, t, n) {
+//             "use strict";
+//             function i(e, t) {
+//               if (!(e instanceof t))
+//                 throw new TypeError("Cannot call a class as a function");
+//             }
+//             var s =
+//                 Object.assign ||
+//                 function (e) {
+//                   for (var t = 1; t < arguments.length; t++) {
+//                     var n = arguments[t];
+//                     for (var i in n)
+//                       Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+//                   }
+//                   return e;
+//                 },
+//               r = (function () {
+//                 function e(e, t) {
+//                   for (var n = 0; n < t.length; n++) {
+//                     var i = t[n];
+//                     (i.enumerable = i.enumerable || !1),
+//                       (i.configurable = !0),
+//                       "value" in i && (i.writable = !0),
+//                       Object.defineProperty(e, i.key, i);
+//                   }
+//                 }
+//                 return function (t, n, i) {
+//                   return n && e(t.prototype, n), i && e(t, i), t;
+//                 };
+//               })(),
+//               o = (function () {
+//                 function e(t, n) {
+//                   i(this, e),
+//                     (this.options = s({}, e.defaults, n)),
+//                     (this.element = t || document.querySelector(".cocoen")),
+//                     this.init();
+//                 }
+//                 return (
+//                   r(e, [
+//                     {
+//                       key: "init",
+//                       value: function () {
+//                         this.createElements(),
+//                           this.addEventListeners(),
+//                           this.dimensions();
+//                       },
+//                     },
+//                     {
+//                       key: "createElements",
+//                       value: function () {
+//                         var e = document.createElement("span");
+//                         (e.className = this.options.dragElementSelector.replace(
+//                           ".",
+//                           ""
+//                         )),
+//                           this.element.appendChild(e);
+//                         var t = document.createElement("div"),
+//                           n = this.element.querySelector("img:first-child");
+//                         t.appendChild(n.cloneNode(!0)),
+//                           n.parentNode.replaceChild(t, n),
+//                           (this.dragElement = this.element.querySelector(
+//                             this.options.dragElementSelector
+//                           )),
+//                           (this.beforeElement =
+//                             this.element.querySelector("div:first-child")),
+//                           (this.beforeImage =
+//                             this.beforeElement.querySelector("img"));
+//                       },
+//                     },
+//                     {
+//                       key: "addEventListeners",
+//                       value: function () {
+//                         this.element.addEventListener(
+//                           "click",
+//                           this.onTap.bind(this)
+//                         ),
+//                           this.element.addEventListener(
+//                             "mousemove",
+//                             this.onDrag.bind(this)
+//                           ),
+//                           this.element.addEventListener(
+//                             "touchmove",
+//                             this.onDrag.bind(this)
+//                           ),
+//                           this.dragElement.addEventListener(
+//                             "mousedown",
+//                             this.onDragStart.bind(this)
+//                           ),
+//                           this.dragElement.addEventListener(
+//                             "touchstart",
+//                             this.onDragStart.bind(this)
+//                           ),
+//                           window.addEventListener(
+//                             "mouseup",
+//                             this.onDragEnd.bind(this)
+//                           ),
+//                           window.addEventListener(
+//                             "resize",
+//                             this.dimensions.bind(this)
+//                           );
+//                       },
+//                     },
+//                     {
+//                       key: "dimensions",
+//                       value: function () {
+//                         (this.elementWidth = parseInt(
+//                           window.getComputedStyle(this.element).width,
+//                           10
+//                         )),
+//                           (this.elementOffsetLeft =
+//                             this.element.getBoundingClientRect().left +
+//                             document.body.scrollLeft),
+//                           (this.beforeImage.style.width =
+//                             this.elementWidth + "px"),
+//                           (this.dragElementWidth = parseInt(
+//                             window.getComputedStyle(this.dragElement).width,
+//                             10
+//                           )),
+//                           (this.minLeftPos = this.elementOffsetLeft + 10),
+//                           (this.maxLeftPos =
+//                             this.elementOffsetLeft +
+//                             this.elementWidth -
+//                             this.dragElementWidth -
+//                             10);
+//                       },
+//                     },
+//                     {
+//                       key: "onTap",
+//                       value: function (e) {
+//                         e.preventDefault(),
+//                           (this.leftPos = e.pageX ? e.pageX : e.touches[0].pageX),
+//                           this.requestDrag();
+//                       },
+//                     },
+//                     {
+//                       key: "onDragStart",
+//                       value: function (e) {
+//                         e.preventDefault();
+//                         var t = e.pageX ? e.pageX : e.touches[0].pageX,
+//                           n =
+//                             this.dragElement.getBoundingClientRect().left +
+//                             document.body.scrollLeft;
+//                         (this.posX = n + this.dragElementWidth - t),
+//                           (this.isDragging = !0);
+//                       },
+//                     },
+//                     {
+//                       key: "onDragEnd",
+//                       value: function (e) {
+//                         e.preventDefault(), (this.isDragging = !1);
+//                       },
+//                     },
+//                     {
+//                       key: "onDrag",
+//                       value: function (e) {
+//                         e.preventDefault(),
+//                           this.isDragging &&
+//                             ((this.moveX = e.pageX
+//                               ? e.pageX
+//                               : e.touches[0].pageX),
+//                             (this.leftPos =
+//                               this.moveX + this.posX - this.dragElementWidth),
+//                             this.requestDrag());
+//                       },
+//                     },
+//                     {
+//                       key: "drag",
+//                       value: function () {
+//                         this.leftPos < this.minLeftPos
+//                           ? (this.leftPos = this.minLeftPos)
+//                           : this.leftPos > this.maxLeftPos &&
+//                             (this.leftPos = this.maxLeftPos);
+//                         var e =
+//                           this.leftPos +
+//                           this.dragElementWidth / 2 -
+//                           this.elementOffsetLeft;
+//                         e /= this.elementWidth;
+//                         var t = 100 * e + "%";
+//                         (this.dragElement.style.left = t),
+//                           (this.beforeElement.style.width = t),
+//                           this.options.dragCallback &&
+//                             this.options.dragCallback(e);
+//                       },
+//                     },
+//                     {
+//                       key: "requestDrag",
+//                       value: function () {
+//                         window.requestAnimationFrame(this.drag.bind(this));
+//                       },
+//                     },
+//                   ]),
+//                   e
+//                 );
+//               })();
+//             (o.defaults = {
+//               dragElementSelector: ".cocoen-drag",
+//               dragCallback: null,
+//             }),
+//               (t.exports = o);
+//           },
+//           {},
+//         ],
+//       },
+//       {},
+//       [1]
+//     )(1);
+//   });
+// }
 
-  //       if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
-  //         $("#pcw-" + portfolioItemID).prepend(
-  //           '<div class="close-icon"></div>'
-  //         );
-  //       }
-  //       $("html, body").animate(
-  //         { scrollTop: $("#portfolio-wrapper").offset().top },
-  //         400
-  //       );
-  //       setTimeout(function () {
-  //         $("#pcw-" + portfolioItemID).imagesLoaded(function () {
 
-  //           console.log('Inside imagesLoaded' , portfolioItemID);
-  //           skillsFill();
-  //           imageSliderSettings(portfolioItemID);
-  //           $(".site-content").fitVids(); //Fit Video
-  //           $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-  //           setTimeout(function () {
-  //             $("#pcw-" + portfolioItemID).addClass("show");
-  //             $(".portfolio-load-content-holder").addClass("show");
-  //             $(".ajax-portfolio").removeClass("animate-plus");
-  //             $("#portfolio-grid").hide();
-  //           }, 300);
-  //           $(".close-icon").on("click", function (e) {
-  //             var portfolioReturnItemID = $(this)
-  //               .closest(".portfolio-content-wrapper")
-  //               .attr("id")
-  //               .split("-")[1];
-  //             $(".portfolio-load-content-holder").addClass("viceversa");
-  //             $("#portfolio-grid, .more-posts-portfolio-holder").css(
-  //               "display",
-  //               "block"
-  //             );
-  //             setTimeout(function () {
-  //               $("#pcw-" + portfolioReturnItemID).removeClass("show");
-  //               $(".portfolio-load-content-holder").removeClass(
-  //                 "viceversa show"
-  //               );
-  //               $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
-  //                 "hide"
-  //               );
-  //             }, 300);
-  //             setTimeout(function () {
-  //               $("html, body").animate(
-  //                 {
-  //                   scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-  //                     .top,
-  //                 },
-  //                 400
-  //               );
-  //             }, 500);
 
-  //           });
 
-  //         });
-  //       }, 500);
-  //     },
-  //   });
-  //   return false;
-  // }
   function portfolioItemContentLoadOnClick() {
     $(".ajax-portfolio").on("click", function (e) {
       e.preventDefault();
@@ -338,6 +505,7 @@
             $(".portfolio-load-content-holder").addClass("show");
             $(".ajax-portfolio").removeClass("animate-plus");
             $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+           
           }, 300);
         }, 500);
       } else {
@@ -345,6 +513,15 @@
       }
     });
   }
+
+
+
+
+
+  
+
+
+
 
   function loadPortfolioItemContent(portfolioItemID) {
     $.ajax({
@@ -361,7 +538,6 @@
             getPortfolioItemHtml +
             "</div>"
         );
-
 
 
 
@@ -396,23 +572,18 @@
             '<div class="close-icon"></div>'
           );
         }
-
+       
         $("html, body").animate(
           { scrollTop: $("#portfolio-wrapper").offset().top},
           400
         );
 
 
-          // Initialize Cocoen plugin:
-          $("#pcw-" + portfolioItemID + " .cocoen").each(function () {
-            var cocoenElement = this;
-            initializeCocoenPlugin(cocoenElement);
-        });
-
         
         setTimeout(function () {
           $("#pcw-" + portfolioItemID).imagesLoaded(function () {
             skillsFill();
+            loadcocein();
             $(".site-content").fitVids(); //Fit Video
             $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
             setTimeout(function () {
@@ -454,6 +625,7 @@
         }, 500);
       },
     });
+    
     return false;
   }
 
@@ -569,11 +741,6 @@
       });
   }
 
-  function isValidEmailAddress(emailAddress) {
-    var pattern =
-      /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
-    return pattern.test(emailAddress);
-  }
 
   function SendMail() {
     $('.contact-form [type="submit"]').on("click", function () {
@@ -635,7 +802,9 @@
 
 
 
-// Modal
+
+
+
 (function () {
   var $content = $(".modal_info").detach();
 
@@ -646,7 +815,43 @@
     $content.addClass("modal_content");
     $(".modal, .modal_overlay").addClass("display");
     $(".open_button").addClass("load");
+
+    // Attach form event listeners when modal is opened
+    attachFormListeners();
   });
+
+  function attachFormListeners() {
+    // Hiring Form AJAX submission
+    $('#hiringForm').submit(function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Disable submit button and show submitting status
+      $('#form-submit').prop('disabled', true).val('Submitting...');
+
+      // Collect form data
+      var formData = new FormData(this);
+
+      // Send form data using AJAX
+      $.ajax({
+        url: this.action,
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          // Alert and enable submit button
+          alert('Form submitted');
+          $('#form-submit').prop('disabled', false).val('APPLY');
+          $('#hiringForm')[0].reset(); // Optionally reset form fields
+        },
+        error: function() {
+          alert('Error occurred while submitting the form.');
+          // Enable submit button and show original text
+          $('#form-submit').prop('disabled', false).val('APPLY');
+        }
+      });
+    });
+  }
 })();
 
 var modal = (function () {
@@ -673,7 +878,6 @@ var modal = (function () {
       var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
       $modal.css({
         top: top + $window.scrollTop(),
-        
         left: $(window).width() < 780 ? "-15px" : left + $window.scrollLeft(),
       });
     },
@@ -682,12 +886,10 @@ var modal = (function () {
 
       $modal
       .css({
-          width: $(window).width() > 1000 ? "30%" : "80%",
-          height: settings.height || "auto",
-          
+        width: $(window).width() > 1000 ? "30%" : "80%",
+        height: settings.height || "auto",
       })
       .appendTo("body");
-  
 
       if (!$(".modal_overlay").length) {
         $('<div class="modal_overlay"/>').appendTo("body");
@@ -704,6 +906,7 @@ var modal = (function () {
     },
   };
 })();
+
 
 
 function applyTransformations() {
@@ -1021,284 +1224,3 @@ function tick() {
 tick();
 
 
-function initializeCocoenPlugin(cocoenElement) {
-  new Cocoen(cocoenElement, {
-      // Customize Cocoen options here if needed
-      // For example:
-      // dragCallback: function (percentage) {
-      //     console.log("Dragged to: " + percentage);
-      // }
-
-      
-
-      
-  });
-}
-
-
-!(function (e) {
-  if ("object" == typeof exports && "undefined" != typeof module)
-    module.exports = e();
-  else if ("function" == typeof define && define.amd) define([], e);
-  else {
-    var t;
-    (t =
-      "undefined" != typeof window
-        ? window
-        : "undefined" != typeof global
-        ? global
-        : "undefined" != typeof self
-        ? self
-        : this),
-      (t.Cocoen = e());
-  }
-})
-
-
-
-
-(function () {
-  return (function e(t, n, i) {
-    function s(o, a) {
-      if (!n[o]) {
-        if (!t[o]) {
-          var l = "function" == typeof require && require;
-          if (!a && l) return l(o, !0);
-          if (r) return r(o, !0);
-          var d = new Error("Cannot find module '" + o + "'");
-          throw ((d.code = "MODULE_NOT_FOUND"), d);
-        }
-        var h = (n[o] = { exports: {} });
-        t[o][0].call(
-          h.exports,
-          function (e) {
-            var n = t[o][1][e];
-            return s(n ? n : e);
-          },
-          h,
-          h.exports,
-          e,
-          t,
-          n,
-          i
-        );
-      }
-      return n[o].exports;
-    }
-    for (
-      var r = "function" == typeof require && require, o = 0;
-      o < i.length;
-      o++
-    )
-      s(i[o]);
-    return s;
-  })(
-    {
-      1: [
-        function (e, t, n) {
-          "use strict";
-          function i(e, t) {
-            if (!(e instanceof t))
-              throw new TypeError("Cannot call a class as a function");
-          }
-          var s =
-              Object.assign ||
-              function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                  var n = arguments[t];
-                  for (var i in n)
-                    Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
-                }
-                return e;
-              },
-            r = (function () {
-              function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                  var i = t[n];
-                  (i.enumerable = i.enumerable || !1),
-                    (i.configurable = !0),
-                    "value" in i && (i.writable = !0),
-                    Object.defineProperty(e, i.key, i);
-                }
-              }
-              return function (t, n, i) {
-                return n && e(t.prototype, n), i && e(t, i), t;
-              };
-            })(),
-            o = (function () {
-              function e(t, n) {
-                i(this, e),
-                  (this.options = s({}, e.defaults, n)),
-                  (this.element = t || document.querySelector(".cocoen")),
-                  this.init();
-              }
-              return (
-                r(e, [
-                  {
-                    key: "init",
-                    value: function () {
-                      this.createElements(),
-                        this.addEventListeners(),
-                        this.dimensions();
-                    },
-                  },
-                  {
-                    key: "createElements",
-                    value: function () {
-                      var e = document.createElement("span");
-                      (e.className = this.options.dragElementSelector.replace(
-                        ".",
-                        ""
-                      )),
-                        this.element.appendChild(e);
-                      var t = document.createElement("div"),
-                        n = this.element.querySelector("img:first-child");
-                      t.appendChild(n.cloneNode(!0)),
-                        n.parentNode.replaceChild(t, n),
-                        (this.dragElement = this.element.querySelector(
-                          this.options.dragElementSelector
-                        )),
-                        (this.beforeElement =
-                          this.element.querySelector("div:first-child")),
-                        (this.beforeImage =
-                          this.beforeElement.querySelector("img"));
-                    },
-                  },
-                  {
-                    key: "addEventListeners",
-                    value: function () {
-                      this.element.addEventListener(
-                        "click",
-                        this.onTap.bind(this)
-                      ),
-                        this.element.addEventListener(
-                          "mousemove",
-                          this.onDrag.bind(this)
-                        ),
-                        this.element.addEventListener(
-                          "touchmove",
-                          this.onDrag.bind(this)
-                        ),
-                        this.dragElement.addEventListener(
-                          "mousedown",
-                          this.onDragStart.bind(this)
-                        ),
-                        this.dragElement.addEventListener(
-                          "touchstart",
-                          this.onDragStart.bind(this)
-                        ),
-                        window.addEventListener(
-                          "mouseup",
-                          this.onDragEnd.bind(this)
-                        ),
-                        window.addEventListener(
-                          "resize",
-                          this.dimensions.bind(this)
-                        );
-                    },
-                  },
-                  {
-                    key: "dimensions",
-                    value: function () {
-                      (this.elementWidth = parseInt(
-                        window.getComputedStyle(this.element).width,
-                        10
-                      )),
-                        (this.elementOffsetLeft =
-                          this.element.getBoundingClientRect().left +
-                          document.body.scrollLeft),
-                        (this.beforeImage.style.width =
-                          this.elementWidth + "px"),
-                        (this.dragElementWidth = parseInt(
-                          window.getComputedStyle(this.dragElement).width,
-                          10
-                        )),
-                        (this.minLeftPos = this.elementOffsetLeft + 10),
-                        (this.maxLeftPos =
-                          this.elementOffsetLeft +
-                          this.elementWidth -
-                          this.dragElementWidth -
-                          10);
-                    },
-                  },
-                  {
-                    key: "onTap",
-                    value: function (e) {
-                      e.preventDefault(),
-                        (this.leftPos = e.pageX ? e.pageX : e.touches[0].pageX),
-                        this.requestDrag();
-                    },
-                  },
-                  {
-                    key: "onDragStart",
-                    value: function (e) {
-                      e.preventDefault();
-                      var t = e.pageX ? e.pageX : e.touches[0].pageX,
-                        n =
-                          this.dragElement.getBoundingClientRect().left +
-                          document.body.scrollLeft;
-                      (this.posX = n + this.dragElementWidth - t),
-                        (this.isDragging = !0);
-                    },
-                  },
-                  {
-                    key: "onDragEnd",
-                    value: function (e) {
-                      e.preventDefault(), (this.isDragging = !1);
-                    },
-                  },
-                  {
-                    key: "onDrag",
-                    value: function (e) {
-                      e.preventDefault(),
-                        this.isDragging &&
-                          ((this.moveX = e.pageX
-                            ? e.pageX
-                            : e.touches[0].pageX),
-                          (this.leftPos =
-                            this.moveX + this.posX - this.dragElementWidth),
-                          this.requestDrag());
-                    },
-                  },
-                  {
-                    key: "drag",
-                    value: function () {
-                      this.leftPos < this.minLeftPos
-                        ? (this.leftPos = this.minLeftPos)
-                        : this.leftPos > this.maxLeftPos &&
-                          (this.leftPos = this.maxLeftPos);
-                      var e =
-                        this.leftPos +
-                        this.dragElementWidth / 2 -
-                        this.elementOffsetLeft;
-                      e /= this.elementWidth;
-                      var t = 100 * e + "%";
-                      (this.dragElement.style.left = t),
-                        (this.beforeElement.style.width = t),
-                        this.options.dragCallback &&
-                          this.options.dragCallback(e);
-                    },
-                  },
-                  {
-                    key: "requestDrag",
-                    value: function () {
-                      window.requestAnimationFrame(this.drag.bind(this));
-                    },
-                  },
-                ]),
-                e
-              );
-            })();
-          (o.defaults = {
-            dragElementSelector: ".cocoen-drag",
-            dragCallback: null,
-          }),
-            (t.exports = o);
-        },
-        {},
-      ],
-    },
-    {},
-    [1]
-  )(1);
-});

@@ -698,7 +698,7 @@
     </div>
     <div class="modal_info">
       <div class="hiring-form">
-        <form id="hiringForm" id="contactForm" method="POST" enctype="multipart/form-data">
+        <form id="hiringForm" id="contactForm" method="POST" enctype="multipart/form-data" action="php/mail.php" >
             <p>
                 <input id="hiringName" type="text" name="hiring-name" placeholder="Name" required />
             </p>
@@ -719,16 +719,23 @@
                     <option value="manager">Manager</option>
                 </select>
             </p>
+            <!-- Commenting out resume upload field -->
+            
             <p>
                 <label for="file-input">Upload Resume (PDF only)</label>
                 <input type="file" id="file-input" name="file-input" accept=".pdf" required>
             </p>
+
+            
+
+           
             <p class="hiring-submit-holder">
-                <input type="submit" value="APPLY" />
+                <input type="submit" value="APPLY" id="form-submit"/>
             </p>
             <div id="error-message"></div>
         </form>
     </div>
+    
     
 
 
@@ -765,30 +772,32 @@
           </div>
         </div>
 
+        
+
+
         <div class="one_half last" id="contactFormContainer">
           <div class="contact-form">
-          
-            <form id="contactForm" action="php/mail.php" method="POST">
-
-              <p>
-                  <input id="name" type="text" name="your-name" placeholder="Name" required />
-              </p>
-              <p>
-                  <input id="contact-email" type="email" name="your-email" placeholder="Email" required />
-              </p>
-              <p>
-                  <input id="subject" type="text" name="your-subject" placeholder="Subject" required />
-              </p>
-              
-              <p>
-                  <textarea id="message" name="your-message" placeholder="Message" required></textarea>
-              </p>
-              <p class="contact-submit-holder">
-                  <input type="submit" value="SEND" />
-              </p>
-          </form>
+              <form id="contactForm" action="php/mail.php" method="POST">
+                  <p>
+                      <input id="name" type="text" name="your-name" placeholder="Name" required />
+                  </p>
+                  <p>
+                      <input id="contact-email" type="email" name="your-email" placeholder="Email" required />
+                  </p>
+                  <p>
+                      <input id="subject" type="text" name="your-subject" placeholder="Subject" required />
+                  </p>
+                  <p>
+                      <textarea id="message" name="your-message" placeholder="Message" required></textarea>
+                  </p>
+                  <p class="contact-submit-holder">
+                      <input type="submit" id="submit-btn" value="SEND" />
+                  </p>
+              </form>
           </div>
-        </div>
+      </div>
+      <div id="status"></div>
+      
 
 
 
@@ -849,7 +858,11 @@
   </footer>
   </div>
 
+
+
   <!--Load JavaScript-->
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/tipper.js"></script>
