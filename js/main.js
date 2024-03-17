@@ -521,8 +521,6 @@
   
 
 
-
-
   function loadPortfolioItemContent(portfolioItemID) {
     $.ajax({
       url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
@@ -538,10 +536,6 @@
             getPortfolioItemHtml +
             "</div>"
         );
-
-
-
-         
 
         // Apply image slider to newly loaded content:
         $("#pcw-" + portfolioItemID + " .image-slider").each(function () {
@@ -572,18 +566,14 @@
             '<div class="close-icon"></div>'
           );
         }
-       
+
         $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top},
+          { scrollTop: $("#portfolio-wrapper").offset().top },
           400
         );
-
-
-        
         setTimeout(function () {
           $("#pcw-" + portfolioItemID).imagesLoaded(function () {
             skillsFill();
-            loadcocein();
             $(".site-content").fitVids(); //Fit Video
             $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
             setTimeout(function () {
@@ -615,7 +605,7 @@
                 $("html, body").animate(
                   {
                     scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-                      .top-100
+                      .top,
                   },
                   400
                 );
@@ -625,9 +615,9 @@
         }, 500);
       },
     });
-    
     return false;
   }
+
 
   function skillsFill() {
     $(".skill-fill").each(function () {
@@ -1038,11 +1028,11 @@ $(document).on("click", "#backButton", function () {
 
   // Retrieve scroll position for the corresponding card
   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
-  var animationDuration = $(window).width() > 1000 ? 1000 : 50;
+  var animationDuration = $(window).width() > 1000 ? 400 : 50;
 
   // Animate scroll to the stored position
-  if (animationDuration >= 1000) {
-    console.log("hello");
+  if (animationDuration >= 400) {
+   
     $("html, body").animate(
       {
         

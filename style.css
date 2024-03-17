@@ -2681,7 +2681,7 @@ footer .footer-social-divider:before {
 /* CSS FOR FADE IN ANIMATION */
 #SERVICES-HOLDER {
   opacity: 0;
-  transition: opacity 3s;
+  transition: opacity 1s;
   padding-top: 3rem;
   height: auto;
   }
