@@ -1315,7 +1315,7 @@ h1.big-text {
   padding-top: 1rem;
   object-fit: contain;
   height: 100%;
-  width: 100%; 
+  width: 82%; 
 
    aspect-ratio: 1/1; 
 }
@@ -4126,7 +4126,7 @@ color: black;
 }
 
 
-
+/* 
 
 .cocoen {
   box-sizing: border-box;
@@ -4159,7 +4159,7 @@ color: black;
 .cocoen>img,
 .cocoen>picture>img {
   display: block;
-  width: 100%;
+  width: 82%;
 }
 
 .cocoen>div:first-child,
@@ -4195,4 +4195,6 @@ picture .cocoen>div {
   width: 14px;
 }
 
+ */
 
+ 
