@@ -4237,7 +4237,7 @@ picture .cocoen>div {
   }
 
   div#comparison figure { 
-      background-image: url('/images/blob.jpeg'); 
+      background-image: url('./images/blob.jpeg'); 
       background-size: cover;
       position: relative;
       font-size: 0;
@@ -4247,7 +4247,7 @@ picture .cocoen>div {
   }
 
   div#comparison figure div { 
-      background-image: url('./images/blob2.jpg');
+      background-image: url('.images/blob2.jpg');
       background-size: cover;
       position: absolute;
       width: 50%; 
