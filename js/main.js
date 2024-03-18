@@ -1,5 +1,3 @@
-
-
 (function ($) {
   "use strict";
   var count = 1;
@@ -12,7 +10,7 @@
   textSliderSettings();
   newsBackgroundImages();
   skillsFill();
-  portfolioItemContentLoadOnClick();
+  // portfolioItemContentLoadOnClick();
 
   fixForMenu();
   singlePostStickyInfo();
@@ -214,410 +212,397 @@
     });
   }
 
+  // function loadcocein()
+  // {
 
+  //   !(function (e) {
+  //     if ("object" == typeof exports && "undefined" != typeof module)
+  //       module.exports = e();
+  //     else if ("function" == typeof define && define.amd) define([], e);
+  //     else {
+  //       var t;
+  //       (t =
+  //         "undefined" != typeof window
+  //           ? window
+  //           : "undefined" != typeof global
+  //           ? global
+  //           : "undefined" != typeof self
+  //           ? self
+  //           : this),
+  //         (t.Cocoen = e());
+  //     }
+  //   })
 
-// function loadcocein()
-// {
- 
-//   !(function (e) {
-//     if ("object" == typeof exports && "undefined" != typeof module)
-//       module.exports = e();
-//     else if ("function" == typeof define && define.amd) define([], e);
-//     else {
-//       var t;
-//       (t =
-//         "undefined" != typeof window
-//           ? window
-//           : "undefined" != typeof global
-//           ? global
-//           : "undefined" != typeof self
-//           ? self
-//           : this),
-//         (t.Cocoen = e());
-//     }
-//   })
-  
-//   (function () {
-//     return (function e(t, n, i) {
-//       function s(o, a) {
-//         if (!n[o]) {
-//           if (!t[o]) {
-//             var l = "function" == typeof require && require;
-//             if (!a && l) return l(o, !0);
-//             if (r) return r(o, !0);
-//             var d = new Error("Cannot find module '" + o + "'");
-//             throw ((d.code = "MODULE_NOT_FOUND"), d);
-//           }
-//           var h = (n[o] = { exports: {} });
-//           t[o][0].call(
-//             h.exports,
-//             function (e) {
-//               var n = t[o][1][e];
-//               return s(n ? n : e);
-//             },
-//             h,
-//             h.exports,
-//             e,
-//             t,
-//             n,
-//             i
-//           );
-//         }
-//         return n[o].exports;
-//       }
-//       for (
-//         var r = "function" == typeof require && require, o = 0;
-//         o < i.length;
-//         o++
-//       )
-//         s(i[o]);
-//       return s;
-//     })(
-//       {
-//         1: [
-//           function (e, t, n) {
-//             "use strict";
-//             function i(e, t) {
-//               if (!(e instanceof t))
-//                 throw new TypeError("Cannot call a class as a function");
-//             }
-//             var s =
-//                 Object.assign ||
-//                 function (e) {
-//                   for (var t = 1; t < arguments.length; t++) {
-//                     var n = arguments[t];
-//                     for (var i in n)
-//                       Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
-//                   }
-//                   return e;
-//                 },
-//               r = (function () {
-//                 function e(e, t) {
-//                   for (var n = 0; n < t.length; n++) {
-//                     var i = t[n];
-//                     (i.enumerable = i.enumerable || !1),
-//                       (i.configurable = !0),
-//                       "value" in i && (i.writable = !0),
-//                       Object.defineProperty(e, i.key, i);
-//                   }
-//                 }
-//                 return function (t, n, i) {
-//                   return n && e(t.prototype, n), i && e(t, i), t;
-//                 };
-//               })(),
-//               o = (function () {
-//                 function e(t, n) {
-//                   i(this, e),
-//                     (this.options = s({}, e.defaults, n)),
-//                     (this.element = t || document.querySelector(".cocoen")),
-//                     this.init();
-//                 }
-//                 return (
-//                   r(e, [
-//                     {
-//                       key: "init",
-//                       value: function () {
-//                         this.createElements(),
-//                           this.addEventListeners(),
-//                           this.dimensions();
-//                       },
-//                     },
-//                     {
-//                       key: "createElements",
-//                       value: function () {
-//                         var e = document.createElement("span");
-//                         (e.className = this.options.dragElementSelector.replace(
-//                           ".",
-//                           ""
-//                         )),
-//                           this.element.appendChild(e);
-//                         var t = document.createElement("div"),
-//                           n = this.element.querySelector("img:first-child");
-//                         t.appendChild(n.cloneNode(!0)),
-//                           n.parentNode.replaceChild(t, n),
-//                           (this.dragElement = this.element.querySelector(
-//                             this.options.dragElementSelector
-//                           )),
-//                           (this.beforeElement =
-//                             this.element.querySelector("div:first-child")),
-//                           (this.beforeImage =
-//                             this.beforeElement.querySelector("img"));
-//                       },
-//                     },
-//                     {
-//                       key: "addEventListeners",
-//                       value: function () {
-//                         this.element.addEventListener(
-//                           "click",
-//                           this.onTap.bind(this)
-//                         ),
-//                           this.element.addEventListener(
-//                             "mousemove",
-//                             this.onDrag.bind(this)
-//                           ),
-//                           this.element.addEventListener(
-//                             "touchmove",
-//                             this.onDrag.bind(this)
-//                           ),
-//                           this.dragElement.addEventListener(
-//                             "mousedown",
-//                             this.onDragStart.bind(this)
-//                           ),
-//                           this.dragElement.addEventListener(
-//                             "touchstart",
-//                             this.onDragStart.bind(this)
-//                           ),
-//                           window.addEventListener(
-//                             "mouseup",
-//                             this.onDragEnd.bind(this)
-//                           ),
-//                           window.addEventListener(
-//                             "resize",
-//                             this.dimensions.bind(this)
-//                           );
-//                       },
-//                     },
-//                     {
-//                       key: "dimensions",
-//                       value: function () {
-//                         (this.elementWidth = parseInt(
-//                           window.getComputedStyle(this.element).width,
-//                           10
-//                         )),
-//                           (this.elementOffsetLeft =
-//                             this.element.getBoundingClientRect().left +
-//                             document.body.scrollLeft),
-//                           (this.beforeImage.style.width =
-//                             this.elementWidth + "px"),
-//                           (this.dragElementWidth = parseInt(
-//                             window.getComputedStyle(this.dragElement).width,
-//                             10
-//                           )),
-//                           (this.minLeftPos = this.elementOffsetLeft + 10),
-//                           (this.maxLeftPos =
-//                             this.elementOffsetLeft +
-//                             this.elementWidth -
-//                             this.dragElementWidth -
-//                             10);
-//                       },
-//                     },
-//                     {
-//                       key: "onTap",
-//                       value: function (e) {
-//                         e.preventDefault(),
-//                           (this.leftPos = e.pageX ? e.pageX : e.touches[0].pageX),
-//                           this.requestDrag();
-//                       },
-//                     },
-//                     {
-//                       key: "onDragStart",
-//                       value: function (e) {
-//                         e.preventDefault();
-//                         var t = e.pageX ? e.pageX : e.touches[0].pageX,
-//                           n =
-//                             this.dragElement.getBoundingClientRect().left +
-//                             document.body.scrollLeft;
-//                         (this.posX = n + this.dragElementWidth - t),
-//                           (this.isDragging = !0);
-//                       },
-//                     },
-//                     {
-//                       key: "onDragEnd",
-//                       value: function (e) {
-//                         e.preventDefault(), (this.isDragging = !1);
-//                       },
-//                     },
-//                     {
-//                       key: "onDrag",
-//                       value: function (e) {
-//                         e.preventDefault(),
-//                           this.isDragging &&
-//                             ((this.moveX = e.pageX
-//                               ? e.pageX
-//                               : e.touches[0].pageX),
-//                             (this.leftPos =
-//                               this.moveX + this.posX - this.dragElementWidth),
-//                             this.requestDrag());
-//                       },
-//                     },
-//                     {
-//                       key: "drag",
-//                       value: function () {
-//                         this.leftPos < this.minLeftPos
-//                           ? (this.leftPos = this.minLeftPos)
-//                           : this.leftPos > this.maxLeftPos &&
-//                             (this.leftPos = this.maxLeftPos);
-//                         var e =
-//                           this.leftPos +
-//                           this.dragElementWidth / 2 -
-//                           this.elementOffsetLeft;
-//                         e /= this.elementWidth;
-//                         var t = 100 * e + "%";
-//                         (this.dragElement.style.left = t),
-//                           (this.beforeElement.style.width = t),
-//                           this.options.dragCallback &&
-//                             this.options.dragCallback(e);
-//                       },
-//                     },
-//                     {
-//                       key: "requestDrag",
-//                       value: function () {
-//                         window.requestAnimationFrame(this.drag.bind(this));
-//                       },
-//                     },
-//                   ]),
-//                   e
-//                 );
-//               })();
-//             (o.defaults = {
-//               dragElementSelector: ".cocoen-drag",
-//               dragCallback: null,
-//             }),
-//               (t.exports = o);
-//           },
-//           {},
-//         ],
-//       },
-//       {},
-//       [1]
-//     )(1);
-//   });
-// }
+  //   (function () {
+  //     return (function e(t, n, i) {
+  //       function s(o, a) {
+  //         if (!n[o]) {
+  //           if (!t[o]) {
+  //             var l = "function" == typeof require && require;
+  //             if (!a && l) return l(o, !0);
+  //             if (r) return r(o, !0);
+  //             var d = new Error("Cannot find module '" + o + "'");
+  //             throw ((d.code = "MODULE_NOT_FOUND"), d);
+  //           }
+  //           var h = (n[o] = { exports: {} });
+  //           t[o][0].call(
+  //             h.exports,
+  //             function (e) {
+  //               var n = t[o][1][e];
+  //               return s(n ? n : e);
+  //             },
+  //             h,
+  //             h.exports,
+  //             e,
+  //             t,
+  //             n,
+  //             i
+  //           );
+  //         }
+  //         return n[o].exports;
+  //       }
+  //       for (
+  //         var r = "function" == typeof require && require, o = 0;
+  //         o < i.length;
+  //         o++
+  //       )
+  //         s(i[o]);
+  //       return s;
+  //     })(
+  //       {
+  //         1: [
+  //           function (e, t, n) {
+  //             "use strict";
+  //             function i(e, t) {
+  //               if (!(e instanceof t))
+  //                 throw new TypeError("Cannot call a class as a function");
+  //             }
+  //             var s =
+  //                 Object.assign ||
+  //                 function (e) {
+  //                   for (var t = 1; t < arguments.length; t++) {
+  //                     var n = arguments[t];
+  //                     for (var i in n)
+  //                       Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+  //                   }
+  //                   return e;
+  //                 },
+  //               r = (function () {
+  //                 function e(e, t) {
+  //                   for (var n = 0; n < t.length; n++) {
+  //                     var i = t[n];
+  //                     (i.enumerable = i.enumerable || !1),
+  //                       (i.configurable = !0),
+  //                       "value" in i && (i.writable = !0),
+  //                       Object.defineProperty(e, i.key, i);
+  //                   }
+  //                 }
+  //                 return function (t, n, i) {
+  //                   return n && e(t.prototype, n), i && e(t, i), t;
+  //                 };
+  //               })(),
+  //               o = (function () {
+  //                 function e(t, n) {
+  //                   i(this, e),
+  //                     (this.options = s({}, e.defaults, n)),
+  //                     (this.element = t || document.querySelector(".cocoen")),
+  //                     this.init();
+  //                 }
+  //                 return (
+  //                   r(e, [
+  //                     {
+  //                       key: "init",
+  //                       value: function () {
+  //                         this.createElements(),
+  //                           this.addEventListeners(),
+  //                           this.dimensions();
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "createElements",
+  //                       value: function () {
+  //                         var e = document.createElement("span");
+  //                         (e.className = this.options.dragElementSelector.replace(
+  //                           ".",
+  //                           ""
+  //                         )),
+  //                           this.element.appendChild(e);
+  //                         var t = document.createElement("div"),
+  //                           n = this.element.querySelector("img:first-child");
+  //                         t.appendChild(n.cloneNode(!0)),
+  //                           n.parentNode.replaceChild(t, n),
+  //                           (this.dragElement = this.element.querySelector(
+  //                             this.options.dragElementSelector
+  //                           )),
+  //                           (this.beforeElement =
+  //                             this.element.querySelector("div:first-child")),
+  //                           (this.beforeImage =
+  //                             this.beforeElement.querySelector("img"));
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "addEventListeners",
+  //                       value: function () {
+  //                         this.element.addEventListener(
+  //                           "click",
+  //                           this.onTap.bind(this)
+  //                         ),
+  //                           this.element.addEventListener(
+  //                             "mousemove",
+  //                             this.onDrag.bind(this)
+  //                           ),
+  //                           this.element.addEventListener(
+  //                             "touchmove",
+  //                             this.onDrag.bind(this)
+  //                           ),
+  //                           this.dragElement.addEventListener(
+  //                             "mousedown",
+  //                             this.onDragStart.bind(this)
+  //                           ),
+  //                           this.dragElement.addEventListener(
+  //                             "touchstart",
+  //                             this.onDragStart.bind(this)
+  //                           ),
+  //                           window.addEventListener(
+  //                             "mouseup",
+  //                             this.onDragEnd.bind(this)
+  //                           ),
+  //                           window.addEventListener(
+  //                             "resize",
+  //                             this.dimensions.bind(this)
+  //                           );
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "dimensions",
+  //                       value: function () {
+  //                         (this.elementWidth = parseInt(
+  //                           window.getComputedStyle(this.element).width,
+  //                           10
+  //                         )),
+  //                           (this.elementOffsetLeft =
+  //                             this.element.getBoundingClientRect().left +
+  //                             document.body.scrollLeft),
+  //                           (this.beforeImage.style.width =
+  //                             this.elementWidth + "px"),
+  //                           (this.dragElementWidth = parseInt(
+  //                             window.getComputedStyle(this.dragElement).width,
+  //                             10
+  //                           )),
+  //                           (this.minLeftPos = this.elementOffsetLeft + 10),
+  //                           (this.maxLeftPos =
+  //                             this.elementOffsetLeft +
+  //                             this.elementWidth -
+  //                             this.dragElementWidth -
+  //                             10);
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "onTap",
+  //                       value: function (e) {
+  //                         e.preventDefault(),
+  //                           (this.leftPos = e.pageX ? e.pageX : e.touches[0].pageX),
+  //                           this.requestDrag();
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "onDragStart",
+  //                       value: function (e) {
+  //                         e.preventDefault();
+  //                         var t = e.pageX ? e.pageX : e.touches[0].pageX,
+  //                           n =
+  //                             this.dragElement.getBoundingClientRect().left +
+  //                             document.body.scrollLeft;
+  //                         (this.posX = n + this.dragElementWidth - t),
+  //                           (this.isDragging = !0);
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "onDragEnd",
+  //                       value: function (e) {
+  //                         e.preventDefault(), (this.isDragging = !1);
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "onDrag",
+  //                       value: function (e) {
+  //                         e.preventDefault(),
+  //                           this.isDragging &&
+  //                             ((this.moveX = e.pageX
+  //                               ? e.pageX
+  //                               : e.touches[0].pageX),
+  //                             (this.leftPos =
+  //                               this.moveX + this.posX - this.dragElementWidth),
+  //                             this.requestDrag());
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "drag",
+  //                       value: function () {
+  //                         this.leftPos < this.minLeftPos
+  //                           ? (this.leftPos = this.minLeftPos)
+  //                           : this.leftPos > this.maxLeftPos &&
+  //                             (this.leftPos = this.maxLeftPos);
+  //                         var e =
+  //                           this.leftPos +
+  //                           this.dragElementWidth / 2 -
+  //                           this.elementOffsetLeft;
+  //                         e /= this.elementWidth;
+  //                         var t = 100 * e + "%";
+  //                         (this.dragElement.style.left = t),
+  //                           (this.beforeElement.style.width = t),
+  //                           this.options.dragCallback &&
+  //                             this.options.dragCallback(e);
+  //                       },
+  //                     },
+  //                     {
+  //                       key: "requestDrag",
+  //                       value: function () {
+  //                         window.requestAnimationFrame(this.drag.bind(this));
+  //                       },
+  //                     },
+  //                   ]),
+  //                   e
+  //                 );
+  //               })();
+  //             (o.defaults = {
+  //               dragElementSelector: ".cocoen-drag",
+  //               dragCallback: null,
+  //             }),
+  //               (t.exports = o);
+  //           },
+  //           {},
+  //         ],
+  //       },
+  //       {},
+  //       [1]
+  //     )(1);
+  //   });
+  // }
 
+  // function portfolioItemContentLoadOnClick() {
+  //   $(".ajax-portfolio").on("click", function (e) {
+  //     e.preventDefault();
+  //     var portfolioItemID = $(this).data("id");
+  //     $(this).addClass("animate-plus");
+  //     if ($("#pcw-" + portfolioItemID).length) {
+  //       // Check if already loaded
+  //       $("html, body").animate(
+  //         { scrollTop: $("#portfolio-wrapper").offset().top },
+  //         400
+  //       );
+  //       setTimeout(function () {
+  //         $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+  //         setTimeout(function () {
+  //           $("#pcw-" + portfolioItemID).addClass("show");
+  //           $(".portfolio-load-content-holder").addClass("show");
+  //           $(".ajax-portfolio").removeClass("animate-plus");
+  //           $("#portfolio-grid, .more-posts-portfolio-holder").hide();
 
+  //         }, 300);
+  //       }, 500);
+  //     } else {
+  //       loadPortfolioItemContent(portfolioItemID);
+  //     }
+  //   });
+  // }
 
+  // function loadPortfolioItemContent(portfolioItemID) {
+  //   $.ajax({
+  //     url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
+  //     type: "GET",
+  //     success: function (html) {
+  //       var getPortfolioItemHtml = $(html)
+  //         .find(".portfolio-item-wrapper")
+  //         .html();
+  //       $(".portfolio-load-content-holder").append(
+  //         '<div id="pcw-' +
+  //           portfolioItemID +
+  //           '" class="portfolio-content-wrapper">' +
+  //           getPortfolioItemHtml +
+  //           "</div>"
+  //       );
 
-  function portfolioItemContentLoadOnClick() {
-    $(".ajax-portfolio").on("click", function (e) {
-      e.preventDefault();
-      var portfolioItemID = $(this).data("id");
-      $(this).addClass("animate-plus");
-      if ($("#pcw-" + portfolioItemID).length) {
-        // Check if already loaded
-        $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-          setTimeout(function () {
-            $("#pcw-" + portfolioItemID).addClass("show");
-            $(".portfolio-load-content-holder").addClass("show");
-            $(".ajax-portfolio").removeClass("animate-plus");
-            $("#portfolio-grid, .more-posts-portfolio-holder").hide();
-           
-          }, 300);
-        }, 500);
-      } else {
-        loadPortfolioItemContent(portfolioItemID);
-      }
-    });
-  }
+  //       // Apply image slider to newly loaded content:
+  //       $("#pcw-" + portfolioItemID + " .image-slider").each(function () {
+  //         var id = $(this).attr("id");
+  //         var auto_value = window[id + "_auto"];
+  //         var hover_pause = window[id + "_hover"];
+  //         var speed_value = window[id + "_speed"];
+  //         auto_value = auto_value === "true" ? true : false;
+  //         hover_pause = hover_pause === "true" ? true : false;
+  //         $(this).owlCarousel({
+  //           loop: true,
+  //           autoHeight: true,
+  //           smartSpeed: 1000,
+  //           autoplay: auto_value,
+  //           autoplayHoverPause: hover_pause,
+  //           autoplayTimeout: speed_value,
+  //           responsiveClass: true,
+  //           items: 1,
+  //         });
+  //         $(this).on("mouseleave", function () {
+  //           $(this).trigger("stop.owl.autoplay");
+  //           $(this).trigger("play.owl.autoplay", [auto_value]);
+  //         });
+  //       });
 
+  //       if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
+  //         $("#pcw-" + portfolioItemID).prepend(
+  //           '<div class="close-icon"></div>'
+  //         );
+  //       }
 
-
-
-
-  
-
-
-  function loadPortfolioItemContent(portfolioItemID) {
-    $.ajax({
-      url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
-      type: "GET",
-      success: function (html) {
-        var getPortfolioItemHtml = $(html)
-          .find(".portfolio-item-wrapper")
-          .html();
-        $(".portfolio-load-content-holder").append(
-          '<div id="pcw-' +
-            portfolioItemID +
-            '" class="portfolio-content-wrapper">' +
-            getPortfolioItemHtml +
-            "</div>"
-        );
-
-        // Apply image slider to newly loaded content:
-        $("#pcw-" + portfolioItemID + " .image-slider").each(function () {
-          var id = $(this).attr("id");
-          var auto_value = window[id + "_auto"];
-          var hover_pause = window[id + "_hover"];
-          var speed_value = window[id + "_speed"];
-          auto_value = auto_value === "true" ? true : false;
-          hover_pause = hover_pause === "true" ? true : false;
-          $(this).owlCarousel({
-            loop: true,
-            autoHeight: true,
-            smartSpeed: 1000,
-            autoplay: auto_value,
-            autoplayHoverPause: hover_pause,
-            autoplayTimeout: speed_value,
-            responsiveClass: true,
-            items: 1,
-          });
-          $(this).on("mouseleave", function () {
-            $(this).trigger("stop.owl.autoplay");
-            $(this).trigger("play.owl.autoplay", [auto_value]);
-          });
-        });
-
-        if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
-          $("#pcw-" + portfolioItemID).prepend(
-            '<div class="close-icon"></div>'
-          );
-        }
-
-        $("html, body").animate(
-          { scrollTop: $("#portfolio-wrapper").offset().top },
-          400
-        );
-        setTimeout(function () {
-          $("#pcw-" + portfolioItemID).imagesLoaded(function () {
-            skillsFill();
-            $(".site-content").fitVids(); //Fit Video
-            $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
-            setTimeout(function () {
-              $("#pcw-" + portfolioItemID).addClass("show");
-              $(".portfolio-load-content-holder").addClass("show");
-              $(".ajax-portfolio").removeClass("animate-plus");
-              $("#portfolio-grid").hide();
-            }, 300);
-            $(".close-icon").on("click", function (e) {
-              var portfolioReturnItemID = $(this)
-                .closest(".portfolio-content-wrapper")
-                .attr("id")
-                .split("-")[1];
-              $(".portfolio-load-content-holder").addClass("viceversa");
-              $("#portfolio-grid, .more-posts-portfolio-holder").css(
-                "display",
-                "block"
-              );
-              setTimeout(function () {
-                $("#pcw-" + portfolioReturnItemID).removeClass("show");
-                $(".portfolio-load-content-holder").removeClass(
-                  "viceversa show"
-                );
-                $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
-                  "hide"
-                );
-              }, 300);
-              setTimeout(function () {
-                $("html, body").animate(
-                  {
-                    scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
-                      .top,
-                  },
-                  400
-                );
-              }, 500);
-            });
-          });
-        }, 500);
-      },
-    });
-    return false;
-  }
-
+  //       $("html, body").animate(
+  //         { scrollTop: $("#portfolio-wrapper").offset().top },
+  //         400
+  //       );
+  //       setTimeout(function () {
+  //         $("#pcw-" + portfolioItemID).imagesLoaded(function () {
+  //           skillsFill();
+  //           $(".site-content").fitVids(); //Fit Video
+  //           $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+  //           setTimeout(function () {
+  //             $("#pcw-" + portfolioItemID).addClass("show");
+  //             $(".portfolio-load-content-holder").addClass("show");
+  //             $(".ajax-portfolio").removeClass("animate-plus");
+  //             $("#portfolio-grid").hide();
+  //           }, 300);
+  //           $(".close-icon").on("click", function (e) {
+  //             var portfolioReturnItemID = $(this)
+  //               .closest(".portfolio-content-wrapper")
+  //               .attr("id")
+  //               .split("-")[1];
+  //             $(".portfolio-load-content-holder").addClass("viceversa");
+  //             $("#portfolio-grid, .more-posts-portfolio-holder").css(
+  //               "display",
+  //               "block"
+  //             );
+  //             setTimeout(function () {
+  //               $("#pcw-" + portfolioReturnItemID).removeClass("show");
+  //               $(".portfolio-load-content-holder").removeClass(
+  //                 "viceversa show"
+  //               );
+  //               $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
+  //                 "hide"
+  //               );
+  //             }, 300);
+  //             setTimeout(function () {
+  //               $("html, body").animate(
+  //                 {
+  //                   scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
+  //                     .top,
+  //                 },
+  //                 400
+  //               );
+  //             }, 500);
+  //           });
+  //         });
+  //       }, 500);
+  //     },
+  //   });
+  //   return false;
+  // }
 
   function skillsFill() {
     $(".skill-fill").each(function () {
@@ -731,7 +716,6 @@
       });
   }
 
-
   function SendMail() {
     $('.contact-form [type="submit"]').on("click", function () {
       var emailVal = $("#contact-email").val();
@@ -789,12 +773,6 @@
   }
 })(jQuery);
 
-
-
-
-
-
-
 (function () {
   var $content = $(".modal_info").detach();
 
@@ -812,11 +790,11 @@
 
   function attachFormListeners() {
     // Hiring Form AJAX submission
-    $('#hiringForm').submit(function(event) {
+    $("#hiringForm").submit(function (event) {
       event.preventDefault(); // Prevent form submission
 
       // Disable submit button and show submitting status
-      $('#form-submit').prop('disabled', true).val('Submitting...');
+      $("#form-submit").prop("disabled", true).val("Submitting...");
 
       // Collect form data
       var formData = new FormData(this);
@@ -824,21 +802,21 @@
       // Send form data using AJAX
       $.ajax({
         url: this.action,
-        type: 'POST',
+        type: "POST",
         data: formData,
         processData: false,
         contentType: false,
-        success: function(response) {
+        success: function (response) {
           // Alert and enable submit button
-          alert('Form submitted');
-          $('#form-submit').prop('disabled', false).val('APPLY');
-          $('#hiringForm')[0].reset(); // Optionally reset form fields
+          alert("Form submitted");
+          $("#form-submit").prop("disabled", false).val("APPLY");
+          $("#hiringForm")[0].reset(); // Optionally reset form fields
         },
-        error: function() {
-          alert('Error occurred while submitting the form.');
+        error: function () {
+          alert("Error occurred while submitting the form.");
           // Enable submit button and show original text
-          $('#form-submit').prop('disabled', false).val('APPLY');
-        }
+          $("#form-submit").prop("disabled", false).val("APPLY");
+        },
       });
     });
   }
@@ -875,11 +853,11 @@ var modal = (function () {
       $content.empty().append(settings.content);
 
       $modal
-      .css({
-        width: $(window).width() > 1000 ? "30%" : "80%",
-        height: settings.height || "auto",
-      })
-      .appendTo("body");
+        .css({
+          width: $(window).width() > 1000 ? "30%" : "80%",
+          height: settings.height || "auto",
+        })
+        .appendTo("body");
 
       if (!$(".modal_overlay").length) {
         $('<div class="modal_overlay"/>').appendTo("body");
@@ -896,8 +874,6 @@ var modal = (function () {
     },
   };
 })();
-
-
 
 function applyTransformations() {
   // $(".small-card").css("opacity","1");
@@ -922,11 +898,16 @@ function removeTransformations() {
 var s1 = null;
 var s2 = null;
 var s3 = null;
+var p1=null;
+var p2=null;
+var p3=null;
+var p4=null;
+
 
 function addoffset(id) {
   var animationDuration = $(window).width() > 1000 ? 1000 : 100; // Check window height
-  var windowsize=$(window).width();
-  var offset=windowsize>=700?430:220;
+  var windowsize = $(window).width();
+  var offset = windowsize >= 700 ? 430 : 220;
 
   $("html, body").animate(
     {
@@ -938,10 +919,105 @@ function addoffset(id) {
 
 function addFadeIn() {
   $("#SERVICES-HOLDER").css("opacity", "1");
+
 }
 
 function addFadeOut() {
   $("#SERVICES-HOLDER").css("opacity", "0");
+}
+
+$(document).ready(function () {
+  $("#port-1").hide();
+  $("#port-2").hide();
+  $("#port-3").hide();
+  $("#port-4").hide();
+
+  $("#portfolio").show();
+
+  $("#p-item-1").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    p1 = $(window).scrollTop();
+    $("#portfolio").hide();
+   
+    $("#port-1").show();
+   
+    ports_fade_in();
+  });
+
+  $("#p-item-2").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    p2 = $(window).scrollTop();
+    $("#portfolio").hide();
+    $("#port-2").show();
+    ports_fade_in();
+  });
+  $("#p-item-3").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    p3 = $(window).scrollTop();
+    $("#portfolio").hide();
+    $("#port-3").show();
+    ports_fade_in();
+  });
+  $("#p-item-4").click(function (event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    p4 = $(window).scrollTop();
+    $("#portfolio").hide();
+    $("#port-4").show();
+    ports_fade_in();
+  });
+});
+
+$(document).on("click", "#PORT-backButton", function () {
+  addFadeOut();
+  $("#port-1").hide();
+  $("#port-2").hide();
+  $("#port-3").hide();
+  $("#port-4").hide();
+
+  $("#portfolio").show();
+  $(".ports").css("opacity", "0");
+
+
+
+
+  // Retrieve scroll position for the corresponding card
+  var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
+  var animationDuration = $(window).width() > 1000 ? 400 : 50;
+
+  // Animate scroll to the stored position
+  if (animationDuration >= 400) {
+    $("html, body").scrollTop($("#portfolio").offset().top);
+
+  } else if (targetCard == "port-1") {
+    $("html, body").scrollTop(p1);
+
+    // $("html, body").scrollTop($("p1").offset().top);
+
+  } else if (targetCard == "port-2") {
+    $("html, body").scrollTop(p2);
+
+    // $("html, body").scrollTop($("p2").offset().top);
+
+  }else if (targetCard == "port-3") {
+    $("html, body").scrollTop(p3);
+
+    // $("html, body").scrollTop($("p3").offset().top);
+
+  }
+   else {
+    $("html, body").scrollTop(p4);
+
+  }
+ 
+});
+
+
+function ports_fade_in()
+{
+  $(".ports").css("opacity", "1");
+  $("html, body").scrollTop($("#ports-holder").offset().top);
+
+
 }
 
 $(document).ready(function () {
@@ -957,7 +1033,7 @@ $(document).ready(function () {
     $("#SERVICES-HOLDER").show();
     $("#SERVICE-1").show();
     addFadeIn();
-   
+
     addoffset("#SERVICE-1");
     s1 = $(window).scrollTop();
     applyTransformations();
@@ -1000,7 +1076,7 @@ $(document).ready(function () {
     //   {
     //     scrollTop: $("#TEAM-HOLDER").offset().top
     //   },
-     
+
     // );
   });
 
@@ -1011,7 +1087,6 @@ $(document).ready(function () {
     $("#TEAM-HOLDER").show();
     console.log("hello");
     $("#TEAM-CARDS").css("opacity", "1");
-  
   });
 });
 
@@ -1025,18 +1100,15 @@ $(document).on("click", "#backButton", function () {
   $("#services").show();
   $("#main-content-service").show();
 
-
   // Retrieve scroll position for the corresponding card
   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
   var animationDuration = $(window).width() > 1000 ? 400 : 50;
 
   // Animate scroll to the stored position
   if (animationDuration >= 400) {
-   
     $("html, body").animate(
       {
-        
-        scrollTop: $("#main-content-service").offset().top-275,
+        scrollTop: $("#main-content-service").offset().top - 275,
       },
       100
     );
@@ -1062,8 +1134,6 @@ $(document).on("click", "#backButton", function () {
       animationDuration
     );
   }
-
-  
 });
 
 $(document).on("click", "#team-back-button", function () {
@@ -1080,29 +1150,29 @@ $(document).on("click", "#team-back-button", function () {
   );
 });
 
-
 // hover effect for services cards
-$(document).ready(function() {
-  $('service-holder').hover(function() {
-      $('arrow-image').addClass('arrow-hover');
-  }, function() {
-      $('arrow-image').removeClass('arrow-hover');
-  });
+$(document).ready(function () {
+  $("service-holder").hover(
+    function () {
+      $("arrow-image").addClass("arrow-hover");
+    },
+    function () {
+      $("arrow-image").removeClass("arrow-hover");
+    }
+  );
 });
-
 
 //code to refresh the screen to set canvas width
-$(document).ready(function() {
+$(document).ready(function () {
   var initialWidth = $(window).width();
 
-  $(window).resize(function() {
-      var currentWidth = $(window).width();
-      if (Math.abs(currentWidth - initialWidth) > 400) {
-          location.reload();
-      }
+  $(window).resize(function () {
+    var currentWidth = $(window).width();
+    if (Math.abs(currentWidth - initialWidth) > 400) {
+      location.reload();
+    }
   });
 });
-
 
 //canvas
 var canvas = document.getElementById("canvas"),
@@ -1161,7 +1231,6 @@ function draw() {
     for (var j = 0, x = stars.length; j < x; j++) {
       var starII = stars[j];
       if (distance(starI, starII) < 150) {
-       
         ctx.lineTo(starII.x, starII.y);
       }
     }
@@ -1212,5 +1281,3 @@ function tick() {
 }
 
 tick();
-
-
