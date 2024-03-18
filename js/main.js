@@ -928,6 +928,8 @@ function addFadeOut() {
 
 $(document).ready(function () {
   $("#port-1").hide();
+
+
   $("#port-2").hide();
   $("#port-3").hide();
   $("#port-4").hide();
@@ -938,8 +940,9 @@ $(document).ready(function () {
     event.preventDefault(); // Prevent the default behavior of anchor tags
     p1 = $(window).scrollTop();
     $("#portfolio").hide();
-   
     $("#port-1").show();
+
+
    
     ports_fade_in();
   });
@@ -1557,3 +1560,20 @@ tick();
 //       [1]
 //     )(1);
 //   });
+
+
+// $("input.unique-slider").on("input change", function(event) {
+//   var element = $(this).parents("div.unique-container");
+//   var pos = event.target.value;
+  
+//   element.find("div.unique-before").css({width: pos + "%"});
+//   element.find("div.unique-slider-button").css({left: "calc(" + pos + "% - 18px)"});
+//   });
+
+
+// JavaScript code
+var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() { 
+	divisor.style.width = slider.value+"%";
+}

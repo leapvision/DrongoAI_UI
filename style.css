@@ -2938,6 +2938,11 @@ footer .footer-social-divider:before {
   } */
   
   
+  .portfolio-right-image
+  {
+    display: flex;
+    justify-content: center ;
+  }
  
 
   
@@ -4126,7 +4131,7 @@ color: black;
 }
 
 
-/* 
+
 
 .cocoen {
   box-sizing: border-box;
@@ -4195,6 +4200,28 @@ picture .cocoen>div {
   width: 14px;
 }
 
- */
-
  
+
+ /* Media query for smaller screens */
+@media only screen and (max-width: 1000px) {
+  div.unique-image {
+      width: 100%;
+  }
+
+  input.unique-slider::-moz-range-thumb {
+      width: 4px;
+      height: 400px;
+  }
+
+  input.unique-slider::-webkit-slider-thumb {
+      width: 4px;
+      height: 350px;
+  }
+
+  div.unique-slider-button {
+      width: 20px;
+      height: 20px;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+  }
+}
