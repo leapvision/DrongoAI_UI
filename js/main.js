@@ -629,7 +629,7 @@ $(document).ready(function () {
     $("#team").hide();
     $("#TEAM-HOLDER").show();
     $("#TEAM-CARDS").css("opacity", "1");
-    $("html, body").scrollTop($("#TEAM-HOLDER").offset().top);
+
 
   });
 
@@ -639,6 +639,7 @@ $(document).ready(function () {
     $("#team").hide();
     $("#TEAM-HOLDER").show();
    
+
     $("#TEAM-CARDS").css("opacity", "1");
   });
 });

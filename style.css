@@ -3106,7 +3106,7 @@ footer .footer-social-divider:before {
   
   h1.big-text {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 7%;
     color: #fff;
     font-size: 50px;
@@ -3201,7 +3201,7 @@ footer .footer-social-divider:before {
   
 #home a {
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 7%;
 }
 
@@ -3369,7 +3369,16 @@ footer .footer-social-divider:before {
     left: -15px;
   }
 
-  
+    .portfolio-content
+    {
+      padding: 0.5rem;
+    }
+
+    .portfolio-right-image img
+    {
+      width: 100%;
+      padding-bottom: 1rem;
+    }
 
   .pricing-table {
     margin-bottom: 100px;
@@ -3676,8 +3685,8 @@ footer .footer-social-divider:before {
 
 #home a {
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 45%;
+  left: 3.5%;
 }
 }
 
@@ -3692,7 +3701,7 @@ footer .footer-social-divider:before {
 
   h1.big-text {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 4%;
     color: #fff;
     font-size: 28px;
@@ -3703,8 +3712,8 @@ footer .footer-social-divider:before {
 
 #home a {
   position: absolute;
-  top: 40%;
-  left: 9%;
+  top: 45%;
+  left: 2%;
 }
 }
 
