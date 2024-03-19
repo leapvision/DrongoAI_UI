@@ -586,14 +586,16 @@ $(document).ready(function () {
   $("#SERVICES-HOLDER").hide();
 
   $("#loadPage1").click(function (event) {
-    event.preventDefault(); // Prevent the default behavior of anchor tags
+    event.preventDefault(); 
+    // Prevent the default behavior of anchor tags
+    s1 = $(window).scrollTop();
     $("#main-content-service").hide();
     $("#SERVICES-HOLDER").show();
     $("#SERVICE-1").show();
     addFadeIn();
 
     addoffset("#SERVICE-1");
-    s1 = $(window).scrollTop();
+    
     applyTransformations();
 
     $("#services").hide();
@@ -601,24 +603,26 @@ $(document).ready(function () {
 
   $("#loadPage2").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
+    s2 = $(window).scrollTop();
     $("#main-content-service").hide();
     $("#SERVICES-HOLDER").show();
     $("#SERVICE-2").show();
     addFadeIn();
     addoffset("#SERVICE-2");
-    s2 = $(window).scrollTop();
+    
     applyTransformations();
     $("#services").hide();
   });
 
   $("#loadPage3").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
+    s3 = $(window).scrollTop();
     $("#main-content-service").hide();
     $("#SERVICES-HOLDER").show();
     $("#SERVICE-3").show();
     addFadeIn();
     addoffset("#SERVICE-3");
-    s3 = $(window).scrollTop();
+    
     applyTransformations();
     $("#services").hide();
   });
@@ -662,11 +666,14 @@ $(document).on("click", "#backButton", function () {
   if (animationDuration >= 400) {
     $("html, body").scrollTop($("#main-content-service").offset().top - 270);
   } else if (targetCard == "SERVICE-1") {
+    console.log("s1:",s1)
     $("html, body").scrollTop(s1);
   } else if (targetCard == "SERVICE-2") {
+    console.log("s1:",s2)
     $("html, body").scrollTop(s2);
   } else {
     $("html, body").scrollTop(s3);
+    console.log("s1:",s3)
   }
 });
 
