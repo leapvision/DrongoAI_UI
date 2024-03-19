@@ -118,7 +118,6 @@
     });
   }
 
-
   function textSliderSettings() {
     $(".text-slider").each(function () {
       var id = $(this).attr("id");
@@ -481,28 +480,21 @@ function removeTransformations() {
 var s1 = null;
 var s2 = null;
 var s3 = null;
-var p1=null;
-var p2=null;
-var p3=null;
-var p4=null;
-
+var p1 = null;
+var p2 = null;
+var p3 = null;
+var p4 = null;
 
 function addoffset(id) {
-  var animationDuration = $(window).width() > 1000 ? 1000 : 100; // Check window height
   var windowsize = $(window).width();
-  var offset = windowsize >= 700 ? 430 : 220;
+  var offset = windowsize >= 700 ? 450 : 220;
 
-  $("html, body").animate(
-    {
-      scrollTop: $(id).offset().top - offset,
-    },
-    animationDuration // Use the determined animation duration
-  );
+  $("html, body").scrollTop($(id).offset().top - offset);
+
 }
 
 function addFadeIn() {
   $("#SERVICES-HOLDER").css("opacity", "1");
-
 }
 
 function addFadeOut() {
@@ -511,7 +503,6 @@ function addFadeOut() {
 
 $(document).ready(function () {
   $("#port-1").hide();
-
 
   $("#port-2").hide();
   $("#port-3").hide();
@@ -525,8 +516,6 @@ $(document).ready(function () {
     $("#portfolio").hide();
     $("#port-1").show();
 
-
-   
     ports_fade_in();
   });
 
@@ -563,47 +552,30 @@ $(document).on("click", "#PORT-backButton", function () {
   $("#portfolio").show();
   $(".ports").css("opacity", "0");
 
-
-
-
   // Retrieve scroll position for the corresponding card
   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
   var animationDuration = $(window).width() > 1000 ? 400 : 50;
 
   // Animate scroll to the stored position
   if (animationDuration >= 400) {
-    $("html, body").scrollTop($("#portfolio").offset().top-80);
-
+    $("html, body").scrollTop($("#portfolio").offset().top - 80);
   } else if (targetCard == "port-1") {
     $("html, body").scrollTop(p1);
-
-    // $("html, body").scrollTop($("p1").offset().top);
 
   } else if (targetCard == "port-2") {
     $("html, body").scrollTop(p2);
 
-    // $("html, body").scrollTop($("p2").offset().top);
-
-  }else if (targetCard == "port-3") {
+  } else if (targetCard == "port-3") {
     $("html, body").scrollTop(p3);
 
-    // $("html, body").scrollTop($("p3").offset().top);
-
-  }
-   else {
+  } else {
     $("html, body").scrollTop(p4);
-
   }
- 
 });
 
-
-function ports_fade_in()
-{
+function ports_fade_in() {
   $(".ports").css("opacity", "1");
-  $("html, body").scrollTop($("#ports-holder").offset().top-80);
-
-
+  $("html, body").scrollTop($("#ports-holder").offset().top - 80);
 }
 
 $(document).ready(function () {
@@ -656,14 +628,9 @@ $(document).ready(function () {
 
     $("#team").hide();
     $("#TEAM-HOLDER").show();
-    console.log("hello");
     $("#TEAM-CARDS").css("opacity", "1");
-    // $("html, body").animate(
-    //   {
-    //     scrollTop: $("#TEAM-HOLDER").offset().top
-    //   },
+    $("html, body").scrollTop($("#TEAM-HOLDER").offset().top);
 
-    // );
   });
 
   $("#loadteam2").click(function (event) {
@@ -671,7 +638,7 @@ $(document).ready(function () {
 
     $("#team").hide();
     $("#TEAM-HOLDER").show();
-    console.log("hello");
+   
     $("#TEAM-CARDS").css("opacity", "1");
   });
 });
@@ -692,33 +659,13 @@ $(document).on("click", "#backButton", function () {
 
   // Animate scroll to the stored position
   if (animationDuration >= 400) {
-    $("html, body").animate(
-      {
-        scrollTop: $("#main-content-service").offset().top - 275,
-      },
-      100
-    );
+    $("html, body").scrollTop($("#main-content-service").offset().top - 270);
   } else if (targetCard == "SERVICE-1") {
-    $("html, body").animate(
-      {
-        scrollTop: s1,
-      },
-      animationDuration
-    );
+    $("html, body").scrollTop(s1);
   } else if (targetCard == "SERVICE-2") {
-    $("html, body").animate(
-      {
-        scrollTop: s2,
-      },
-      animationDuration
-    );
+    $("html, body").scrollTop(s2);
   } else {
-    $("html, body").animate(
-      {
-        scrollTop: s3,
-      },
-      animationDuration
-    );
+    $("html, body").scrollTop(s3);
   }
 });
 
@@ -728,12 +675,7 @@ $(document).on("click", "#team-back-button", function () {
 
   $("#team").show();
 
-  $("html, body").animate(
-    {
-      scrollTop: $("#team").offset().top,
-    },
-    1000
-  );
+  $("html, body").scrollTop($("#team").offset().top-75);
 });
 
 // hover effect for services cards
@@ -754,7 +696,7 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     var currentWidth = $(window).width();
-    if (Math.abs(currentWidth - initialWidth) > 400) {
+    if (Math.abs(currentWidth - initialWidth) > 250) {
       location.reload();
     }
   });
@@ -868,10 +810,9 @@ function tick() {
 
 tick();
 
-
-// JavaScript code
+// JavaScript code for x-ray slider
 var divisor = document.getElementById("divisor"),
-slider = document.getElementById("slider");
-function moveDivisor() { 
-	divisor.style.width = slider.value+"%";
+  slider = document.getElementById("slider");
+function moveDivisor() {
+  divisor.style.width = slider.value + "%";
 }
