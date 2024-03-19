@@ -2752,6 +2752,10 @@ footer .footer-social-divider:before {
     padding: 1rem;
   }
  
+  .service-txt
+  {
+    padding-bottom: 3rem;
+  }
 
 .portfolio-content-image-wrapper{
   display: flex;
@@ -3360,10 +3364,12 @@ footer .footer-social-divider:before {
 
   #PORT-backButton
   {
-    top: 140px;
+    top: 115px;
     /* right: -10px; */
     left: -15px;
   }
+
+  
 
   .pricing-table {
     margin-bottom: 100px;
