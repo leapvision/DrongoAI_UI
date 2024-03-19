@@ -774,13 +774,11 @@ function draw() {
       }
     }
   }
- 
-ctx.lineWidth = (window.innerWidth < 800) ? 0.5 : 0.25;
-
-  // Set stroke color with reduced opacity
-ctx.strokeStyle = "white  "; 
-
+  ctx.lineWidth = (window.innerWidth < 800) ? 1 : 0.25;
+  ctx.strokeStyle = "white";
+  ctx.imageSmoothingEnabled = true; // Enable anti-aliasing or smooth rendering
   ctx.stroke();
+  
 }
 
 function distance(point1, point2) {
