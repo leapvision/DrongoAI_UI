@@ -739,56 +739,7 @@ a.button-dot:hover:before {
     2.5 Image/Text Slider CSS
 ====================================== */
 
-.image-slider-wrapper {
-  margin-bottom: 20px;
-}
 
-.single-post-header-content .image-slider-wrapper {
-  margin-bottom: 0;
-}
-
-.owl-carousel .owl-stage-outer {
-  height: auto !important;
-}
-
-.owl-theme .owl-dots {
-  padding-top: 25px;
-  line-height: 0;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s ease;
-  width: 17px;
-  height: 17px;
-  border-radius: 90%;
-}
-
-.owl-theme .owl-dots .owl-dot {
-  border-radius: 90%;
-  transition: all 0.3s ease;
-  border: 2px solid #000;
-  margin: 3px;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #fff;
-}
-
-.owl-theme .owl-dots .owl-dot.active {
-  background-color: #000;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  background-color: transparent;
-}
-
-.owl-item
-{
-  display: flex;
-    justify-content: center;
-}
 
 .text-slider-wrapper {
   font-size: 24px;
@@ -974,7 +925,7 @@ h1.big-text {
 
 #home a {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 12%;
 }
 
@@ -1067,77 +1018,7 @@ h1.big-text {
 {
   background: #000;
 }
-/* ===================================
-    7. News Section CSS
-====================================== */
 
-#news {
-  background-image: url(images/on_white_left.png);
-  background-color: #ffffff;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-.blog-holder-scode {
-  margin-top: 0;
-  width: 1370px;
-  transform: translateX(-100px);
-  text-align: center;
-}
-
-.blog-holder-scode article:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.blog-item-holder-scode {
-  margin: 30px 0;
-  width: 27%;
-  display: inline-block;
-  margin-right: 8%;
-  vertical-align: text-top;
-  text-align: left;
-}
-
-.blog-item-holder-scode .excerpt {
-  margin-top: 20px;
-}
-
-.blog-item-holder-scode h4 {
-  padding: 0;
-  margin: 35px 0;
-}
-
-.blog-item-holder-scode h4 a {
-  color: #000 !important;
-  font-size: 34px;
-  line-height: 110%;
-  font-weight: 700;
-  transition: 0.3s;
-  letter-spacing: -1px;
-}
-
-.blog-item-holder-scode h4 a:hover {
-  opacity: 0.8;
-}
-
-.blog-item-holder-scode .post-thumbnail {
-  overflow: hidden;
-}
-
-.latest-posts-background-featured-image-holder {
-  width: 100%;
-  height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  transition: 0.3s;
-}
-
-.latest-posts-background-featured-image-holder:hover {
-  opacity: 0.8;
-  transform: scale(1.1);
-}
 
 /* ===================================
     8. Portfolio Section CSS
@@ -1303,12 +1184,7 @@ h1.big-text {
   transform: translateY(70px);
 }
 
-/* .portfolio-content-image-wrapper
-{
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-} */
+
 
 
 .portfolio-right-image img{
@@ -1463,112 +1339,6 @@ h1.big-text {
     transform: rotate(360deg);
   }
 }
-
-/* ===================================
-    9. Pricing Section CSS
-====================================== */
-
-#pricing {
-  background-image: url(images/on_white_right.png);
-  background-color: #ffffff;
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-.pricing-table {
-  padding-bottom: 20px;
-  background-color: #ffffff;
-  margin-top: 30px;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid #000;
-  position: relative;
-  text-align: left;
-}
-
-.pricing-wrapper {
-  padding: 0 15%;
-}
-
-.pricing-table-title {
-  color: #000;
-  font-size: 21px;
-  font-weight: 500;
-  padding: 40px 0;
-  margin-bottom: 25px;
-}
-
-.pricing-num {
-  font-size: 200px;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: -1px 0 #b3b3b3, 0 1px #b3b3b3, 1px 0 #b3b3b3, 0 -1px #b3b3b3;
-  line-height: 100%;
-  margin-bottom: -10px;
-  position: absolute;
-  top: -50px;
-  right: -9px;
-  z-index: 1;
-}
-
-.pricing-num:before {
-  content: "";
-  width: 150px;
-  background-color: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  z-index: -1;
-}
-
-.pricing-table-price {
-  font-size: 100px;
-  line-height: 120%;
-  color: var(--primary-color);
-  font-weight: 700;
-}
-
-.pricing-table-desc {
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-.pricing-table ul {
-  padding: 0;
-  list-style: none;
-  margin-top: 25px;
-}
-
-.pricing-table ul li {
-  padding: 10px 0;
-  color: #000;
-}
-
-.pricing-list span.fa {
-  color: var(--primary-color);
-  margin-right: 25px;
-}
-
-.pricing-list.included-no,
-.pricing-list.included-no span.fa {
-  color: gray;
-}
-
-.pricing-list.included-no span.fa:before {
-  content: "\f00d";
-}
-
-.pricing-table-content-holder {
-  margin-bottom: 40px;
-}
-
-.pricing-button {
-  text-align: center;
-}
-
 /* ===================================
     10. Team Section CSS
 ====================================== */
@@ -1627,18 +1397,6 @@ h1.big-text {
   margin-bottom: 35px;
   margin-top: -5px;
   padding: 0;
-}
-
-.member-social-holder {
-  background: var(--primary-color);
-  position: sticky;
-    width: 3rem;
-    top: 73%;
-    padding-left: 25px;
-    padding-right: 0px;
-    left: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
 }
 
 .member-right .member-social-holder {
@@ -1835,203 +1593,6 @@ p.milestone-num {
 }
 
 /* ===================================
-    13. Blog Page CSS
-====================================== */
-
-body.blog {
-  background-color: #fff;
-}
-
-.blog .site-content {
-  background-color: #fff;
-}
-
-.blog h1.entry-title {
-  text-align: center;
-  display: table;
-  margin: 50px auto;
-  font-family: "Rubik", sans-serif;
-  font-weight: 600;
-  color: #fff;
-  background-color: #f1576b;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.blog-holder {
-  width: 1170px;
-  max-width: 95%;
-}
-
-.blog-item-holder {
-  margin: 120px 0;
-  text-align: center;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.blog-item-wrapper {
-  display: inline-block;
-}
-
-.blog-item-holder .excerpt {
-  width: 700px;
-  margin: 0 auto;
-  max-width: 95%;
-  margin-bottom: 30px;
-  margin-top: 25px;
-}
-
-.blog-item-holder.has-post-thumbnail {
-  width: 1170px;
-  max-width: 100%;
-}
-
-.blog-item-holder.has-post-thumbnail .excerpt {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 60px;
-}
-
-.blog-item-holder .post-thumbnail {
-  max-width: 590px;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.post-thumbnail-image {
-  transition: 0.3s;
-}
-
-.post-thumbnail-image:hover {
-  opacity: 0.8;
-}
-
-.blog-item-holder.has-post-thumbnail:nth-of-type(2n + 1) .post-thumbnail {
-  float: left;
-  text-align: right;
-}
-
-.blog-item-holder.has-post-thumbnail:nth-of-type(2n + 1) .entry-holder {
-  float: left;
-  position: relative;
-  z-index: 31;
-}
-
-.blog-item-holder.has-post-thumbnail:nth-of-type(2n) .post-thumbnail {
-  float: right;
-  text-align: left;
-  margin-right: 0;
-}
-
-.blog-item-holder.has-post-thumbnail:nth-of-type(2n) .entry-holder {
-  float: right;
-  position: relative;
-  z-index: 31;
-}
-
-.blog-item-holder.has-post-thumbnail .entry-holder {
-  width: 430px;
-  text-align: left;
-  padding: 0 75px;
-  background: #fff;
-}
-
-.blog-item-holder.has-post-thumbnail.is-smaller .entry-holder {
-  margin-top: 40px;
-}
-
-.blog-item-holder h2.entry-title {
-  display: block;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 46px;
-  padding-top: 0;
-  word-break: break-word;
-  letter-spacing: -2px;
-}
-
-.blog-item-holder h2.entry-title a {
-  color: #000 !important;
-  transition: 0.2s;
-}
-
-.blog-item-holder h2.entry-title a:hover {
-  opacity: 0.8;
-}
-
-.blog-item-holder .cat-links ul {
-  list-style: none;
-  padding: 0;
-  display: inline-block;
-}
-
-.blog-item-holder .cat-links ul li {
-  display: inline-block;
-}
-
-.blog-item-holder .cat-links ul li a:after {
-  content: ",";
-  padding-right: 5px;
-}
-
-.blog-item-holder .cat-links ul li:last-child a:after {
-  display: none;
-}
-
-.blog-item-holder .cat-links ul a {
-  color: #000000 !important;
-  transition: 0.2s;
-}
-
-.blog-item-holder .cat-links ul a:hover {
-  opacity: 0.8;
-}
-
-.blog-item-holder .entry-date.published,
-.blog-item-holder .cat-links {
-  display: inline-block;
-  font-size: 12px;
-  margin-top: -10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.blog-item-holder .cat-links:after {
-  content: "\2022";
-  display: inline-block;
-  margin: 0 7px 0 10px;
-}
-
-.blog-item-holder a.item-button {
-  display: inline-block;
-  color: #fff;
-  background-color: var(--primary-color);
-  text-align: left;
-  padding: 10px 40px;
-  cursor: pointer;
-  vertical-align: middle;
-  text-decoration: none;
-  transition: all 0.2s linear;
-  margin-bottom: 17px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50px;
-  font-size: 14px;
-  letter-spacing: 2px;
-  box-sizing: border-box;
-  margin-bottom: 0;
-}
-
-.blog-item-holder a.item-button:hover {
-  background-color: #fff;
-  color: var(--primary-color);
-}
-
-/* ===================================
     14. Single Post CSS
 ====================================== */
 
@@ -2039,191 +1600,6 @@ body.blog {
   background-color: #fff;
 }
 
-.single-post-header-content {
-  margin-bottom: 55px;
-}
-
-.single .post-info-wrapper {
-  margin-bottom: 30px;
-  font-size: 15px;
-  color: #939393;
-  width: 150px;
-  margin-right: 200px;
-  float: left;
-  padding-top: 7px;
-}
-
-.single .post-info-wrapper a {
-  color: #939393 !important;
-}
-
-.single .sticky-spacer {
-  position: static !important;
-  margin-bottom: 0 !important;
-  max-width: 150px;
-}
-
-.single .entry-info {
-  position: relative;
-}
-
-.single .entry-info > div {
-  margin-bottom: 20px;
-}
-
-.single .entry-info div:last-child {
-  margin-bottom: 0;
-}
-
-.single .entry-info .cat-links {
-  margin-top: 5px;
-}
-
-.single .entry-info:after {
-  content: "";
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  right: -20px;
-  top: -5px;
-  background-color: var(--primary-color);
-}
-
-.single .post-info-wrapper .text-holder {
-  font-size: 10px;
-  color: #000;
-  letter-spacing: 2px;
-  margin-bottom: 0;
-  line-height: 15px;
-}
-
-.single article {
-  padding-top: 75px;
-}
-
-.single h1.entry-title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 115%;
-  margin-bottom: 10px;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-  text-align: center;
-  width: 720px;
-  margin: 0 auto 30px;
-  max-width: 95%;
-  color: #000;
-  padding-top: 0;
-}
-
-.single .entry-info div:last-of-type:after {
-  display: none;
-}
-
-.single .entry-info ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  line-height: 150%;
-}
-
-.single .entry-info ul li {
-  display: inline-block;
-}
-
-.single .entry-info .cat-links li:after {
-  content: ",";
-  padding-right: 5px;
-}
-
-.single .entry-info .cat-links ul li:last-child:after {
-  display: none;
-}
-
-.single-post-featured-image {
-  text-align: center;
-  padding-bottom: 40px;
-  width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 95%;
-}
-
-.single .entry-content {
-  font-size: 15px;
-  line-height: 30px;
-  color: #000;
-  width: 680px;
-  float: left;
-}
-
-.single .nav-links {
-  transform: translateY(70px);
-  margin-top: 35px;
-  margin-bottom: 50px;
-}
-
-.single .nav-links > a {
-  background-color: var(--primary-color);
-  padding: 26px 30px 24px;
-  margin: 0;
-  display: inline;
-  color: #fff !important;
-  transition: 0.3s;
-}
-
-.single .nav-links > a:hover {
-  background-color: #73f473;
-}
-
-/* ===================================
-   14.1 Tipper CSS
-====================================== */
-
-.tipper {
-  width: 100%;
-  min-height: 1px;
-  position: absolute;
-  top: -999px;
-  left: -999px;
-  z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s linear;
-  max-width: 500px;
-}
-
-.tipper-visible {
-  opacity: 1;
-}
-
-.tipper-content {
-  background: #111;
-  border-radius: 3px;
-  color: #fff;
-  display: block;
-  float: left;
-  font-size: 22px;
-  margin: 0;
-  padding: 10px 15px;
-  position: relative;
-  line-height: 28px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.tipper-caret {
-  width: 0;
-  height: 0;
-  content: "";
-  display: block;
-  margin: 0;
-  position: absolute;
-}
-
-.tipper-left .tipper-content {
-  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.35);
-}
 
 /* ===================================
     15. Contact Section CSS
@@ -3209,81 +2585,6 @@ footer .footer-social-divider:before {
     padding-bottom: 70px;
   }
 
-  .single article {
-    padding-top: 35px;
-  }
-
-  .single h1.entry-title {
-    font-size: 38px;
-    line-height: 44px;
-  }
-
-  .single-post-header-content {
-    margin-bottom: 35px;
-  }
-
-  .single-post .right-content-wrapper {
-    float: none;
-    width: 100%;
-  }
-
-  .tipper {
-    display: none !important;
-  }
-
-  .blog-item-holder {
-    width: 100%;
-    padding: 5px 0;
-    float: none;
-  }
-
-  .blog-item-wrapper {
-    display: block;
-  }
-
-  .blog-item-holder:first-of-type {
-    margin-top: 30px;
-  }
-
-  .blog-item-holder h2.entry-title {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .blog-item-holder.has-post-thumbnail .excerpt {
-    max-width: 700px;
-    margin-bottom: 30px;
-  }
-
-  .blog-item-holder .post-thumbnail {
-    float: none !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-bottom: 30px;
-    width: 95%;
-    margin-top: 0;
-  }
-
-  .blog-item-holder.has-post-thumbnail .entry-holder {
-    float: none !important;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    width: 100%;
-    padding: 0;
-  }
-
-  .blog-item-holder .cat-links ul {
-    margin: 0;
-  }
-
-  .blog-item-holder a.button {
-    margin-bottom: 30px;
-  }
-
   .footer {
     padding-top: 30px;
   }
@@ -3380,10 +2681,6 @@ footer .footer-social-divider:before {
       padding-bottom: 1rem;
     }
 
-  .pricing-table {
-    margin-bottom: 100px;
-  }
-
   .member {
     margin: 35px auto;
     max-width: 80%;
@@ -3409,53 +2706,6 @@ footer .footer-social-divider:before {
     text-align: center;
     padding: 25px 0;
   }
-
-  .skill-percent {
-    display: block;
-    width: 100%;
-    font-size: 40px;
-  }
-
-  .skill-text {
-    display: block;
-    width: 100%;
-  }
-
-  .skill-text span {
-    margin-bottom: 10px;
-    display: block;
-  }
-
-  li.milestone {
-    width: 100%;
-    margin-bottom: 60px;
-    display: block;
-    max-width: 350px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  li.milestone:last-child {
-    margin-bottom: 0;
-  }
-
-  li.milestone > div {
-    width: 100% !important;
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center !important;
-  }
-
-  p.milestone-num {
-    font-size: 65px;
-  }
-
-  li.milestone h5 {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
   .portfolio-item-wrapper {
     margin-top: 50px;
   }
@@ -3472,21 +2722,6 @@ footer .footer-social-divider:before {
 }
 
 
-
-.member-social-holder {
-  background: var(--primary-color);
-  position: static;
-    width: 100%;
-    top: 50%;
-   
-    left: 100%;
-    margin: 0px;
-    z-index: 1;
-   padding: auto;
-
-
-
-}
 
 }
 

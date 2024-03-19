@@ -575,7 +575,7 @@ $(document).on("click", "#PORT-backButton", function () {
 
 function ports_fade_in() {
   $(".ports").css("opacity", "1");
-  $("html, body").scrollTop($("#ports-holder").offset().top - 50);
+  $("html, body").scrollTop($("#ports-holder").offset().top - 80);
 }
 
 $(document).ready(function () {
