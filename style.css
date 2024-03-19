@@ -974,7 +974,7 @@ h1.big-text {
 
 #home a {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 12%;
 }
 
@@ -3201,7 +3201,7 @@ footer .footer-social-divider:before {
   
 #home a {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 7%;
 }
 

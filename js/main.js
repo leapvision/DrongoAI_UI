@@ -487,7 +487,7 @@ var p4 = null;
 
 function addoffset(id) {
   var windowsize = $(window).width();
-  var offset = windowsize >= 700 ? 450 : 220;
+  var offset = windowsize >= 700 ? 450 : 200;
 
   $("html, body").scrollTop($(id).offset().top - offset);
 
@@ -575,7 +575,7 @@ $(document).on("click", "#PORT-backButton", function () {
 
 function ports_fade_in() {
   $(".ports").css("opacity", "1");
-  $("html, body").scrollTop($("#ports-holder").offset().top - 80);
+  $("html, body").scrollTop($("#ports-holder").offset().top - 50);
 }
 
 $(document).ready(function () {
