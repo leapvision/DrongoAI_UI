@@ -3225,7 +3225,7 @@ button.modal_close span:after {
 #TEAM-CARDS
 {
   opacity: 0;
-  transition: opacity 0.8s;
+  transition: opacity 0.5s;
   padding-top: 8rem;
 }
 

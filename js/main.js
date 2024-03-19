@@ -632,6 +632,7 @@ $(document).ready(function () {
 
     $("#team").hide();
     $("#TEAM-HOLDER").show();
+    
     $("#TEAM-CARDS").css("opacity", "1");
 
 
@@ -639,12 +640,13 @@ $(document).ready(function () {
 
   $("#loadteam2").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
-
+    
     $("#team").hide();
-    $("#TEAM-HOLDER").show();
-   
-
     $("#TEAM-CARDS").css("opacity", "1");
+    $("#TEAM-HOLDER").show();
+    
+    
+
   });
 });
 
@@ -666,14 +668,14 @@ $(document).on("click", "#backButton", function () {
   if (animationDuration >= 400) {
     $("html, body").scrollTop($("#main-content-service").offset().top - 270);
   } else if (targetCard == "SERVICE-1") {
-    console.log("s1:",s1)
+    
     $("html, body").scrollTop(s1);
   } else if (targetCard == "SERVICE-2") {
-    console.log("s1:",s2)
+   
     $("html, body").scrollTop(s2);
   } else {
     $("html, body").scrollTop(s3);
-    console.log("s1:",s3)
+    
   }
 });
 
@@ -718,8 +720,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var stars = [], // Array that contains the stars
-  FPS = 60, // Frames per second
-  x = 36, // Number of stars
+  FPS = 90, // Frames per second
+  x = 26, // Number of stars
   mouse = {
     x: 0,
     y: 0,
@@ -728,6 +730,7 @@ var stars = [], // Array that contains the stars
 if (canvas.width > 680) {
   x = 100;
 }
+
 
 // Push stars to array
 
@@ -771,8 +774,12 @@ function draw() {
       }
     }
   }
-  ctx.lineWidth = 0.15;
-  ctx.strokeStyle = "white";
+ 
+ctx.lineWidth = (window.innerWidth < 800) ? 0.5 : 0.25;
+
+  // Set stroke color with reduced opacity
+ctx.strokeStyle = "white  "; 
+
   ctx.stroke();
 }
 
@@ -795,11 +802,15 @@ function update() {
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
 
+   
+
     s.x += s.vx / FPS;
     s.y += s.vy / FPS;
 
     if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
     if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
+    
+
   }
 }
 
