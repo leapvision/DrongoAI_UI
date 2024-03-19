@@ -913,6 +913,8 @@ a.button-dot:hover:before {
   padding: 0;
 }
 
+
+
 h1.big-text {
   position: absolute;
   top: 30%;
@@ -921,6 +923,10 @@ h1.big-text {
   font-size: 80px;
   line-height: 120%;
   margin-bottom: 40px;
+  
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20%;
 }
 
 #home a {
