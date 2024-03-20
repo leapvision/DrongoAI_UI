@@ -720,7 +720,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var stars = [], // Array that contains the stars
-  FPS = 90, // Frames per second
+  FPS = 60, // Frames per second
   x = 26, // Number of stars
   mouse = {
     x: 0,
@@ -774,7 +774,7 @@ function draw() {
       }
     }
   }
-  ctx.lineWidth = (window.innerWidth < 800) ? 1 : 0.25;
+  ctx.lineWidth = (window.innerWidth < 800) ? 0.15 : 0.15;
   ctx.strokeStyle = "white";
   ctx.imageSmoothingEnabled = true; // Enable anti-aliasing or smooth rendering
   ctx.stroke();
@@ -826,10 +826,10 @@ function tick() {
 }
 
 tick();
-
 // JavaScript code for x-ray slider
 var divisor = document.getElementById("divisor"),
   slider = document.getElementById("slider");
 function moveDivisor() {
   divisor.style.width = slider.value + "%";
 }
+
