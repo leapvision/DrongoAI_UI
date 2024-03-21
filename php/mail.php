@@ -52,14 +52,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'hellojaikrishna@gmail.com';
-        $mail->Password = 'wpfk phba yshq lfop';
+        $mail->Username = 'rajesh@drongoai.com';
+        $mail->Password = 'ywvu zdkg zmol hzjr';
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('hellojaikrishna@gmail.com', 'Drongo AI');
-        $mail->addAddress('hellojaikrishna@gmail.com', 'Drongo');
+        $mail->setFrom('rajesh@drongoai.com', 'Drongo AI Contact Form');
+        $mail->addAddress('rajesh@drongoai.com', 'Drongo AI Contact Form ');
         $mail->addReplyTo($email, $name);
+
+        //ADD BCC
+        $mail->addBCC('founders@drongoai.com', 'BCC Recipient');
 
         // Content
         $mail->isHTML(false);

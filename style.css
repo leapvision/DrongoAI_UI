@@ -1130,6 +1130,7 @@ h1.big-text {
 .grid-item a.item-link:hover:after,
 .grid-item a.item-link:hover .portfolio-text-holder {
   opacity: 1;
+
 }
 
 .portfolio-content h1 {
@@ -3560,3 +3561,9 @@ input[type=range]::-moz-range-thumb {
  filter: invert(75%);
 }
 
+
+
+.grid-item a.item-link:hover .right-arrow  img {
+ 
+  transform: translateX(25px);
+}
