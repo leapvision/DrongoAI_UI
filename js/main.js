@@ -6,11 +6,11 @@
   fixForFooterNoContent();
   fixForBlogThumbnailSize();
   fixTeamLayout();
-  // imageSliderSettings();
-  textSliderSettings();
+
+
   newsBackgroundImages();
   skillsFill();
-  // portfolioItemContentLoadOnClick();
+  
 
   fixForMenu();
   singlePostStickyInfo();
@@ -20,7 +20,7 @@
   fitVideo();
   firstSectionActiveFix();
   setMenu();
-  // SendMail();
+ 
 
   //Show-Hide header sidebar
   $("#toggle").on("click", multiClickFunctionStop);
@@ -118,31 +118,7 @@
     });
   }
 
-  function textSliderSettings() {
-    $(".text-slider").each(function () {
-      var id = $(this).attr("id");
-      var auto_value = window[id + "_auto"];
-      var hover_pause = window[id + "_hover"];
-      var speed_value = window[id + "_speed"];
-      auto_value = auto_value === "true" ? true : false;
-      hover_pause = hover_pause === "true" ? true : false;
-      $("#" + id).owlCarousel({
-        loop: true,
-        autoHeight: false,
-        smartSpeed: 1000,
-        autoplay: auto_value,
-        autoplayHoverPause: hover_pause,
-        autoplayTimeout: speed_value,
-        responsiveClass: true,
-        dots: false,
-        animateIn: "fadeIn",
-        animateOut: "fadeOut",
-        nav: true,
-        items: 1,
-      });
-    });
-  }
-
+ 
   function setUpParallax() {
     $("[data-jarallax-element]").jarallax({
       speed: 0.2,
@@ -832,4 +808,8 @@ var divisor = document.getElementById("divisor"),
 function moveDivisor() {
   divisor.style.width = slider.value + "%";
 }
+
+
+
+
 
