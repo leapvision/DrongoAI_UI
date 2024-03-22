@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addReplyTo($email, $name);
 
         //ADD BCC
-        $mail->addBCC('founders@drongoai.com', 'BCC Recipient');
+        $mail->addBCC('connect@drongoai.com', 'BCC Recipient');
 
         // Content
         $mail->isHTML(false);
