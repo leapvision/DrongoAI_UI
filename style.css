@@ -1714,8 +1714,9 @@ p.milestone-num {
 
 .join-us {
   display: flex;
-  justify-content: flex-end;
-  padding: 40px;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 50px;
 
   p {
     padding: 10px;
@@ -2337,7 +2338,7 @@ footer .footer-social-divider:before {
   }
 
   .portfolio-content{
-    margin-top: 7rem;
+    margin-top: 0.5rem;
   }
 /* 
   /* .grid-item a.item-link, */
@@ -3532,9 +3533,9 @@ input[type=range]::-moz-range-thumb {
 
 
 @media (max-width: 1380px) {
- .portfolio-content{
-  margin-top: 5rem;
- }
+  .portfolio-content-services{
+    margin-top: 5rem;
+   }
 
  #PORT-backButton
  {

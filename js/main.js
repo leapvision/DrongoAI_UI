@@ -6,7 +6,7 @@
   fixForFooterNoContent();
   fixForBlogThumbnailSize();
   fixTeamLayout();
-
+  portfolioItemContentLoadOnClick();
 
   newsBackgroundImages();
   skillsFill();
@@ -477,82 +477,82 @@ function addFadeOut() {
   $("#SERVICES-HOLDER").css("opacity", "0");
 }
 
-$(document).ready(function () {
-  $("#port-1").hide();
+// $(document).ready(function () {
+//   $("#port-1").hide();
 
-  $("#port-2").hide();
-  $("#port-3").hide();
-  $("#port-4").hide();
+//   $("#port-2").hide();
+//   $("#port-3").hide();
+//   $("#port-4").hide();
 
-  $("#portfolio").show();
+//   $("#portfolio").show();
 
-  $("#p-item-1").click(function (event) {
-    event.preventDefault(); // Prevent the default behavior of anchor tags
-    p1 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-1").show();
+//   $("#p-item-1").click(function (event) {
+//     event.preventDefault(); // Prevent the default behavior of anchor tags
+//     p1 = $(window).scrollTop();
+//     $("#portfolio").hide();
+//     $("#port-1").show();
 
-    ports_fade_in();
-  });
+//     ports_fade_in();
+//   });
 
-  $("#p-item-2").click(function (event) {
-    event.preventDefault(); // Prevent the default behavior of anchor tags
-    p2 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-2").show();
-    ports_fade_in();
-  });
-  $("#p-item-3").click(function (event) {
-    event.preventDefault(); // Prevent the default behavior of anchor tags
-    p3 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-3").show();
-    ports_fade_in();
-  });
-  $("#p-item-4").click(function (event) {
-    event.preventDefault(); // Prevent the default behavior of anchor tags
-    p4 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-4").show();
-    ports_fade_in();
-  });
-});
+//   $("#p-item-2").click(function (event) {
+//     event.preventDefault(); // Prevent the default behavior of anchor tags
+//     p2 = $(window).scrollTop();
+//     $("#portfolio").hide();
+//     $("#port-2").show();
+//     ports_fade_in();
+//   });
+//   $("#p-item-3").click(function (event) {
+//     event.preventDefault(); // Prevent the default behavior of anchor tags
+//     p3 = $(window).scrollTop();
+//     $("#portfolio").hide();
+//     $("#port-3").show();
+//     ports_fade_in();
+//   });
+//   $("#p-item-4").click(function (event) {
+//     event.preventDefault(); // Prevent the default behavior of anchor tags
+//     p4 = $(window).scrollTop();
+//     $("#portfolio").hide();
+//     $("#port-4").show();
+//     ports_fade_in();
+//   });
+// });
 
-$(document).on("click", "#PORT-backButton", function () {
-  addFadeOut();
-  $("#port-1").hide();
-  $("#port-2").hide();
-  $("#port-3").hide();
-  $("#port-4").hide();
+// $(document).on("click", "#PORT-backButton", function () {
+//   addFadeOut();
+//   $("#port-1").hide();
+//   $("#port-2").hide();
+//   $("#port-3").hide();
+//   $("#port-4").hide();
 
-  $("#portfolio").show();
-  $(".ports").css("opacity", "0");
+//   $("#portfolio").show();
+//   $(".ports").css("opacity", "0");
 
-  // Retrieve scroll position for the corresponding card
-  var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
-  var animationDuration = $(window).width() > 1000 ? 400 : 50;
+//   // Retrieve scroll position for the corresponding card
+//   var targetCard = $(this).data("target"); // Assuming you have data-target attribute set for each Go Back button
+//   var animationDuration = $(window).width() > 1000 ? 400 : 50;
 
-  // Animate scroll to the stored position
-  if (animationDuration >= 400) {
-    $("html, body").scrollTop($("#portfolio").offset().top - 80);
-  } else if (targetCard == "port-1") {
-    $("html, body").scrollTop(p1);
+//   // Animate scroll to the stored position
+//   if (animationDuration >= 400) {
+//     $("html, body").scrollTop($("#portfolio").offset().top - 80);
+//   } else if (targetCard == "port-1") {
+//     $("html, body").scrollTop(p1);
 
-  } else if (targetCard == "port-2") {
-    $("html, body").scrollTop(p2);
+//   } else if (targetCard == "port-2") {
+//     $("html, body").scrollTop(p2);
 
-  } else if (targetCard == "port-3") {
-    $("html, body").scrollTop(p3);
+//   } else if (targetCard == "port-3") {
+//     $("html, body").scrollTop(p3);
 
-  } else {
-    $("html, body").scrollTop(p4);
-  }
-});
+//   } else {
+//     $("html, body").scrollTop(p4);
+//   }
+// });
 
-function ports_fade_in() {
-  $(".ports").css("opacity", "1");
-  $("html, body").scrollTop($("#ports-holder").offset().top - 80);
-}
+// function ports_fade_in() {
+//   $(".ports").css("opacity", "1");
+//   $("html, body").scrollTop($("#ports-holder").offset().top - 80);
+// }
 
 $(document).ready(function () {
   $("#SERVICE-1").hide();
@@ -813,3 +813,114 @@ function moveDivisor() {
 
 
 
+
+
+function portfolioItemContentLoadOnClick() {
+  $(".ajax-portfolio").on("click", function (e) {
+    e.preventDefault();
+    var portfolioItemID = $(this).data("id");
+    $(this).addClass("animate-plus");
+    if ($("#pcw-" + portfolioItemID).length) {
+      // Check if already loaded
+      $("html, body").animate(
+        { scrollTop: $("#portfolio-wrapper").offset().top-87 },
+        400
+      );
+      setTimeout(function () {
+        $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+        setTimeout(function () {
+          $("#pcw-" + portfolioItemID).addClass("show");
+          $(".portfolio-load-content-holder").addClass("show");
+          $(".ajax-portfolio").removeClass("animate-plus");
+          $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+        }, 300);
+      }, 500);
+    } else {
+      loadPortfolioItemContent(portfolioItemID);
+    }
+  });
+}
+
+function loadPortfolioItemContent(portfolioItemID) {
+  $.ajax({
+    url: $('.ajax-portfolio[data-id="' + portfolioItemID + '"]').attr("href"),
+    type: "GET",
+    success: function (html) {
+      var getPortfolioItemHtml = $(html)
+        .find(".portfolio-item-wrapper")
+        .html();
+      $(".portfolio-load-content-holder").append(
+        '<div id="pcw-' +
+          portfolioItemID +
+          '" class="portfolio-content-wrapper">' +
+          getPortfolioItemHtml +
+          "</div>"
+      );
+
+     
+
+      if (!$("#pcw-" + portfolioItemID + " .close-icon").length) {
+        $("#pcw-" + portfolioItemID).prepend(
+          '<div class="close-icon"></div>'
+        );
+      }
+
+      $("html, body").animate(
+        { scrollTop: $("#portfolio-wrapper").offset().top -87},
+        400
+      );
+      setTimeout(function () {
+        $("#pcw-" + portfolioItemID).imagesLoaded(function () {
+          skillsFill();
+          $(".site-content").fitVids(); //Fit Video
+          $("#portfolio-grid, .more-posts-portfolio-holder").addClass("hide");
+          setTimeout(function () {
+            $("#pcw-" + portfolioItemID).addClass("show");
+            $(".portfolio-load-content-holder").addClass("show");
+            $(".ajax-portfolio").removeClass("animate-plus");
+            $("#portfolio-grid").hide();
+          }, 300);
+          
+          $(".close-icon").on("click", function (e) {
+            console.log("close cliekd");
+            var portfolioReturnItemID = $(this)
+              .closest(".portfolio-content-wrapper")
+              .attr("id")
+              .split("-")[1];
+            $(".portfolio-load-content-holder").addClass("viceversa");
+            $("#portfolio-grid, .more-posts-portfolio-holder").css(
+              "display",
+              "block"
+            );
+            setTimeout(function () {
+              $("#pcw-" + portfolioReturnItemID).removeClass("show");
+              $(".portfolio-load-content-holder").removeClass(
+                "viceversa show"
+              );
+              $("#portfolio-grid, .more-posts-portfolio-holder").removeClass(
+                "hide"
+              );
+            }, 300);
+            setTimeout(function () {
+              $("html, body").animate(
+                {
+                  scrollTop: $("#p-item-" + portfolioReturnItemID).offset()
+                    .top-87,
+                },
+                400
+              );
+            }, 500);
+          });
+        });
+      }, 500);
+    },
+  });
+  return false;
+}
+
+
+function skillsFill() {
+  $(".skill-fill").each(function () {
+    $(this).width($(this).data("fill"));
+  });
+}
