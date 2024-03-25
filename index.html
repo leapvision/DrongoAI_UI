@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="images/drongo-logos/DrongoD.webp" />
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,700i" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 
@@ -844,7 +844,7 @@
       <h3 class="entry-title">TEAM</h3>
     </div>
     <div class="team-holder">
-      <img class="team-photo" src="images/team/team.webp" alt="Team-Photo" loading="eager" />
+      <img class="team-photo" src="images/team/team.jpg" alt="Team-Photo" loading="eager" />
       <div class="gradient-overlay"></div>
       <h1 class="team-tag-line">
         Team Drongo AI is a team of new age solution architects <br> guided by
@@ -1041,20 +1041,26 @@
             </select>
           </p>
           <!-- Commenting out resume upload field -->
-
+          <div class="g-recaptcha" data-sitekey="6LcWoqMpAAAAALOkT8urzVDnomzTEhjwbWxGorC8" style="padding-bottom: 0.5rem; display: flex; justify-content: center; align-items: center;"  data-callback="enableSubmit"></div>
           <p>
-            <label for="file-input">Upload Resume (PDF only)</label>
-            <input type="file" id="file-input" name="file-input" accept=".pdf" required>
+            <label for="file-input">Upload Resume</label>
+            <input type="file" id="file-input" name="file-input" accept=".pdf,.doc,.docx" required>
           </p>
 
 
 
+          
+          <input type="text" name="last_name" id="last_name" >
+            <!-- this is jenu pot see php -->
 
           <p class="hiring-submit-holder">
             <input type="submit" value="APPLY" id="form-submit" />
           </p>
           <div id="error-message"></div>
         </form>
+       
+
+        
       </div>
 
 
@@ -1100,22 +1106,44 @@
         <div class="one_half last" id="contactFormContainer">
           <div class="contact-form">
             <form id="contactForm" action="php/mail.php" method="POST">
-              <p>
-                <input id="name" type="text" name="your-name" placeholder="Name" required />
-              </p>
-              <p>
-                <input id="contact-email" type="email" name="your-email" placeholder="Email" required />
-              </p>
-              <p>
-                <input id="subject" type="text" name="your-subject" placeholder="Subject" required />
-              </p>
-              <p>
-                <textarea id="message" name="your-message" placeholder="Message" required></textarea>
-              </p>
-              <p class="contact-submit-holder">
-                <input type="submit" id="submit-btn" value="SEND" />
-              </p>
+                <p>
+                    <input id="name" type="text" name="your-name" placeholder="Name" required />
+                    
+                    <input type="text" name="middle_name" id="middle_name" >
+                    <!-- this is a jenu pot  -->
+                </p>
+                <p>
+                    <input id="contact-email" type="email" name="your-email" placeholder="Email" required />
+                </p>
+                <p>
+                    <input id="subject" type="text" name="your-subject" placeholder="Subject" required />
+                </p>
+                <p>
+                    <textarea id="message" name="your-message" placeholder="Message" required></textarea>
+                </p>
+                <div class="g-recaptcha" data-sitekey="6LcWoqMpAAAAALOkT8urzVDnomzTEhjwbWxGorC8" style="padding-bottom: 0.5rem; display: flex; justify-content: center; align-items: center;"  data-callback="enableSubmit"></div>
+                <p class="contact-submit-holder">
+                    <input type="submit" id="submit-btn" disabled />
+                </p>
             </form>
+           <script>
+            function enableSubmit() {
+                var submitBtn = document.getElementById("submit-btn");
+        submitBtn.disabled = false;
+        submitBtn.style.backgroundColor = "#be0218"; // Set background color
+        submitBtn.style.borderColor = "#be0218"; // Set border color
+        // Add hover effect
+        submitBtn.addEventListener("mouseenter", function() {
+            this.style.backgroundColor = "#ffffff"; // Change background color on hover
+        });
+
+        // Reset background color on mouse leave
+        submitBtn.addEventListener("mouseleave", function() {
+            this.style.backgroundColor = "#be0218"; // Reset background color on mouse leave
+        });
+}
+           </script>
+           
           </div>
         </div>
         <div id="status"></div>
@@ -1199,7 +1227,7 @@
   <script src="js/isotope.pkgd.js"></script>
   <script src="js/jquery.sticky-kit.min.js"></script>
   <script src="js/main.js"></script>
-
+ 
 
 
 </body>

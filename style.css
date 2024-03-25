@@ -1686,7 +1686,7 @@ p.milestone-num {
 
 .contact-form input[type="submit"] {
   color: #fff;
-  background-color: var(--primary-color);
+  background-color: #b3b3b3;
   text-align: center;
   padding: 10px 40px;
   cursor: pointer;
@@ -1696,7 +1696,7 @@ p.milestone-num {
   display: block;
   width: 100%;
   line-height: 35px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid #b3b3b3;
   border-radius: 50px;
   font-size: 14px;
   letter-spacing: 2px;
@@ -3567,4 +3567,18 @@ input[type=range]::-moz-range-thumb {
 .grid-item a.item-link:hover .right-arrow  img {
  
   transform: translateX(25px);
+}
+
+
+
+/* honey pots */
+
+#last_name
+{
+  display:none
+}
+
+#middle_name
+{
+  display: none;
 }

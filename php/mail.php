@@ -8,7 +8,21 @@ require 'vendor/autoload.php';
 // Set default contact flag to true
 $contact = true;
 
+if (!empty($_POST['last_name'])) {
+    // Bot detected, exit without sending email
+   
+    exit;
+}
+
+if (!empty($_POST['middle_name'])) {
+    // Bot detected, exit without sending email
+   
+    exit;
+}
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     // Check if it's the first form (contact form)
     if (isset($_POST['your-name']) && isset($_POST['your-email']) && isset($_POST['your-subject']) && isset($_POST['your-message'])) {
         $name = $_POST['your-name'];
@@ -52,17 +66,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'rajesh@drongoai.com';
-        $mail->Password = 'ywvu zdkg zmol hzjr';
+        $mail->Username = 'hellojaikrishna@gmail.com';
+        // rajesh@drongoai.com  ywvu zdkg zmol hzjr connect@drongoai.com
+        $mail->Password = 'wpfk phba yshq lfop';
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('rajesh@drongoai.com', 'Drongo AI Contact Form');
-        $mail->addAddress('rajesh@drongoai.com', 'Drongo AI Contact Form ');
+        $mail->setFrom('hellojaikrishna@gmail.com', 'Drongo AI Contact Form');
+        $mail->addAddress('hellojaikrishna@gmail.com', 'Drongo AI Contact Form ');
         $mail->addReplyTo($email, $name);
 
         //ADD BCC
-        $mail->addBCC('connect@drongoai.com', 'BCC Recipient');
+        $mail->addBCC('hellojaikrishna@gmail.com', 'BCC Recipient');
 
         // Content
         $mail->isHTML(false);
