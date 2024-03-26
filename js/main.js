@@ -472,9 +472,11 @@ function portfolioItemContentLoadOnClick() {
               .split("-")[1];
              
             $("#portfolio-grid").show();
+            alert("portfolio-grid -show")
             window.scrollTo({ top: $("#p-item-" + o).offset().top - 87, behavior: 'auto' });
-            console.log(o);
+           
             $("#pcw-" + o).hide(); 
+            alert("element hide")
           });
           
       },
