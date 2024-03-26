@@ -435,7 +435,7 @@ function portfolioItemContentLoadOnClick() {
       var o = $(this).data("id");
       if ($("#pcw-" + o).length) {
         // Content already loaded, just show it
-        $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+        $("#portfolio-grid").hide();
         $("#pcw-" + o).show();
         window.scrollTo({ top: $("#portfolio-wrapper").offset().top - 87, behavior: 'auto' });
       } else {
@@ -460,7 +460,7 @@ function portfolioItemContentLoadOnClick() {
         );
         $("#pcw-" + t + " .close-icon").length ||
           $("#pcw-" + t).prepend('<div class="close-icon"></div>');
-        $("#portfolio-grid, .more-posts-portfolio-holder").hide();
+        $("#portfolio-grid").hide();
         $("#pcw-" + t).show();
         window.scrollTo({ top: $("#portfolio-wrapper").offset().top - 87, behavior: 'auto' });
   
@@ -470,11 +470,11 @@ function portfolioItemContentLoadOnClick() {
               .closest(".portfolio-content-wrapper")
               .attr("id")
               .split("-")[1];
-              $("#pcw-" + o).hide(); 
-            $("#portfolio-grid, .more-posts-portfolio-holder").show();
+             
+            $("#portfolio-grid").show();
             window.scrollTo({ top: $("#p-item-" + o).offset().top - 87, behavior: 'auto' });
             console.log(o);
-           
+            $("#pcw-" + o).hide(); 
           });
           
       },
