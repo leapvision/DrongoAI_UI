@@ -464,9 +464,14 @@ function portfolioItemContentLoadOnClick() {
         $("#pcw-" + t).show();
         window.scrollTo({ top: $("#portfolio-wrapper").offset().top - 87, behavior: 'auto' });
   
-        $(".close-icon").on("click", function (t) {
-            console.log("close clicked");
-            var o = $(this)
+        
+          
+      },
+    });
+
+    $(".portfolio-load-content-holder").on("click", ".close-icon", function(t) {
+      console.log("close clicked");
+      var o = $(this)
               .closest(".portfolio-content-wrapper")
               .attr("id")
               .split("-")[1];
@@ -477,9 +482,6 @@ function portfolioItemContentLoadOnClick() {
            
             $("#pcw-" + o).hide(); 
             alert("element hide")
-          });
-          
-      },
     });
   }
   
