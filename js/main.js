@@ -428,6 +428,7 @@ var divisor = document.getElementById("divisor"),
 function moveDivisor() {
   divisor.style.width = slider.value + "%";
 }
+
 function portfolioItemContentLoadOnClick() {
     $(".ajax-portfolio").on("click", function (t) {
       t.preventDefault();
@@ -463,23 +464,22 @@ function portfolioItemContentLoadOnClick() {
         $("#pcw-" + t).show();
         window.scrollTo({ top: $("#portfolio-wrapper").offset().top - 87, behavior: 'auto' });
   
-        // Wait for the portfolio grid to load before closing the opened portfolio item
-        $(document).ajaxStop(function () {
-          $(".close-icon").on("click", function (t) {
+        $(".close-icon").on("click", function (t) {
             console.log("close clicked");
             var o = $(this)
               .closest(".portfolio-content-wrapper")
               .attr("id")
               .split("-")[1];
+              $("#pcw-" + o).hide(); 
             $("#portfolio-grid, .more-posts-portfolio-holder").show();
             window.scrollTo({ top: $("#p-item-" + o).offset().top - 87, behavior: 'auto' });
-            $("#pcw-" + o).remove(); // Remove the content from the DOM
+            console.log(o);
+           
           });
-        });
+          
       },
     });
   }
-  
   
 function skillsFill() {
   $(".skill-fill").each(function () {
