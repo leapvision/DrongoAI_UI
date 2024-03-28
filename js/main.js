@@ -478,19 +478,19 @@ function addFadeOut() {
 }
 
 $(document).ready(function () {
-  $("#port-1").hide();
+  $("#port-1").css("display","none");
 
-  $("#port-2").hide();
-  $("#port-3").hide();
-  $("#port-4").hide();
+  $("#port-2").css("display","none");
+  $("#port-3").css("display","none");
+  $("#port-4").css("display","none");
 
-  $("#portfolio").show();
+  $("#portfolio").css("display","block");
 
   $("#p-item-1").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
     p1 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-1").show();
+    $("#portfolio").css("display","none");
+    $("#port-1").css("display","block");
 
     ports_fade_in();
   });
@@ -498,32 +498,27 @@ $(document).ready(function () {
   $("#p-item-2").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
     p2 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-2").show();
+    $("#portfolio").css("display","none");
+    $("#port-2").css("display","block");
     ports_fade_in();
   });
   $("#p-item-3").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
     p3 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-3").show();
+    $("#portfolio").css("display","none");
+    $("#port-3").css("display","block");
     ports_fade_in();
   });
   $("#p-item-4").click(function (event) {
     event.preventDefault(); // Prevent the default behavior of anchor tags
     p4 = $(window).scrollTop();
-    $("#portfolio").hide();
-    $("#port-4").show();
+    $("#portfolio").css("display","none");
+    $("#port-4").css("display","block");
     ports_fade_in();
   });
 });
 
 
-
-function scrollToScreen()
-{
- 
-}
 
 $(document).on("click", "#pc-1, #pc-2, #pc-3, #pc-4", function () {
   var id = $(this).attr("id").split("-")[1];
@@ -551,8 +546,8 @@ $(document).on("click", "#pc-1, #pc-2, #pc-3, #pc-4", function () {
 });
 
 function hidePortfolios() {
-  $("[id^='port-']").hide();
-  $("#portfolio").show();
+  $("[id^='port-']").css("display","none");
+  $("#portfolio").css("display","block");
   
 }
 
