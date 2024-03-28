@@ -1051,7 +1051,7 @@
      transform: translateX(-5px);
  }
 
- #PORT-backButton {
+ .PORT-backButton {
      background-image: url(images/close-left-arrow.png);
      background-repeat: no-repeat;
      width: 70px;
@@ -1067,7 +1067,7 @@
      top: 115px;
  }
 
- #PORT-backButton:hover {
+ .PORT-backButton:hover {
      transform: translateX(-5px);
  }
 
@@ -1986,6 +1986,12 @@
          top: 55%;
      }
 
+
+     .portfolio-content
+     {
+        margin-top: 5rem;
+     }
+
      h1.big-text {
          font-size: 60px;
      }
@@ -2028,7 +2034,7 @@
      }
 
      .portfolio-content {
-         margin-top: 0.5rem;
+         margin-top: 5rem;
      }
      
 
@@ -2345,7 +2351,7 @@
          left: -15px;
      }
 
-     #PORT-backButton {
+     .PORT-backButton {
          top: 115px;
          left: -15px;
      }
@@ -3122,8 +3128,12 @@
          margin-top: 5rem;
      }
 
-     #PORT-backButton {
+     .PORT-backButton {
          left: -10px
+     }
+     .portfolio-content
+     {
+        margin-top: 5rem;
      }
  }
 
