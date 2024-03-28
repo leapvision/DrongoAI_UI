@@ -548,7 +548,7 @@ $(document).on("click", "#pc-1, #pc-2, #pc-3, #pc-4", function () {
 function hidePortfolios() {
   $("[id^='port-']").css("display","none");
   $("#portfolio").css("display","block");
-  alert("close");
+  
 }
 
 
